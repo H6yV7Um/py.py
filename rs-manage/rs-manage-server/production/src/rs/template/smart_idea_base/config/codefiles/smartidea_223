@@ -1,0 +1,1773 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+
+
+layoutConfig_400_300 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+         <div id="logoBox" class="logoBox">
+           
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>        
+        </div>  
+        <div class="discountBg">
+               <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+
+                <div class="item0_block">
+                    <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>     
+    </div> 
+</code>
+
+lunboConfig_400_300 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:398,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:132px;left:32px;}.rightIconBlock {top:132px;right:32px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_400_300 = <code>
+    .container{position:relative;width:398px;height:298px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;cursor: pointer;}
+     #adWrap{width:398px;height:298px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:100px;height:100px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 100px;height: 100px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block;width:75px;height:48px;overflow:hidden;color:#fff; margin-top: 18px; margin-left: 5px; float: left; text-align: left;  }
+    .logo img{width:140px;;height:140px;overflow:hidden;}
+    .logo a{font-size: 18px;}
+    .discount{ position: absolute;width: 80px;height: 35px;overflow:hidden;right: -60px;_right: -60px; top: -4px;  }
+    .discount a{ font-size: 24px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount_bg{ width: 78px;height: 110px;}
+    .discountBg{position: absolute;top: 0;right: 0;width: 78px;height: 110px;}
+    .discountBg img{width: 78px;height: 110px;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:270px;height:298px; margin: 0 auto; }
+    .item0_block{position:relative; margin-top: 15px; margin-left: 64px;_margin-left:0; width:270px;text-align:center; overflow: visible;}
+    .item0_logo{width:155px;height:155px;margin: 0 auto;}
+    .item0_logo img{width: 155px; height: 155px;}
+    .item0_info{width:270px;margin: 6px auto;}
+    .item0_price{display: inline-block; margin-top: 4px;}
+    .item0_price img{ width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;width:240px;overflow:hidden;white-space:nowrap;}
+    .title1 a{font-size:16px;color:#2c2c2c;line-height:20px;width:241px;height: 20px;overflow:hidden;white-space:nowrap;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .button{margin:0 auto;width:120px;height:26px; margin-top: 6px;}
+    .buttonText{width:120px;height:26px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:26px; text-align: left; text-indent: 28px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 100px 8px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:132px;left:28px;}
+    .rightIconBlock {top:132px;right:28px;}
+</code>
+
+
+layoutConfig_360_300 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+         <div id="logoBox" class="logoBox">
+             <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>
+        </div>  
+        <div class="discountBg">
+               <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>                    
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div> 
+    </div> 
+</code>
+
+lunboConfig_360_300 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:358,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:130px;left:20px;}.rightIconBlock {top:130px;right:20px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_360_300 = <code>
+    .container{position:relative;width:358px;height:298px;border:1px solid #FF82EF;overflow:hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;cursor: pointer;}
+     #adWrap{width:358px;height:298px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:100px;height:100px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 100px;height: 100px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block;color:#fff; margin-top: 18px; margin-left: 5px;width:63px;height:42px;overflow:hidden;}
+    .logo img{width:140px;;height:140px;overflow:hidden;}
+    .logo a{width: 67px;height: 45px;font-size: 16px;overflow:hidden;}
+    .discount{ position: absolute; right: -47px; top: -2px;width: 61px; height: 30px; overflow: hidden; }
+    .discount a{width: 60px; height: 35px;overflow: hidden;line-height: 35px; font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;  }
+    .discount_bg{ width: 78px;height: 110px;}
+    .discountBg{position: absolute;top: 0;right: 0;width: 78px;height: 110px;}
+    .discountBg img{width: 78px;height: 110px;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{position:relative;overflow: hidden;}
+    .item0{width:250px;height:276px; margin: 0 auto;}
+    .item0_block{position:relative;width:250px;margin-top:12px;margin-left:54px;_margin-left:0;width:250px;text-align:center; overflow: visible;}
+    .item0_logo{width:140px;height:140px;margin: 0 auto;}
+    .item0_logo img{width: 140px; height: 140px;}
+    .item0_info{margin: 6px auto;}
+    .item0_price{display: inline-block; margin-top: 4px;}
+    .item0_price img{ width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;}
+    .title1 a{width: 250px;line-height:20px;height: 20px; overflow: hidden;font-size:14px;color:#2c2c2c;white-space: nowrap;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .button{margin:0 auto;width:120px;height:26px; margin-top: 6px;}
+    .buttonText{width:120px;height:26px;background:#EE008C;text-align:center;}
+    .buttonText a{font-size:16px;color:#fff;line-height:26px; text-align: left; text-indent: 28px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 100px 8px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_336_280 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+             <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>        
+        </div>    
+        <div class="discountBg">
+               <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                   <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                   </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_336_280 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:334,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:130px;left:32px;}.rightIconBlock {top:130px;right:32px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_336_280 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:334px;height:278px;border:1px solid #FF82EF; overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:334px;height:278px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:90px;height:90px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 90px;height: 90px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block; color:#fff; margin-top: 18px; margin-left: 5px; float: left; text-align: left; }
+    .logo img{width:140px;;height:140px;overflow:hidden;}
+    .logo a{width: 65px;height: 42px;overflow: hidden;font-size: 16px;}
+    .discount{ position: absolute; right: -48px;_right: -48px; top: -9px;  width: 57px; height: 80px;}
+    .discount a{line-height: 35px; font-size: 18px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount_bg{ width: 76px;height: 104px; overflow: hidden;}
+    .discountBg{position: absolute;top: 0;right: 0;width: 76px;height: 104px;}
+    .discountBg img{width: 76px;height: 104px;top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:230px;height:276px; margin: 0 auto;}
+    .item0_block{position:relative;margin-top:12px; margin-left: 50px; _margin-left:0; width:230px;text-align:center; overflow: visible;}
+    .item0_logo{width:140px;height:140px;margin: 0 auto;}
+    .item0_logo img{width: 140px; height: 140px;}
+    .item0_info{width:230px;margin: 6px auto;}
+    .item0_price{display: inline-block; margin-top: 4px;}
+    .item0_price img{ width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;with:230px;overflow:hidden;white-space:nowrap;}
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;height: 20px;width: 216px;white-space: nowrap;overflow: hidden;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .button{margin:0 auto;width:120px;height:26px; margin-top: 6px;}
+     .buttonText{width:120px;height:26px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:26px; text-align: left; text-indent: 28px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 100px 8px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_300_250 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+             <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>   
+        </div>  
+        <div class="discountBg">
+               <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                   <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo">
+                            <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div> 
+    </div> 
+</code>
+
+lunboConfig_300_250 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:298,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:110px;left:13px;}.rightIconBlock {top:110px;right:13px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_300_250 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:298px;height:248px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:298px;height:248px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:86px;height:85px;overflow:hidden; }
+    .logoBox img{ position:absolute; left: 0; top: 0;width:86px;height:85px;}
+    .logo{position:relative;display:inline-block;width:66px;;height:40px; color:#fff; margin-top: 10px; margin-left: 5px;}
+    .logo a{width:65px;height:42px;overflow:hidden;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .discount { position: absolute; right: -49px;_right: -49px; top: -17px;  width: 74px; height: 90px; line-height: 45px; font-size: 20px; }
+    .discount a{ width: 60px;height: 35px;line-height: 35px; font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; overflow: hidden;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .discountBg{width: 74px;height: 90px; position: absolute; right:0; top: 0;}
+    .discountBg img{width: 74px;height: 90px; }
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:210px;height:246px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:20px; margin-left: 44px;_margin-left: 0; width:210px;text-align:center; overflow: visible;}
+    .item0_logo{width:120px;height:120px;margin: 0 auto;}
+    .item0_logo img{width: 120px; height: 120px;}
+    .item0_info{width:210px;margin: 5px auto;}
+    .item0_price{display: inline-block; margin-top: 2px;}
+    .item0_price img{ width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;width:210px;overflow：hidden;white-space:nowrap;}
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;height: 20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{margin:2px auto 0;width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 11px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_250_250 = <code>
+    <%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+   <div id="adWrap">
+         <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>        
+        </div>  
+        <div class="discountBg">
+               <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+
+</code>
+
+lunboConfig_250_250 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:248,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:110px;left:13px;}.rightIconBlock {top:110px;right:13px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_250 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:248px;height:248px;border:1px solid #FF82EF;overflow:hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:248px;height:248px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:75px;height:75px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 75px;height: 75px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block;color:#fff; margin-top: 10px; margin-left: 5px;float:left; text-align: left;width: 55px; height: 38px;overflow: hidden;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .logo a{font-size: 14px;}
+    .discount{ position: absolute; right: -19px;_right: -19px;  top: -22px;  width: 56px; height: 45px; overflow:hidden;}
+    .discount a{width: 56px;height:45px;overflow: hidden;line-height: 45px; font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount .dis_img{ position: absolute; left: 0; top: 0; width: 56px; height: 80px; }
+    .discount .dis_val{ position: relative; }
+    .discountBg{position: absolute; right: 0; top: 0;  width: 56px; height: 80px;}
+    .discountBg img{ width: 56px; height: 80px;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{position: relative;overflow: hidden;}
+    .item0{width:210px;height:246px; margin: 0 auto;}
+    .item0_block{position:relative;margin-top:20px;margin-left:20px;_margin-left:0;width:210px;text-align:center; overflow: visible;}
+    .item0_logo{width:120px;height:120px;margin: 0 auto;}
+    .item0_logo img{width: 120px; height: 120px;}
+    .item0_info{width:210px;margin: 5px auto;}
+    .item0_price{display: inline-block;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;width: 210px;overflow: hidden;white-space: nowrap;}
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;height: 20px; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .button{margin:0 auto;width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_250_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+   <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>           
+        </div>  
+        <div class="discountBg">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>                       
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_250_200 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:240,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:88px;left:10px;}.rightIconBlock {top:88px;right:10px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_200 = <code>
+   a{ cursor: pointer;}
+    .container{position:relative;width:248px;height:198px;border:1px solid #FF82EF;overflow:hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:248px;height:198px; overflow: hidden; }
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:68px;height:68px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 68px;height: 68px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block; color:#fff; margin-top: 10px; margin-left: 2px; float:left; text-align: left; }
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .logo a{font-size: 12px;}
+    .discount{ position: absolute; right: -19px;_right: -19x; top: -12px;width: 47px;height: 35px;overflow: hidden;}
+    .discount a{  line-height: 35px; font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 57px;height: 80px;}
+    .discount .dis_val{position: relative;}
+    .discount_bg{ width: 57px;height: 80px;}
+    .discountBg{width: 57px;height: 80px;top: 0;right: 0;position: absolute;}
+    .discountBg img{width: 57px;height: 80px;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{position: relative;overflow: hidden;}
+    .item0{width:210px;height:198px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:12px;margin-left:19px;_margin-left:0;width:210px;text-align:center; }
+    .item0_logo{width:90px;height:90px;margin: 0 auto;}
+    .item0_logo img{width: 90px; height: 90px;}
+    .item0_info{width:210px;margin: 5px auto;}
+    .item0_price{display: inline-block; margin-top: 1px;}
+    .item0_price img{ width: 82px;height: 40px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;width: 210px;overflow:hidden;white-space: nowrap;}
+    .title1 a{ width: 210px;line-height:20px;height: 20px;font-size:14px;color:#2c2c2c;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .button{margin:0 auto;width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_200_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+         <div id="logoBox" class="logoBox">
+            
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>         
+        </div>  
+        <div class="discountBg">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img2.png"/>   
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div  class="discount">
+                       <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                    </div>
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div>
+</code>
+
+lunboConfig_200_200 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:194,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:88px;left:10px;}.rightIconBlock {top:88px;right:10px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_200_200 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:198px;height:198px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:198px;height:198px; overflow: hidden;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:75px;height:75px;overflow:hidden; }
+    .logoBox img{position: absolute; width: 60px;height: 60px;top: 0;left: 0;}
+    .logo{position:relative;display:inline-block;width: 51px; height: 34px;color:#fff; margin-top: 5px; margin-left: 2px;overflow: hidden; }
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .logo a{font-size: 12px;}
+    .discount{ position: absolute; right: -2px; top: -12px; width: 42px; height: 35px;overflow:hidden;  }
+    .discount a{ line-height: 35px; font-size: 12px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount_bg{ width: 42px;height: 64px;}
+    .discountBg{position: absolute;top: 0;right: 0;width: 42px;height: 64px;}
+    .discountBg img{position: absolute;top: 0;right: 0;width: 42px;height: 64px;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 42px;height: 64px;}
+    .discount .dis_val{ position: relative;  }
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:198px;height:198px; margin: 0 auto; overflow: hidden;}
+    .item0_block{position:relative;margin-top:12px;width:198px;text-align:center; overflow: visible;}
+    .item0_logo{width:85px;height:85px;margin: 0 auto;}
+    .item0_logo img{width: 85px; height: 85px;}
+    .item0_info{width:181px;margin: 5px auto;}
+    .item0_price{display: inline-block; margin-top: 4px;}
+    .item0_price img{ width: 82px;height: 40px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{height:23px;width: 198px;white-space: nowrap; overflow:hidden;}
+    .title1 a{font-size:12px;color:#2c2c2c;line-height:20px;height: 20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;} 
+    .button{margin:0 auto;width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:110px;left:20px;}
+    .rightIconBlock {top:110px;right:20px;}
+</code>
+
+
+layoutConfig_120_270 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_logo2.png" class="logo_img"/>
+            <div id="logo" class="logoBg"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">       
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>                  
+                     <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    
+                        <div class="item0_info">
+                            <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            </div>
+                            <div  class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText">
+                                    <a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_120_270 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:118,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {bottom:64px;left:20px;}.rightIconBlock {bottom:64px;right:20px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_120_270 = <code>
+    .container{position:relative;width:118px;height:268px;border:1px solid #FF82EF; margin: 0 auto;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff; cursor: pointer;}
+     #adWrap{width:118px;height:598px;}
+    .logoBox{ position: relative; width:100%;height:80px; text-align: center; }
+    .logoBox .logo_img{ width: 118px; height: 60px; position: absolute; left: 0; top: 0; }
+    .logoBg{ color:#fff; padding-top: 4px; position: relative; z-index: 1;}
+    .logoBg img{width:90px;;height:40px;overflow:hidden;}
+    .discount{width:118px;height:19px;overflow:hidden;white-space:nowrap;}
+    .discount a{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;width:118px;height:19px;overflow:hidden;white-space:nowrap; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:400px; margin: 0 auto;}
+    .item0_block{position:relative;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:55px;height:55px;margin: 0 auto;}
+    .item0_logo img{width: 55px; height: 55px;}
+    .item0_info{margin: 0 auto;}
+    .item0_price{display: inline-block; }
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat;}
+    .title1{width:118px;height:36px;overflow:hidden;}
+    .title1 a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{margin:0 auto;width:90px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 10px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px center; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{ display: none; cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {bottom:64px;left:20px;}
+    .rightIconBlock {bottom:64px;right:20px;}
+</code>
+
+
+layoutConfig_120_600 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+   <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_logo2.png" class="logo_img"/>
+            <div id="logo" class="logoBg"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>    
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank" ><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>               
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                        </div>
+                        <div  class="discount">
+                                <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_120_600 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:118,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {bottom:64px;left:20px;}.rightIconBlock {bottom:64px;right:20px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_120_600 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:118px;height:598px;border:1px solid #FF82EF; margin: 0 auto;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:118px;height:598px;}
+    .logoBox{ position: relative; width:100%;height:80px; text-align: center;  }
+    .logoBox .logo_img{ width: 118px; height: 60px; position: absolute; left: 0; top: 0; }
+    .logoBg{ color:#fff; padding-top: 4px; position: relative; z-index: 1;}
+    .logoBg img{width:90px;;height:40px;overflow:hidden;}
+    .discount{ margin:  15px 0; width:118px;height:29px;overflow:hidden;}
+    .discount a{ font-size: 22px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:400px; margin: 0 auto;}
+    .item0_block{position:relative;margin-top:35px;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:100px;height:100px;margin: 0 auto;}
+    .item0_logo img{width: 100px; height: 100px;}
+    .item0_info{margin: 0 auto;}
+    .item0_price{display: inline-block; margin-top: 26px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat;}
+    .title1{ width:118px;height:66px;overflow:hidden;margin-top: 20px;}
+    .title1 a{font-size:16px;color:#2c2c2c;line-height:22px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{margin:0 auto;width:100px;}
+    .buttonText{width:100px;height:30px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:30px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 78px center; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {bottom:64px;left:20px;}
+    .rightIconBlock {bottom:64px;right:20px;}
+</code>
+
+
+layoutConfig_160_600 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_logo2.png" class="logo_img"/>
+            <div id="logo" class="logoBg"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>         
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>                      
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                        </div>
+                       <div  class="discount">
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button">
+                            <div class="buttonText">
+                                <a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_160_600 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:158,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {bottom:34px;left:30px;}.rightIconBlock {bottom:34px;right:30px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_160_600 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:158px;height:598px;border:1px solid #FF82EF; margin: 0 auto;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:158px;height:598px; overflow: hidden;}
+    .logoBox{ position: relative; width:100%;height:80px; text-align: center; }
+    .logoBox .logo_img{ width: 158px; height: 80px; position: absolute; left: 0; top: 0; }
+    .logoBg{ color:#fff; padding-top: 10px; position: relative; z-index: 1;}
+    .logoBg img{width:90px;;height:40px;overflow:hidden;}
+    .logo{width:158px;height:52px;overflow:hidden;}
+    .discount{ margin: 15px 0;width:128px;height:35px;overflow:hidden; }
+    .discount a{ font-size: 26px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;}
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:446px; margin: 0 auto; overflow: hidden; }
+    .item0_block{position:relative;margin-top:25px;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:135px;height:135px;margin: 0 auto;}
+    .item0_logo img{width: 135px; height: 135px;}
+    .item0_info{margin: 22px 15px 0;}
+    .item0_price{display: inline-block; margin-top: 26px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{width:128px;height:72px;overflow:hidden;}
+    .title1 a{font-size:18px;color:#2c2c2c;line-height:24px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{margin:0 auto;width:100px;}
+    .buttonText{width:100px;height:30px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:30px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 78px center; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {bottom:34px;left:30px;}
+    .rightIconBlock {bottom:34px;right:30px;}
+</code>
+
+
+layoutConfig_960_90 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+           <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item_panel">
+                        <div class="item0_logo"><a id="image_0_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <a id="brandLogo_0_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_info">
+                            <div class="title1"><a id="title_0_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                            <a id="discount_0_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount"  href="<%pageItem_1[i]['discount']['curl']%>"  target="_blank">
+                                <%pageItem_1[i]['discount']['value']%>
+                            </a>
+                            <div class="button"><div class="buttonText"><a id="osprice_0<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                    <div class="item_panel">
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <a id="brandLogo_1_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_info">
+                            <div class="title1"><a id="title_1_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                            <a id="discount_1_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount" href="<%pageItem_1[i]['discount']['curl']%>"  target="_blank">
+                                <%pageItem_1[i]['discount']['value']%>
+                            </a>
+                            <div class="button"><div class="buttonText"><a id="osprice_1<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div>  
+</code>
+
+lunboConfig_960_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:730,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:100px;}.rightIconBlock {top:30px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:958px;height:88px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:958px;height:88px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:90px;height:88px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 90px; height: 88px; }
+    .logo{position:relative;display:inline-block;width:90px;;height:40px; color:#fff; margin-top: 10px; margin-left: 5px;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .itemBox .discount{ float:left;width:50px;height:19px;overflow:hidden;font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:730px;height:88px; overflow: hidden; margin:0 0 0 150px;}
+    .item0_block{position:relative;overflow: visible; width: 100%; float: left; margin: 7px 0;_margin:0; background: #fff; }
+    .item0_logo{width:75px;height:75px;float: left;}
+    .item0_logo a{ width: 75px;height: 75px;overflow:hidden;}
+    .item0_logo img{width: 75px; height: 75px;}
+    .item0_info{width:155px;float: left;}
+    .item0_price{display: inline-block;float: left;width: 98px;height: 48px;margin: 12px 10px 0 10px;_display:inline;}
+    .item0_price img{width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{width:135px;height:40px;overflow: hidden; margin-top: 3px; margin-bottom: 10px; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:12px;color:#fff;line-height:20px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:14px;left:100px;}
+    .rightIconBlock {top:14px;right:22px;}
+    .item_panel{ float: left; width: 50%; }
+</code>
+
+
+layoutConfig_960_60 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>      
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item_panel">
+                        <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_info">
+                            <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank">
+                                <%pageItem_1[i]['discount']['value']%>
+                            </a>
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+
+                    <div class="item_panel">
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <a id="brandLogo_1_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_info">
+                            <div class="title1"><a id="title_1_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                            <a id="discount_1_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount"  href="<%pageItem_1[i]['discount']['curl']%>" target="_blank">
+                                <%pageItem_1[i]['discount']['value']%>
+                            </a>
+                            <div class="button"><div class="buttonText"><a id="osprice_1_<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_960_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:730,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:14px;left:100px;}.rightIconBlock {top:14px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_60 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:958px;height:58px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:958px;height:58px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:60px;height:58px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat right -26px;  */}
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 60px; height: 58px; }
+    .logo{ position:relative;display:inline-block;width:90px;;height:40px; color:#fff; margin-top: 5px; margin-left: 2px;}
+    .logo a{font-size: 12px;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .container .discount{ width: 37px; height: 19px;overflow: hidden;font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:730px;height:58px; overflow: hidden; margin:0 0 0 150px;}
+    .item0_block{position:relative;overflow: visible; width: 100%; float: left; background: #fff; }
+    .item0_logo{width:60px;height:60px;float: left;}
+    .item0_logo a{ width: 60px;height: 60px;overflow:hidden;}
+    .item0_logo img{width: 60px; height: 60px;}
+    .item0_info{width:182px;float: left; margin-top: 4px;}
+    .item0_price{width: 98px;height: 48px;float: left;margin: 5px 10px 0 0; _display:inline;}
+    .item0_price img{width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{width: 179px;height: 16px;overflow: hidden; margin-top: 3px; margin-bottom: 10px;}
+    .title1 a{font-size:12px;color:#2c2c2c;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+   .button{ float: right; width:90px;height:20px;}
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:12px;color:#fff;line-height:20px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:14px;left:100px;}
+    .rightIconBlock {top:14px;right:22px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 50%; }
+
+</code>
+
+
+layoutConfig_760_90 = <code>
+ <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+           
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div  class="discount">
+                            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img.jpg" class="dis_img"/>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                         </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_760_90 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:532,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:100px;}.rightIconBlock {top:30px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_760_90 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:758px;height:88px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:758px;height:88px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:90px;height:88px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 90px; height: 88px; }
+    .logo{position:relative;display:inline-block; color:#fff; margin-top: 10px; margin-left: 5px;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .discount{ width: 110px; height: 88px; position:relative; float: left;  }
+    .discount a{ position:relative; font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;margin-top:33px;text-indent:20px; }
+    .discount .dis_img{ position: absolute; left: 0; top: 0; width: 110px; height: 88px; }
+    .discount .dis_val{ position: relative; display: block; margin: 30px 0 0 24px; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 535px; height:88px; overflow: hidden; margin:0 0 0 155px;}
+    .item0_block{position:relative;width: 535px;overflow: hidden; float: left; background: #fff; }
+    .item0_logo{width:75px;height:75px;float: left; margin-top: 7px; }
+    .item0_logo a{ width: 75px;height: 75px;overflow:hidden;}
+    .item0_logo img{width: 75px; height: 75px;}
+    .item0_info{float: left;}
+    .item0_price{display: inline-block;float: left;margin: 20px 10px 0 10px;}
+    .mid-pic{position: relative;width:98px;height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 130px; height:40px;overflow:hidden; margin-top: 20px; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:100px;height:30px; margin: 29px 0 0 0; }
+    .buttonText{width:100px;height:30px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:30px; text-align: left; text-indent: 10px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 82px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .discount{overflow:hidden;}
+</code>
+
+
+layoutConfig_728_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            
+           <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                         <div  class="discount">
+                            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img.jpg" class="dis_img"/>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_728_90 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:520,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:100px;}.rightIconBlock {top:30px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_728_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:726px;height:88px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:726px;height:88px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:90px;height:88px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 90px; height: 88px; }
+    .logo{position:relative;display:inline-block;width:70px;;height:40px;color:#fff; margin-top: 10px;_margin-top: 6px; margin-left: 5px;overflow:hidden;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .discount{ width: 110px; height: 88px; overflow:hidden;position:relative; float: left; font-size: 20px; }
+    .discount a{ position:relative; font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;margin-top:32px;text-indent:20px;  }
+    .discount .dis_img{ position: absolute; left: 0; top: 0; width: 110px; height: 88px; }
+    .discount .dis_val{ position: relative; display: block; margin: 30px 0 0 24px; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 520px; height:88px; overflow: hidden; margin:0 0 0 145px;}
+    .item0_block{position:relative;width: 520px; overflow: hidden; float: left; background: #fff; }
+    .item0_logo{width:75px;height:75px;float: left; margin-top: 7px; }
+    .item0_logo a{ width: 75px;height: 75px;overflow:hidden;}
+    .item0_logo img{width: 75px; height: 75px;}
+    .item0_info{ float: left;}
+    .item0_price{display: inline-block;float: left;margin: 20px 5px 0 0;}
+    .mid-pic{position: relative; width:98px;height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 130px;height:40px;overflow:hidden; margin-top: 20px; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:100px;height:30px; margin: 29px 0 0 0; }
+    .buttonText{width:100px;height:30px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:12px;color:#fff;line-height:30px; text-align: left; text-indent: 15px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:14px;left:100px;}
+    .rightIconBlock {top:14px;right:22px;}
+</code>
+
+
+layoutConfig_580_90 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+           
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>         
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                    <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                         <div  class="discount">
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                          </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_580_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:390,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:29px;left:92px;}.rightIconBlock {top:29px;right:12px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_580_90 = <code>
+   a{ cursor: pointer;}
+    .container{position:relative;width:578px;height:88px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:578px;height:88px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:90px;height:88px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 90px; height: 88px; }
+    .logo{position:relative;display:inline-block;width:90px;height:40px;color:#fff; margin-top: 10px; margin-left: 5px;}
+    .logo img{width:90px;;height:40px;overflow:hidden;}
+    .discount a{ width: 100px; height: 44px; line-height: 44px; text-align: center; float: right; font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 390px; height:88px; overflow: hidden; margin:0 0 0 135px;}
+    .item0_block{position:relative;width: 390px; overflow: visible; float: left; background: #fff; }
+    .item0_logo{width:73px;height:73px;float: left; margin-top: 8px; }
+    .item0_logo a{ width: 73px;height: 73px;overflow:hidden;}
+    .item0_logo img{width: 73px; height: 73px;}
+    .item0_info{float: left;width: 200px;}
+    .item0_price{display: inline-block;float: left;width: 98px;height: 48px;_display:inline;margin: 20px 8px 0 8px; }
+    .item0_price img{width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 85px; margin-top: 15px;height: 60px;overflow: hidden; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:100px;height:30px;}
+    .buttonText{width:100px;height:30px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:30px; text-align: left; text-indent: 10px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 82px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:25px;height:25px;}
+    .leftIcon,.rightIcon{width:25px;height:25px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:14px;left:92px;}
+    .rightIconBlock {top:14px;right:22px;}
+</code>
+
+
+layoutConfig_640_60 = <code>
+   <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+      <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            
+            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logoBox" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>
+        </div> 
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div  class="discount">
+                            <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/dis_img.jpg" class="dis_img"/>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_640_60 = <code>{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:520,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:14px;left:65px;}.rightIconBlock {top:14px;right:10px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_640_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:638px;height:58px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:638px;height:58px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:60px;height:58px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 60px; height: 58px; }
+    .logo{position:relative;display:inline-block;width:60px;;height:40px;color:#fff; margin-top: 5px; margin-left: 2px;}
+    .logo a{font-size:12px;}
+    .logo img{width:60px;;height:40px;overflow:hidden;}
+    .discount{ width: 78px; height: 58px; position: relative; float: left;overflow:hidden; }
+    .discount a{ position: relative; margin-top:19px;text-indent:9px;font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discount .dis_img{ position: absolute; left: 0; top: 0; width: 78px; height: 58px; }
+    .discount .dis_val{ position: relative; display: block; margin: 20px 0 0 15px; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 470px; height:58px; overflow: hidden; margin:0 0 0 115px;}
+    .item0_block{position:relative;width: 470px;overflow: visible; float: left; background: #fff; }
+    .item0_logo{width:58px;height:58px;float: left; }
+    .item0_logo a{ width: 58px;height: 58px;overflow:hidden;}
+    .item0_logo img{width: 58px; height: 58px;}
+    .item0_info{float: left;}
+    .item0_price{display: inline-block;float: left;margin: 5px 10px 0 10px;}
+    .mid-pic{position: relative;width:98px; height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 126px;height:40px;overflow:hidden; margin-top: 10px; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:20px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:90px;height:20px; margin: 19px 0 0 0; }
+    .buttonText{width:90px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:20px; text-align: left; text-indent: 10px; background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png') no-repeat 70px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:25px;height:25px;}
+    .leftIcon,.rightIcon{width:25px;height:25px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:14px;left:100px;}
+    .rightIconBlock {top:14px;right:22px;}
+</code>
+
+
+layoutConfig_468_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            
+           <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div  class="discount">
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_468_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:320,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:16px;left:60px;}.rightIconBlock {top:16px;right:6px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_468_60 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:466px;height:58px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:466px;height:58px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:60px;height:58px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 60px; height: 58px; }
+    .logo{position:relative;display:inline-block;width:60px;height:40px;color:#fff;margin-top: 5px; _margin-top: 5px; margin-left: 2px;}
+    .logo a{font-size:12px;_font-size:12px;}
+    .logo img{width:60px;;height:40px;overflow:hidden;}
+    .discount a{ width: 72px; height: 28px; line-height: 28px; text-align: center; float: right; font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 320px; height:58px; overflow: hidden; margin:0 0 0 97px;}
+    .item0_block{position:relative;width: 320px;overflow: visible; float: left; background: #fff; }
+    .item0_logo{width:58px;height:58px;float: left; }
+    .item0_logo a{ width: 58px;height: 58px;overflow:hidden;}
+    .item0_logo img{width: 58px; height: 58px;}
+    .item0_info{float: left;width: 152px;}
+    .item0_price{display: inline-block;float: left;margin: 5px 5px 0 5px;width: 98px;height: 48px;_display:inline; }
+     .item0_price img{width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 75px; height: 35px; overflow: hidden; margin-top: 10px; }
+    .title1 a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:75px;height:20px;}
+    .buttonText{width:75px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:12px;color:#fff;line-height:20px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:25px;height:25px;}
+    .leftIcon,.rightIcon{width:25px;height:25px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:16px;left:60px;}
+    .rightIconBlock {top:16px;right:6px;}
+
+</code>
+
+
+layoutConfig_460_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            
+          <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_title_bg.png" class="logo_img"/>
+            <div id="logo" class="logo"><a id="logolink_0" href="<%pageItem_1[0].curl%>" target="_blank">唯品会<br/>Vip.com</a></div>   
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                 <div class="item0_block">
+                    <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                    <div class="item0_info">
+                        <div class="title1"><a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a></div>
+                        <div  class="discount">
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                        </div>
+                        <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_460_60 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:320,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:16px;left:60px;}.rightIconBlock {top:16px;right:6px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_460_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:458px;height:58px;border:1px solid #FF82EF;overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:458px;height:58px;}
+    .logoBox{position:absolute; left: 0; top: 0; z-index: 9; width:60px;height:58px;overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logoBox .logo_img{ position: absolute; left: 0; top: 0; width: 60px; height: 58px; }
+    .logo{position:relative;display:inline-block;width:60px;height:40px;color:#fff; margin-top: 5px; margin-left: 3px;}
+    .logo a{font-size:12px;}
+    .logo img{width:60px;;height:40px;overflow:hidden;}
+    .discount a{ width: 74px; height: 28px; line-height: 28px; text-align: center; float: right; font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #ea158b; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative; width: 320px; height:58px; overflow: hidden; margin:0 0 0 97px;}
+    .item0_block{position:relative; width: 320px;overflow: visible; float: left; background: #fff; }
+    .item0_logo{width:58px;height:58px;float: left; }
+    .item0_logo a{ width: 58px;height: 58px;overflow:hidden;}
+    .item0_logo img{width: 58px; height: 58px;}
+    .item0_info{float: left;width: 152px;}
+    .item0_price{display: inline-block;float: left;margin: 5px 5px 0 5px; }
+    .mid-pic{position: relative; width:98px;height: 48px; display: block; }
+    .arrow{background: url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph/vip_row_bg.png')}
+    .title1{ float: left; width: 75px; height: 35px; overflow: hidden; margin-top: 10px; }
+    .title1 a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: right; width:75px;height:20px;}
+    .buttonText{width:75px;height:20px;background:#EE008C;text-align:center}
+    .buttonText a{font-size:12px;color:#fff;line-height:20px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:25px;height:25px;}
+    .leftIcon,.rightIcon{width:25px;height:25px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .leftIconBlock {top:16px;left:60px;}
+    .rightIconBlock {top:16px;right:6px;}  
+</code>

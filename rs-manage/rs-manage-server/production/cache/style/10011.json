@@ -1,0 +1,26 @@
+{
+  "styleId": 10011,
+  "styleGroupId": 10000,
+  "flowType": [
+    2
+  ],
+  "layout": [
+    1,2
+  ],
+  "creativeType": [
+    0
+  ],
+  "attachType": [
+    1,4,8
+  ],
+  "size": [
+    {
+      "sizeType": 2,
+      "valueType": 2,
+      "scaleEnd": 0,
+	  "scale": 2.5
+    }
+  ],
+  "updateTime": 1491880107000,
+  "template":[10011]
+}

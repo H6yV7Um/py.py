@@ -1,0 +1,15 @@
+{
+  "templateId": 50042,
+  "size": [
+    {
+      "sizeType": 1,
+      "valueType": 2,
+      "width": 250,
+      "widthEnd": 1000,
+      "height": 80,
+      "heightEnd": 1000
+    }
+  ],
+  "isShowCloseFeedBack": false,
+  "updateTime": 1452573146000
+}

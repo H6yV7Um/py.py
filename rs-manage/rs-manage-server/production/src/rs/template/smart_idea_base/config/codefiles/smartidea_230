@@ -1,0 +1,361 @@
+# for daxila template
+
+GlobalCss = <code>
+{
+            '.container div':'{position:absolute;overflow:hidden}',
+            'a':'{text-decoration:none;font-family:微软雅黑;}',
+            '.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid #29a5df;background:#fff;}',
+            '.adItemSpace':'{width:400px;height:0px;border-top:1px dotted #dadada;position:relative;}',
+            '.adDesc':'{color:#29a5df;}',
+            '.adTitle':'{color:#29a5df;font-size:20px;line-height:20px;}',
+            '.clickButton':'{background:#29a5df;}',
+            '.buttonText':'{color:#fff}',
+            '.bd-logo':'{top:0;right:0;width:24px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src=http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png);_background:0 0;cursor:default}',
+            '.bd-logo:hover':'{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src=http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png);_background:0 0}'}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+    container:{id:'container',style:'width:118px;height:268px;position:relative',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:50px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:50px;height:33px;top:10px;left:34px;',type:'image',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:218px;background:#fff;left:0px;top:50px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:218px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'vertical'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:218px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:90px;height:90px;left:14px;top:5px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:142px;height:142px;left:-26px;top:-26px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:110px;height:115px;left:4px;top:100px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:110px;height:20px;line-height:20px;left:0px;top:0px;font-size:13px;text-align:left;font-weight:bold;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:110px;height:58px;*height:56px;line-height:14px;left:0px;top:20px;font-size:12px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:80px;left:10px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识'
+    ,isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_120_600 = <code>
+{
+    container:{id:'container',style:'width:118px;height:598px;position:relative',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:100px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+   brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:50px;height:33px;top:20px;left:32px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:97px;top:55px;left:4px;color:#ffffff;font-size:14px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:498px;background:#fff;left:0px;top:100px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:498px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'vertical'},
+    adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:498px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:110px;height:110px;left:4px;top:60px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:174px;height:174px;left:-32px;top:-32px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:118px;height:318px;left:0px;top:180px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:110px;height:25px;line-height:25px;left:4px;top:20px;font-size:13px;font-weight:bold;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:110px;height:80px;left:4px;top:50px;font-size:13px;line-height:20px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:190px;left:14px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+    container:{id:'container',style:'width:158px;height:598px;position:relative',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:158px;height:120px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+   brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:66px;height:40px;top:13px;left:41px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:116px;height:42px;top:60px;left:22px;color:#ffffff;font-size:17px;font-family:微软雅黑;text-align:center;line-height:20px;letter-spacing:1px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:158px;height:478px;background:#fff;left:0px;top:120px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:158px;height:455px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'vertical'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:158px;height:455px;background:#fff;position:relative;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:150px;height:150px;left:4px;top:55px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:238px;height:238px;left:-44px;top:-44px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:158px;height:240px;left:0px;top:220px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:138px;height:25px;font-weight:bold;line-height:30px;left:10px;top:0px;font-size:15px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:138px;height:79px;left:10px;top:30px;font-size:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:120px;height:40px;top:150px;left:19px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:18px;height:40px;line-height:40px;',type:'text',content:'更多知识'
+    ,isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_200_200 = <code>
+{
+    container:{id:'container',style:'width:198px;height:198px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:198px;height:40px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:22px;width:33px;top:9px;*top:9px;left:5px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:20px;width:143px;top:8px;left:47px;color:#ffffff;font-size:13px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:198px;height:158px;background:#fff;left:0px;top:40px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:198px;height:158px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:198px;height:158px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:85px;height:102px;left:5px;top:30px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:135px;height:135px;left:-25px;top:-25px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:100px;height:120px;left:95px;top:25px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:100px;height:20px;line-height:20px;left:0px;top:0px;font-size:12px;font-weight:bold;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:100px;height:66px;*height:66px;left:0px;top:20px;font-size:12px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:66px;height:22px;top:87px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;line-height:22px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_250_200 = <code>
+{
+    container:{id:'container',style:'width:248px;height:198px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:40px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:27px;width:40px;top:6px;left:12px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:20px;width:160px;top:10px;left:69px;color:#ffffff;font-size:14px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:248px;height:158px;background:#fff;left:0px;top:40px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:248px;height:158px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:248px;height:158px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:115px;height:115px;left:5px;top:22px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:182px;height:182px;left:-33px;top:-33px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:115px;height:115px;left:126px;top:22px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'font-weight:bold;width:115px;height:20px;line-height:20px;left:0px;top:0px;font-size:13px;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:115px;line-height:16px;height:66px;*height:66px;left:0px;top:20px;font-size:12px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:66px;height:22px;top:93px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:25px;line-height:22px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_250_250 = <code>
+{
+    container:{id:'container',style:'width:248px;height:248px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:48px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:33px;width:50px;top:7px;left:10px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:16px;width:177px;top:16px;left:65px;color:#ffffff;font-size:15px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:248px;height:200px;background:#fff;left:0px;top:48px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:248px;height:200px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:248px;height:200px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:115px;height:115px;left:7px;top:40px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:182px;height:182px;left:-33px;top:-33px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:115px;height:115px;left:130px;top:40px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:115px;height:18px;line-height:18px;left:0px;top:0px;font-size:13px;font-weight:bold;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:115px;height:66px;left:0px;top:20px;font-size:12px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:90px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:25px;line-height:25px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_300_250 = <code>
+{
+    container:{id:'container',style:'width:298px;height:248px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:298px;height:60px;background:#29a5df;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:33px;width:50px;top:15px;left:9px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:20px;width:220px;top:20px;left:60px;padding-left:4px;word-break:break-all;word-wrap:break-word ;color:#ffffff;font-size:19px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:298px;height:188px;background:#fff;left:0px;top:60px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:298px;height:188px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:298px;height:188px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:130px;height:130px;left:9px;top:30px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:206px;height:206px;left:-38px;top:-38px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:150px;height:130px;left:148px;top:30px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:150px;height:20px;letter-spacing:1px;line-height:20px;left:0px;top:0px;font-size:17px;font-weight:bold',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:153px;height:65px;*height:67px;line-height:16px;left:0px;top:25px;font-size:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:100px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_336_280 = <code>
+{
+    container:{id:'container',style:'width:358px;height:298px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:358px;height:70px;background:#29a5df;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:44px;width:66px;top:12px;left:20px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:20px;width:220px;top:24px;left:110px;;color:#ffffff;font-size:20px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:350px;height:228px;background:#fff;left:0px;top:70px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:350px;height:228px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:358px;height:228px;background:#fff;position:relative;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:180px;height:180px;left:9px;top:24px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:300px;height:300px;left:-55px;top:-55px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:153px;height:190px;left:198px;top:20px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:160px;height:30px;font-weight:bold;letter-spacing:1px;line-height:30px;left:0px;top:0px;font-size:17px;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:158px;height:108px;line-height:21px;left:0px;top:33px;font-size:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:120px;height:40px;top:143px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:18px;height:40px;line-height:40px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_360_300 = <code>
+{
+    container:{id:'container',style:'width:358px;height:298px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:358px;height:70px;background:#29a5df;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:44px;width:66px;top:12px;left:20px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:20px;width:220px;top:23px;left:108px;color:#ffffff;font-size:20px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:350px;height:228px;background:#fff;left:0px;top:70px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:350px;height:228px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:358px;height:228px;background:#fff;position:relative;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:180px;height:180px;left:10px;top:24px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:300px;height:300px;left:-55px;top:-55px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:150px;height:190px;left:200px;top:20px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:153px;height:30px;line-height:30px;left:0px;top:0px;font-size:17px;font-weight:bold;letter-spacing:1px;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:150px;height:109px;left:0px;top:33px;font-size:16px;line-height:21px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:120px;height:40px;top:143px;left:0px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:18px;height:40px;line-height:40px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_400_300 = <code>
+{
+    container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:398px;height:70px;background:#29a5df;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:48px;width:73px;top:12px;left:20px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'height:22px;width:243px;top:24px;left:106px;color:#ffffff;font-size:21px;font-family:微软雅黑;text-align:center;line-height:22px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:398px;height:228px;background:#fff;left:0px;top:70px;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:390px;height:228px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:390px;height:228px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:180px;height:180px;left:17px;top:24px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:285px;height:285px;left:-52px;top:-52px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:170px;height:190px;left:215px;top:20px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:168px;line-height:30px;height:30px;letter-spacing:2px;font-weight:bold;left:0px;top:0px;font-size:17px;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:170px;height:100px;*height:97px;line-height:23px;left:0px;top:33px;font-size:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adItem',style:'width:120px;height:40px;top:163px;left:215px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:18px;height:40px;line-height:40px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_460_60 = <code>
+{
+    container:{id:'container',style:'width:458px;height:58px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:140px;height:58px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:26px;width:40px;top:5px;left:44px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:134px;height:20px;top:30px;left:0px;color:#ffffff;font-size:12px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:316px;height:58px;background:#fff;left:140px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:316px;height:58px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:316px;height:58px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:56px;height:56px;left:25px;top:1px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:88px;height:88px;left:-16px;top:-16px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:226px;height:50px;left:90px;top:3px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'font-weight:bold;width:130px;height:20px;line-height:20px;left:0px;top:0px;font-size:13px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:122px;height:30px;*height:29px;left:0px;top:20px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:66px;height:22px;top:25px;left:140px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;line-height:22px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_468_60 = <code>
+{
+    container:{id:'container',style:'width:466px;height:58px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:140px;height:58px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:26px;width:40px;top:5px;left:45px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:134px;height:20px;top:30px;left:0;color:#ffffff;font-size:12px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:326px;height:58px;background:#fff;left:140px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:326px;height:58px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:326px;height:58px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:56px;height:56px;left:25px;top:1px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:88px;height:88px;left:-16px;top:-16px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:236px;height:50px;left:90px;top:3px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:114px;height:20px;font-weight:bold;line-height:20px;left:0px;top:0px;font-size:13px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:114px;height:29px;left:0px;top:20px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:66px;height:22px;top:25px;left:140px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;line-height:22px;',type:'text',content:'更多详情',isShow:true,className:'buttonText',k:'learnMore'}
+};
+</code>
+
+layoutConfig_580_90 = <code>
+{
+    container:{id:'container',style:'width:578px;height:88px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:170px;height:88px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:50px;height:33px;top:14px;left:50px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:168px;height:30px;top:50px;left:0;color:#ffffff;font-size:15px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:408px;height:88px;background:#fff;left:170px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:408px;height:88px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:408px;height:88px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:80px;height:80px;left:30px;top:4px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:126px;height:126px;left:-23px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:280px;height:68px;left:120px;top:10px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:162px;height:25px;font-weight:bold;letter-spacing:1px;line-height:25px;left:5px;top:0px;font-size:15px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:150px;height:50px;left:5px;top:25px;font-size:14px;line-height:20px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:40px;left:165px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_640_60 = <code>
+{
+    container:{id:'container',style:'width:638px;height:58px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:200px;height:58px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:26px;width:40px;top:5px;left:69px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:200px;height:20px;top:31px;left:0;color:#ffffff;font-size:16px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:438px;height:58px;background:#fff;left:200px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:438px;height:58px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:438px;height:58px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:56px;height:56px;left:50px;top:1px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:88px;height:88px;left:-16px;top:-16px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:310px;height:50px;left:120px;top:3px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:150px;height:20px;font-weight:bold;line-height:20px;left:5px;top:0px;font-size:13px;letter-spacing:2px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:150px;height:45px;left:5px;top:20px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:75px;height:25px;top:25px;left:165px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:25px;line-height:25px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_728_90 = <code>
+{
+    container:{id:'container',style:'width:726px;height:88px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:200px;height:88px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+     brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:37px;width:56px;top:14px;left:64px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:196px;height:30px;top:50px;left:0;color:#ffffff;font-size:17px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:400px;height:88px;background:#fff;left:260px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:400px;height:88px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:400px;height:88px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:80px;height:80px;left:5px;top:4px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:126px;height:126px;left:-23px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:300px;height:68px;left:100px;top:10px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:162px;height:25px;line-height:25px;letter-spacing:2px;font-weight:bold;left:5px;top:0px;font-size:15px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:180px;height:40px;left:5px;top:25px;font-size:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:40px;left:195px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+    container:{id:'container',style:'width:758px;height:88px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:200px;height:88px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:37px;width:56px;top:10px;left:66px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:198px;height:20px;top:50px;left:0;color:#ffffff;font-size:17px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:430px;height:88px;background:#fff;left:260px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:430px;height:88px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:430px;height:88px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:80px;height:80px;left:5px;top:4px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:126px;height:126px;left:-23px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:330px;height:76px;left:100px;top:5px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:165px;height:25px;line-height:25px;left:5px;top:0px;font-size:15px;text-align:left;letter-spacing:2px;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:190px;height:58px;padding-top:2px;left:5px;top:25px;font-size:14px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:40px;left:210px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_960_60 = <code>
+{
+    container:{id:'container',style:'width:958px;height:58px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:58px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:26px;width:40px;top:6px;left:58px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:160px;height:25px;line-height:25px;top:30px;left:0;color:#ffffff;font-size:14px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:720px;height:58px;background:#fff;left:205px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:720px;height:58px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:360px;height:58px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:56px;height:56px;left:10px;top:1px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:88px;height:88px;left:-16px;top:-16px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:280px;height:78px;left:80px;top:5px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:140px;height:20px;font-weight:bold;letter-spacing:1px;line-height:20px;left:0px;top:0px;font-size:13px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:140px;height:32px;*height:32px;left:0px;top:20px;font-size:12px;line-height:15px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:66px;height:22px;top:28px;left:160px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;line-height:22px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+    container:{id:'container',style:'width:958px;height:88px;',type:'layout'},
+    brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:88px;background:#29a5df;text-align:left;',type:'layout',isShow:true},
+    brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:37px;width:56px;top:10px;left:54px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg'},
+    brandSlogan:{id:'brandSlogan',parent:'brandBlock',style:'width:176px;height:25px;top:50px;left:0;color:#ffffff;font-size:16px;font-family:微软雅黑;text-align:center;line-height:20px;',type:'text',isShow:true,linkDisplay:"inline",enableClick:false,k:'brandTitle',content:'让数据洞察助力企业转型'},
+    adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:730px;height:88px;background:#fff;left:205px;top:0;',isShow:true,type:"layout"},
+    adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:730px;height:88px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+    adItem:{id:'adItem',parent:'adBlock',style:'width:400px;height:88px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:80px;height:80px;left:5px;top:4px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:126px;height:126px;left:-23px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+    adInfoBlock:{id:'adInfoBlock',parent:'adItem',style:'width:280px;height:68px;left:95px;top:10px;',isShow:true,type:"layout",linkDisplay:"inline"},
+    adTitle:{id:'adTitle',parent:'adInfoBlock',style:'width:160px;height:25px;line-height:25px;letter-spacing:1px;font-weight:bold;left:5px;top:0px;font-size:15px;text-align:left;',className:'adTitle',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+    adDesc:{id:'adDesc',parent:'adInfoBlock',style:'width:160px;height:40px;*height:40px;line-height:19px;left:5px;top:25px;font-size:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'desc'},
+    clickButton:{id:'clickButton',parent:'adInfoBlock',style:'width:90px;height:30px;top:35px;left:188px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+    buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:30px;line-height:30px;',type:'text',content:'更多知识',isShow:true,className:'buttonText',k:'learnMore'}
+}
+</code>
+

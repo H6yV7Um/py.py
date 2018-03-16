@@ -1,0 +1,206 @@
+{ 
+	"tplid": 50002, 
+	"name": "mobTextWithIconTemplate",
+	"displayName": "图文创意",
+	"deviceType": 2,	// 设备类型：1-PC、2-移动、3-整合营销
+	"creativeType": 4,	// 创意类型：0-文本，1-图片，2-Flash，4-图文，7-视频
+    "sdl": { 
+		"elements": [],
+		"blocks": [
+			{
+                "blockNo": 1,
+                "blockType": 0,
+				"name": "material", 	// elements下的属性均为物料的基本元素数据
+				"displayName": "物料",
+				"elements": [
+					{ 
+						"elementIndex": 0, 
+						"required": true, 
+						"name": "creativeName", 
+						"displayName": "创意名称", 
+						"dataType": 1,	// 数据类型：1-文本框，2-多选文本框（概念标签），3-多选文本框（展现监测链接），4-图标，
+										// 5-本地上传，6-包含霓裳控件的上传，7-支持尺寸显示，8-已选择文件控制面板
+						"isArray": false,
+						"supportSizes":[],
+						"defaultValue": "", 
+						"tip": "", 
+						"rule": { 
+							"minByteLength": -1, 
+							"maxByteLength": -1, 
+							"minTextByteLength": 4, 
+							"maxTextByteLength": 40, 
+							"minItemNumber": -1, 
+							"maxItemNumber": -1, 
+							"width": -1, 
+							"height": -1
+						}
+					},
+					{ 
+						"elementIndex": 1, 
+						"required": true, 
+						"name": "creativeExternalTags", 
+						"displayName": "概念标签", 
+						"dataType": 2, 
+						"isArray": true,
+						"supportSizes":[],
+						"defaultValue": "", 
+						"tip": "标签不超过10个汉字，至少一个，最多10个标签，标签以回车分隔",
+						"rule": { 
+							"minByteLength": -1, 
+							"maxByteLength": -1, 
+							"minTextByteLength": 2, 
+							"maxTextByteLength": 20, 
+							"minItemNumber": 1, 
+							"maxItemNumber": 10, 
+							"width": -1, 
+							"height": -1
+						}
+					},
+					{ 
+						"elementIndex": 2, 
+						"required": true, 
+						"name": "creativeTitle", 
+						"displayName": "推广标题", 
+						"dataType": 1, 
+						"isArray": false,
+						"supportSizes":[],
+						"defaultValue": "", 
+						"tip": "", 
+						"rule": { 
+							"minByteLength": -1, 
+							"maxByteLength": -1, 
+							"minTextByteLength": 1, 
+							"maxTextByteLength": 28,
+							"minItemNumber": -1, 
+							"maxItemNumber": -1,					
+							"width": -1, 
+							"height": -1
+						}
+					},
+					{
+						"elementIndex": 3, 
+						"required": true, 
+						"name": "creativeDesc1", 
+						"displayName": "推广描述", 
+						"dataType": 1, 
+						"isArray": false,
+						"supportSizes":[],
+						"defaultValue": "", 
+						"tip": "", 
+						"rule": { 
+							"minByteLength": -1, 
+							"maxByteLength": -1, 
+							"minTextByteLength": 8, 
+							"maxTextByteLength": 40, 
+							"minItemNumber": -1, 
+							"maxItemNumber": -1,
+							"width": -1, 
+							"height": -1
+						}
+					},
+					{
+						"elementIndex": 4, 
+						"required": true, 
+						"name": "iconInfo", 
+						"displayName": "创意图标", 
+						"dataType": 4, 
+						"isArray": false,
+						"supportSizes":[],
+						"defaultValue": "", 
+						"tip": "60*60，小于54kb", 
+						"rule": { 
+							"minByteLength": -1, 
+							"maxByteLength": 55296, 
+							"minTextByteLength": -1, 
+							"maxTextByteLength": -1,
+							"minItemNumber": -1, 
+							"maxItemNumber": -1,					
+							"width": 60, 
+							"height": 60
+						}
+					}
+				],
+				
+				"action": {
+					"name": "action", 
+					"displayName": "推广方式",
+					"isSingleChoice": true,
+					"elements": [ 
+						{ 
+							"elementIndex": 0, 
+							"required": true, 
+							"name": "forward", 
+							"displayName": "跳转", 
+							"actionType": 4,	// 交互动作类型：0-无交互动作，1-短信，4-跳转，6-电话
+							"elements": [ 
+								{ 
+									"elementIndex": 0, 
+									"required": true, 
+									"name": "mobileClickLink", 
+									"displayName": "移动点击链接", 
+									"dataType": 1,
+									"isArray": false, 
+									"supportSizes":[],
+									"defaultValue": "", 
+									"tip": "", 
+									"rule": { 
+										"minByteLength": -1, 
+										"maxByteLength": -1, 
+										"minTextByteLength": 10, 
+										"maxTextByteLength": 1024, 
+										"minItemNumber": -1, 
+										"maxItemNumber": -1, 
+										"width": -1, 
+										"height": -1
+									}
+								},
+								{ 
+									"elementIndex": 1, 
+									"required": true, 
+									"name": "targetPage", 
+									"displayName": "目标页地址", 
+									"dataType": 1, 
+									"isArray": false, 
+									"supportSizes":[],
+									"defaultValue": "", 
+									"tip": "", 
+									"rule": { 
+										"minByteLength": -1, 
+										"maxByteLength": -1, 
+										"minTextByteLength": 10, 
+										"maxTextByteLength": 1024, 
+										"minItemNumber": -1, 
+										"maxItemNumber": -1, 
+										"width": -1, 
+										"height": -1
+									}
+								},
+								{ 
+									"elementIndex": 2, 
+									"required": false, 
+									"name": "monitorLinks", 
+									"displayName": "展现监测链接", 
+									"dataType": 3, 
+									"isArray": true, 
+									"supportSizes":[],
+									"defaultValue": "", 
+									"tip": "请填写展现监测链接，最多可设置3个", 
+									"rule": { 
+										"minByteLength": -1, 
+										"maxByteLength": -1, 
+										"minTextByteLength": 10, 
+										"maxTextByteLength": 1024, 
+										"minItemNumber": 0, 
+										"maxItemNumber": 3, 
+										"width": -1, 
+										"height": -1
+									}
+								} 
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+}

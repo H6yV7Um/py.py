@@ -1,0 +1,33 @@
+{
+"status": 200,
+"data": [
+{
+"id": 10012,
+"templateId": 10012,
+"name": "线索通banner模板",
+"styleId": 50001,
+"sizeType": 1,
+"valueType": 2,
+"width": 100,
+"widthEnd": 1000,
+"height": 60,
+"heightEnd": 1000,
+"scale": 2,
+"scaleEnd": 6
+},
+{
+"id": 10017,
+"templateId": 10017,
+"name": "线索通悬浮窗模板",
+"styleId": 50001,
+"sizeType": 1,
+"valueType": 2,
+"width": 100,
+"widthEnd": 1000,
+"height": 60,
+"heightEnd": 1000,
+"scale": 1,
+"scaleEnd": 2
+}
+]
+}

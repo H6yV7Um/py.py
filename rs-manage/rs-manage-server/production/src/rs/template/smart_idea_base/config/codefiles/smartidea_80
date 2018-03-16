@@ -1,0 +1,281 @@
+# vip gezi templete
+
+GlobalCss = <code>
+{
+			'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:2px solid #EA007F;}',
+			'.container div':'{position:absolute;overflow:hidden}',
+			'.container a':'{text-decoration:none;font-family:Î¢ÈíÑÅºÚ;}',
+			'.brandLine':'{display:inline;overflow:hidden;background:rgba(115,86,73,0.5)}',
+			'.adItem':'{position:relative;float:left}',
+			'.adLine':'{height:2px;background:#503529}',
+			'.discount':'{text_decoration:none;background:#745848;font-size:14px;text-align:center}'
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+	container:{id:'container',style:'width:116px;height:266px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:60px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;top:5px;left:20px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:116px;height:1px;top:60px;left:0;)',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:116px;height:206px;left:0;top:61px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:116px;height:103px;position:relative;float:left;',mouseover:1,mouseout:1,isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:100px;height:100px;left:8px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:116px;height:2px;left:0;top:74px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:116px;height:27px;background:rgba(116,88,72,0.7);top:76px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_120_600 = <code>
+{
+	container:{id:'container',style:'width:116px;height:596px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:80px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:90px;height:60px;top:10px;left:13px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:116px;height:1px;top:80px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:116px;height:518px;left:0;top:81px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:116px;height:129px;position:relative;float:left',className:'adItem',mouseover:1,mouseout:1,isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:100px;height:102px;left:8px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:116px;height:2px;left:0;top:102px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:116px;height:25px;top:104px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+	container:{id:'container',style:'width:156px;height:596px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:156px;height:80px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:105px;height:70px;top:5px;left:25px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:156px;height:1px;top:80px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:156px;height:518px;left:0;top:81px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:156px;height:129px;position:relative;float:left',className:'adItem',mouseover:1,mouseout:1,isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:100px;height:102px;left:28px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:156px;height:2px;left:0;top:102px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:156px;height:25px;top:104px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_200_200 = <code>
+{
+	container:{id:'container',style:'width:196px;height:196px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:196px;height:45px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:60px;height:40px;top:2px;left:68px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:196px;height:1px;top:45px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:196px;height:150px;left:0;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:98px;height:75px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:12px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:98px;height:2px;left:0;top:50px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:98px;height:23px;top:52px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_250_200 = <code>
+{
+	container:{id:'container',style:'width:246px;height:196px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:45px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:60px;height:40px;top:2px;left:93px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:246px;height:1px;top:45px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:246px;height:150px;left:0;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:123px;height:75px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:24px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:123px;height:2px;left:0;top:50px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:123px;height:23px;top:52px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_250_250 = <code>
+{
+	container:{id:'container',style:'width:246px;height:246px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:45px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:60px;height:40px;left:93px;top:2px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:246px;height:1px;top:45px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:246px;height:200px;left:0;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:123px;height:100px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:65px;height:65px;left:29px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:123px;height:2px;left:0;top:71px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:123px;height:27px;top:73px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_300_250 = <code>
+{
+	container:{id:'container',style:'width:296px;height:246px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:296px;height:45px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:60px;height:40px;top:2px;left:118px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:296px;height:1px;top:45px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:297px;height:200px;left:0;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:6}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:99px;height:100px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:65px;height:65px;left:17px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:99px;height:2px;left:0;top:71px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:99px;height:27px;top:73px;left:0;)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_336_280 = <code>
+{
+	container:{id:'container',style:'width:332px;height:276px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:332px;height:55px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;top:2px;left:128px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:332px;height:1px;top:55px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:333px;height:220px;left:0;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:6}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:111px;height:110px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:80px;height:80px;left:15px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:111px;height:2px;left:0;top:81px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:111px;height:27px;top:83px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_360_300 = <code>
+{
+	container:{id:'container',style:'width:356px;height:296px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:356px;height:55px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;top:2px;left:140px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:356px;height:1px;top:55px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:356px;height:240px;left:0;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:8}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:89px;height:120px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:80px;height:80px;left:4px;top:4px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:89px;height:2px;left:0;top:91px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:89px;height:27px;top:93px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_400_300 = <code>
+{
+	container:{id:'container',style:'width:396px;height:296px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:396px;height:55px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;top:2px;left:160px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:396px;height:1px;top:55px;left:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:396px;height:240px;left:0;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:8}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:99px;height:120px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:90px;height:90px;left:4px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:99px;height:2px;left:0;top:91px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:99px;height:27px;top:93px;left:0;',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_460_60 = <code>
+{
+	container:{id:'container',style:'width:456px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:100px;height:56px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:69px;height:46px;top:5px;left:15px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:56px;left:100px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:356px;height:56px;left:101px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:89px;height:56px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:55px;height:55px;left:17px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:89px;height:2px;left:0;top:34px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:89px;height:20px;top:36px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_468_60 = <code>
+{
+	container:{id:'container',style:'width:464px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:100px;height:56px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:69px;height:46px;top:5px;left:15px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:56px;left:100px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:364px;height:56px;left:101px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:91px;height:56px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:55px;height:55px;left:18px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:91px;height:2px;left:0;top:34px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:91px;height:20px;top:36px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_580_90 = <code>
+{
+	container:{id:'container',style:'width:576px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:86px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:105px;height:70px;top:8px;left:22px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:86px;left:150px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:428px;height:86px;left:151px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:4}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:107px;height:86px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:15px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:107px;height:2px;left:0;top:57px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:107px;height:27px;top:59px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_640_60 = <code>
+{
+	container:{id:'container',style:'width:636px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:56px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;top:3px;left:37px',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:56px;left:150px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:485px;height:56px;left:151px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:5}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:97px;height:56px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:55px;height:55px;left:21px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:97px;height:2px;left:0;top:34px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:97px;height:20px;top:36px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_728_90 = <code>
+{
+	container:{id:'container',style:'width:724px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:105px;height:70px;top:8px;left:37px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:86px;left:180px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:545px;height:86px;left:181px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:5}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:109px;height:86px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:17px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:109px;height:2px;left:0;top:57px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:109px;height:27px;top:59px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_760_90 = <code>
+{
+	container:{id:'container',style:'width:756px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:105px;height:70px;top:8px;left:37px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:86px;left:180px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:575px;height:86px;left:181px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:5}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:115px;height:86px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:20px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:115px;height:2px;left:0;top:57px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:115px;height:27px;top:59px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_960_60 = <code>
+{
+	container:{id:'container',style:'width:956px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:56px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:75px;height:50px;left:37px;top:3px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:56px;left:150px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:808px;height:56px;left:151px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:8}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:101px;height:56px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:55px;height:55px;left:23px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:101px;height:2px;left:0;top:34px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:101px;height:20px;top:36px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>
+
+
+layoutConfig_960_90 = <code>
+{
+	container:{id:'container',style:'width:956px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#EA007F;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:105px;height:70px;top:8px;left:37px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000rj_cmAdeHrFQ9tTe0.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	brandLine:{id:'brandLine',parent:'container',style:'width:1px;height:86px;left:180px;top:0;',className:'brandLine',type:'layout',isShow:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:780px;height:86px;left:181px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:6}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:130px;height:86px;position:relative;float:left',className:'adItem',mouseover:'1',mouseout:'1',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:74px;height:74px;left:28px;top:0;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adLine:{id:'adLine',parent:'adItem',style:'width:130px;height:2px;left:0;top:57px;',className:'adLine',isShow:true,type:"text",linkDisplay:"inline" },
+	discount:{id:'discount',parent:'adItem',style:'width:130px;height:27px;top:59px;left:0;background:rgba(116,88,72,0.7)',type:'text',content:'',isShow:true, className:'discount',k:'discount'}
+}
+</code>

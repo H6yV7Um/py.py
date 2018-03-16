@@ -1,0 +1,1586 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+
+
+layoutConfig_400_300 = <code>
+    <%{    data=dataArray[0],
+        pageItemCollection=data.pageBlocks,
+        pageItem_1=pageItemCollection["normalBlock"];
+    }%>
+        <div id="adWrap">
+            <div id="itemBox" class="itemBox">
+                <div id="item0" class="item0">
+                    <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                var title = pageItem_1[i].title.value || '';
+                var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                var type = pageItem_1[i].type.value || 1;
+            %>
+                    <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                        <div class="item0_block" style="background-color: <%bgColor%>">
+                            <div class="logoBox"></div>
+                            <div class="titleBox">
+                                <div class="title">
+                                    <%title%>
+                                </div>
+                                <div class="border"></div>
+                                <div class="subTitleBox">
+                                    <div class="subTitle1">
+                                        <%subTitle1%>
+                                    </div>
+                                    <div class="subTitle2">
+                                        <%subTitle2%>
+                                    </div>
+                                </div>
+                                <div class="border2"></div>
+                            </div>
+                            <div class="knowMore"></div>
+                            <div class="people">
+                                <%if(type == 1){%>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_big_1.png" class="people_img" />
+                                <%}else if(type == 2){%>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_big_2.png" class="people_img" />
+                                <%}else{%>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_big_3.png" class="people_img" />
+                                <%}%>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+</code>
+
+lunboConfig_400_300 = <code>
+{
+        isLunbo: true,
+        isAnimation: true,
+        lunboTimeArray: [50000, 30000, 20000],
+        lunboStep: 400,
+        lunboBlock: "item0",
+        showPageNumBlock: false,
+        lunboType: 2
+}
+</code>
+
+cssConfig_400_300 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:400px; height:300px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:400px;height:300px;overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:300px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:400px;height:300px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:63px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;top:0;right:-7px;width:190px;}
+    .people img{width:100%;}
+    .titleBox{position:absolute; top:85px; left:22px;}
+    .title{font-size:22px; line-height:32px;}
+    .border{width:165px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:14px; margin-bottom:10px; border-top: none;}
+    .border2{width:165px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:20px; border-top: none;}
+    .subTitleBox{font-size:13px; line-height:17px;text-align: center;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px; top:234px; left:46px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock,.rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px!important;height:40px!important;}
+    .leftIcon,.rightIcon{width:20px!important;height:40px!important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png')!important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png')!important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:130px;left:0;}
+    .rightIconBlock{top:130px;right:0;}
+</code>
+
+
+layoutConfig_360_300 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_360_300 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:360,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_360_300 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:360px; height:300px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:360px; height:300px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:360px; height:300px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:360px; height:300px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:50px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:85px; left:14px;text-align: center;}
+    .title{font-size:21px; line-height:26px;}
+    .border{width:165px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:14px; margin-bottom:10px; border-top: none;}
+    .border2{width:165px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:20px; border-top: none;}
+    .subTitleBox{font-size:13px; line-height:17px;text-align: center;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px; top:230px; left:30px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:166px; height:300px; top:0; right:0;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:26px !important;height:56px !important;}
+    .leftIcon,.rightIcon{width:26px !important;height:56px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:120px; left:0;}
+    .rightIconBlock {top:120px; right:0;}
+</code>
+
+
+layoutConfig_336_280 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_336_280 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:336,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_336_280 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:336px; height:280px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:336px; height:280px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:336px; height:280px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:336px; height:280px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:52px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:80px; left:12px; width:180px;}
+    .title{font-size:20px; line-height:25px; text-align:center;}
+    .border{width:162; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:14px; margin-bottom:10px; border-top: none;}
+    .border2{width:162; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:20px; border-top: none;}
+    .subTitleBox{font-size:13px; line-height:17px;text-align:center;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px; top:233px; left:28px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:155px; height:280px; top:0; right:0;}
+    .people img {height: 280px; position:relative; top:0; right:-16px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:26px !important;height:56px !important;}
+    .leftIcon,.rightIcon{width:26px !important;height:56px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:116px; left:0;}
+    .rightIconBlock {top:116px; right:0;}
+</code>
+
+
+layoutConfig_300_250 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_360_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_300_250 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:300,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_300_250 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:300px; height:250px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:300px; height:250px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:300px; height:250px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:300px; height:250px;}
+    .logoBox{position:absolute; width:78px; height:46px; background-size: 78px 46px; text-align:center; top:0; left:45px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:72px; left:10px;text-align: center;}
+    .title{font-size:18px; line-height:25px;}
+    .border{width:145px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:12px; margin-bottom:10px; border-top: none;}
+    .border2{width:145px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:18px; border-top: none;}
+    .subTitleBox{font-size:12px; line-height:16px;text-align: center;}
+    .knowMore{position:absolute; width:115px; height:29px; background-size: 115px 29px; top:184px; left:25px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:135px; height:250px; top:0; right:0;}
+    .people img {height: 250px}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:26px !important;height:56px !important;}
+    .leftIcon,.rightIcon{width:26px !important;height:56px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_360_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_360_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_360_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:100px; left:0;}
+    .rightIconBlock {top:100px; right:0;}
+</code>
+
+
+layoutConfig_250_250 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_250 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:250,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_250 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:250px; height:250px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:250px; height:250px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:250px; height:250px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:250px; height:250px;}
+    .logoBox{position:absolute; width:75px; height:42px; background-size: 75px 42px; text-align:center; top:0; left:87px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:72px; left:53px; text-align: center;}
+    .title{font-size:18px; line-height:24px;}
+    .border{width:138px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:12px; margin-bottom:10px; border-top: none;}
+    .border2{width:138px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:18px; border-top: none;}
+    .subTitleBox{font-size:12px; line-height:16px;text-align: center;}
+    .knowMore{position:absolute; width:105px; height:26px; background-size: 105px 26px; top:184px; left:73px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:100px; height:250px; top:0; right:0;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:105px; left:0;}
+    .rightIconBlock {top:105px; right:0;}
+</code>
+
+
+layoutConfig_250_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_200 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:250,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_200 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:250px; height:200px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:250px; height:200px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:250px; height:200px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:250px; height:200px;}
+    .logoBox{position:absolute; width:75px; height:42px; background-size: 75px 42px; text-align:center; top:0; left:87px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:48px; left:53px; text-align: center;}
+    .title{font-size:18px; line-height:23px;}
+    .border{width:138px; font: 0px Arial; line-height:0; height:0;border:1px solid #fff; margin-top:12px; margin-bottom:10px; border-top: none;}
+    .border2{width:138px; font: 0px Arial; line-height:0; height:0; border:1px solid #fff; margin-top:10px; margin-bottom:18px; border-top: none;}
+    .subTitleBox{font-size:12px; line-height:16px;text-align: center;}
+    .knowMore{position:absolute; width:105px; height:26px; background-size: 105px 26px; top:160px; left:73px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:100px; height:200px; top:0; right:0;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:85px; left:0;}
+    .rightIconBlock {top:85px; right:0;}
+</code>
+
+
+layoutConfig_200_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                            <div class="border2"></div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_200_200 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:200,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_200_200 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:200px; height:200px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:200px; height:200px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:200px; height:200px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:200px; height:200px;}
+    .logoBox{position:absolute; width:75px; height:42px; background-size: 75px 42px; text-align:center; top:0; left:63px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:50px; left:28px; text-align: center;}
+    .title{font-size:18px; line-height:22px;}
+    .border{width:138px; font: 0px Arial; line-height:0; height:0; border-bottom:1px solid #fff; margin-top:10px; margin-bottom:10px;}
+    .border2{width:138px; height:0; border-top:1px solid #fff; margin-top:10px; margin-bottom:18px;}
+    .subTitleBox{font-size:12px; line-height:16px;text-align: center;}
+    .knowMore{position:absolute; width:105px; height:26px; background-size: 105px 26px; top:158px; left:48px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:80px; height:250px; top:0; right:0;}
+    .people img{height:200px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:75px; left:0;}
+    .rightIconBlock {top:75px; right:0;}
+</code>
+
+
+layoutConfig_120_270 = <code>
+    <%{
+        data=dataArray[0],
+        pageItemCollection = data.pageBlocks,
+        pageItem_1 = pageItemCollection["normalBlock"];
+    }%>
+    <div id="adWrap">
+        <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <% for(var i = 0, l = pageItem_1.length; i < l; i++) {
+                        var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                        var title = pageItem_1[i].title.value || '';
+                        var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                        var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                        var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                        var type = pageItem_1[i].type.value || 1;
+                %>
+                    <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                        <div class="item0_block" style="background-color: <%bgColor%>">
+                            <div class="logoBox"></div>
+                            <div class="title vertical-text"><%title%></div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1 vertical-text"><%subTitle1%></div>
+                                <div class="subTitle2 vertical-text"><%subTitle2%></div>
+                            </div>
+                            <div class="knowMore"></div>
+                            <div class="people">
+                            </div>
+                        </div>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_120_270 = <code>
+{
+            isLunbo: true,
+            isAnimation: true,
+            lunboTimeArray: [5000, 3000, 2000],
+            lunboStep: 120,
+            lunboBlock: "item0",
+            showPageNumBlock: false,
+            lunboType: 2
+}
+</code>
+
+cssConfig_120_270 = <code>
+    a{cursor:pointer;}
+    .container{position:relative;width:120px;height:270px;border:0;margin:0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow:hidden;}
+    #adWrap{width:120px;height:270px;overflow:hidden;}
+    .block-wrapper{width:120px;height:270px;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:270px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:120px;height:270px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:80px; height:50px; background-size: 80px 50px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;bottom:-5px;left:-38px;width:170px;height:238px;}
+    .people img{width:170px;height:238px;}
+    .title{color:#fff;position:absolute;top:57px;width:40px;right:13px;font-size:18px;}
+    .vertical-text{word-wrap:break-word;display:inline-block;vertical-align:top;writing-mode:tb-rl;}
+    .subTitleBox{position:absolute;top:57px;left:12px;padding:0 5px;border-left:1px solid #fff;border-right:1px solid #fff;color:#fff;font-size:12px;text-align:left;}
+    .subTitle1,.subTitle2{width:23px;font-size:12px;float:left;line-height:23px;}
+    .knowMore{position:absolute; width:80px; height:20px; background-size: 80px 20px;top:210px; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock,.rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px!important;height:20px!important;}
+    .leftIcon,.rightIcon{width:20px!important;height:20px!important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_2.png')!important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_2.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_2.png')!important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_2.png')!important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_2.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_2.png')!important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:240px;left:35px;}
+    .rightIconBlock{top:240px;right:35px;}
+</code>
+
+
+layoutConfig_120_600 = <code>
+    <%{
+        data=dataArray[0],
+        pageItemCollection = data.pageBlocks,
+        pageItem_1 = pageItemCollection["normalBlock"];
+    }%>
+    <div id="adWrap">
+        <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <% for(var i = 0, l = pageItem_1.length; i < l; i++) {
+                        var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                        var title = pageItem_1[i].title.value || '';
+                        var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                        var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                        var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                        var type = pageItem_1[i].type.value || 1;
+                %>
+                    <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                        <div class="item0_block" style="background-color: <%bgColor%>">
+                            <div class="logoBox"></div>
+                            <div class="title vertical-text"><%title%></div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1 vertical-text"><%subTitle1%></div>
+                                <div class="subTitle2 vertical-text"><%subTitle2%></div>
+                            </div>
+                            <div class="knowMore"></div>
+                            <div class="people">
+                                <% if(type == 1) { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_1.png" class="people_img" />
+                                <% } else if (type == 2) { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_2.png" class="people_img" />
+                                <% } else { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_3.png" class="people_img" />
+                                <%}%>
+                            </div>
+                        </div>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_120_600 = <code>
+{
+            isLunbo: true,
+            isAnimation: true,
+            lunboTimeArray: [5000, 3000, 2000],
+            lunboStep: 120,
+            lunboBlock: "item0",
+            showPageNumBlock: false,
+            lunboType: 2
+}
+</code>
+
+cssConfig_120_600 = <code>
+    a{cursor:pointer;}
+    .container{position:relative;width:120px;height:600px;border:0;margin:0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow:hidden;}
+    #adWrap{width:120px;height:600px;overflow:hidden;}
+    .block-wrapper{width:120px;height:600px;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:600px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:120px;height:600px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:96px; height:60px; background-size: 96px 60px; text-align:center; top:0; left:12px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;bottom:-5px;left:-38px;width:170px;height:238px;}
+    .people img{width:170px;height:238px;}
+    .title{color:#fff;position:absolute;top:95px;width:40px;right:13px;font-size:24px;}
+    .vertical-text{word-wrap:break-word;display:inline-block;vertical-align:top;writing-mode:tb-rl;}
+    .subTitleBox{position:absolute;top:97px;left:12px;padding:0 5px;border-left:1px solid #fff;border-right:1px solid #fff;color:#fff;font-size:12px;text-align:left;}
+    .subTitle1,.subTitle2{width:23px;font-size:12px;float:left;line-height:23px;}
+    .knowMore{position:absolute; width:80px; height:20px; background-size: 80px 20px;top:320px; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px !important;height:30px !important;}
+    .leftIcon,.rightIcon{width:30px !important;height:30px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_2.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_2.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_2.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:555px;left:22px;}
+    .rightIconBlock{top:555px;right:22px;}
+</code>
+
+
+layoutConfig_160_600 = <code>
+    <%{
+        data=dataArray[0],
+        pageItemCollection = data.pageBlocks,
+        pageItem_1 = pageItemCollection["normalBlock"];
+    }%>
+    <div id="adWrap">
+        <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <% for(var i = 0, l = pageItem_1.length; i < l; i++) {
+                        var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                        var title = pageItem_1[i].title.value || '';
+                        var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                        var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                        var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                        var type = pageItem_1[i].type.value || 1;
+                %>
+
+                    <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                        <div class="item0_block" style="background-color: <%bgColor%>">
+                            <div class="logoBox"></div>
+                            <div class="title vertical-text"><%title%></div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1 vertical-text"><%subTitle1%></div>
+                                <div class="subTitle2 vertical-text"><%subTitle2%></div>
+                            </div>
+                            <div class="knowMore"></div>
+                            <div class="people">
+                                <% if(type == 1) { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_1.png" class="people_img" />
+                                <% } else if (type == 2) { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_2.png" class="people_img" />
+                                <% } else { %>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/vertical_people_3.png" class="people_img" />
+                                <%}%>
+                            </div>
+                        </div>
+                    </a>
+
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_160_600 = <code>
+{
+            isLunbo: true,
+            isAnimation: true,
+            lunboTimeArray: [5000, 3000, 2000],
+            lunboStep: 160,
+            lunboBlock: "item0",
+            showPageNumBlock: false,
+            lunboType: 2
+}
+</code>
+
+cssConfig_160_600 = <code>
+    a{cursor:pointer;}
+    .container{position:relative;width:160px;height:600px;border:0;margin:0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow:hidden;}
+    #adWrap{width:160px;height:600px;overflow:hidden;}
+    .block-wrapper{width:160px;height:600px;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:600px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:160px;height:600px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:96px; height:60px; background-size: 96px 60px; text-align:center; top:0; left:33px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;bottom:-5px;left:-10px;width:170px;height:238px;}
+    .people img{width:170px;height:238px;}
+    .title{color:#fff;position:absolute;top:85px;width:40px;right:22px;font-size:25px;}
+    .vertical-text{word-wrap:break-word;display:inline-block;vertical-align:top;writing-mode:tb-rl;}
+    .subTitleBox{position:absolute;top:87px;left:20px;padding:0 10px;border-left:1px solid #fff;border-right:1px solid #fff;color:#fff;font-size:12px;text-align:left;}
+    .subTitle1,.subTitle2{width:23px;font-size:18px;float:left;line-height:24px;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px;top:320px; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock,.rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px!important;height:30px!important;}
+    .leftIcon,.rightIcon{width:30px!important;height:30px!important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png')!important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_2.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_2.png')!important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png')!important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_2.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_2.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_2.png')!important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:555px;left:42px;}
+    .rightIconBlock{top:555px;right:42px;}
+</code>
+
+
+layoutConfig_960_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:960,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:960px; height:90px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:960px; height:90px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:960px; height:90px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:960px; height:90px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:28px; left:180px;}
+    .title{float:left; font-size:32px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:14px; margin-right:14px;}
+    .subTitleBox{float:left; font-size:13px; line-height:17px;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px;top:30px; right:180px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:108px; height:90px; top:0; right:0;}
+    .people_img{width:108px; height:90px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:25px; left:0;}
+    .rightIconBlock {top:25px; right:0;}
+</code>
+
+
+layoutConfig_960_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:960,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:960px; height:60px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:960px; height:60px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:960px; height:60px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:960px; height:60px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:13px; left:160px;}
+    .title{float:left; font-size:32px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:14px; margin-right:14px;}
+    .subTitleBox{float:left; font-size:13px; line-height:17px;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px; top:15px; right:160px; background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:72px; height:60px; top:0; right:0;}
+    .people_img{width:72px; height:60px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:15px !important;height:30px !important;}
+    .leftIcon,.rightIcon{width:15px !important;height:30px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:15px; left:0;}
+    .rightIconBlock {top:15px; right:0;}
+</code>
+
+
+layoutConfig_760_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_760_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:760,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_760_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:760px; height:90px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:760px; height:90px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:760px; height:90px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:760px; height:90px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:28px; left:120px;}
+    .title{float:left; font-size:24px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:8px; margin-right:8px;}
+    .subTitleBox{float:left; font-size:13px; line-height:17px;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px;top:30px; right:120px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:108px; height:90px; top:0; right:0;}
+    .people_img{width:108px; height:90px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:25px; left:0;}
+    .rightIconBlock {top:25px; right:0;}
+</code>
+
+
+layoutConfig_728_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_728_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:728,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_728_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:728px; height:90px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:728px; height:90px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:728px; height:90px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:728px; height:90px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:28px; left:110px;}
+    .title{float:left; font-size:24px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:6px; margin-right:6px;}
+    .subTitleBox{float:left; font-size:13px; line-height:17px;}
+    .knowMore{position:absolute; width:121px; height:31px; background-size: 121px 31px;top:30px; right:110px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:108px; height:90px; top:0; right:0;}
+    .people_img{width:108px; height:90px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:25px; left:0;}
+    .rightIconBlock {top:25px; right:0;}
+</code>
+
+
+layoutConfig_580_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_580_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:580,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_580_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:580px; height:90px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:580px; height:90px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:580px; height:90px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:580px; height:90px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:28px; left:110px;}
+    .title{float:left; font-size:14px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:8px; margin-right:8px;}
+    .subTitleBox{float:left; font-size:12px; line-height:17px;}
+    .knowMore{position:absolute; width:80px; height:20px; background-size: 80px 20px;top:35px; right:110px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:108px; height:90px; top:0; right:0;}
+    .people_img{width:108px; height:90px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:20px !important;height:40px !important;}
+    .leftIcon,.rightIcon{width:20px !important;height:40px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:25px; left:0;}
+    .rightIconBlock {top:25px; right:0;}
+</code>
+
+
+layoutConfig_640_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                    var title = pageItem_1[i].title.value || '';
+                    var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                    var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                    var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                    var type = pageItem_1[i].type.value || 1;
+                %>
+
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color: <%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title">
+                            <%title%>
+                            </div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img"/>
+                        <%}else if(type == 2){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img"/>
+                        <%}else{%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img"/>
+                        <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_640_60 = <code>{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:640,
+            lunboBlock:"item0",//item0下的子元素轮播
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_640_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:640px; height:60px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+     #adWrap{width:640px; height:60px; overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative; width:640px; height:60px; margin:0 auto; overflow: hidden; }
+    .item0_block{position:relative; width:640px; height:60px;}
+    .logoBox{position:absolute; width:90px; height:56px; background-size: 90px 56px; text-align:center; top:0; left:20px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .titleBox{position:absolute; top:13px; left:120px;}
+    .title{float:left; font-size:20px; line-height:34px;}
+    .border{float:left; width:0; height:32px; border:1px solid #fff; margin-left:14px; margin-right:14px;}
+    .subTitleBox{float:left; font-size:12px; line-height:17px;}
+    .knowMore{position:absolute; width:80px; height:20px; background-size: 80px 20px;top:20px; right:100px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .people{position:absolute; width:72px; height:60px; top:0; right:0;}
+    .people_img{width:72px; height:60px;}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:15px !important;height:30px !important;}
+    .leftIcon,.rightIcon{width:15px !important;height:30px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') !important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') !important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') no-repeat 0 0 !important; *filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') !important;*background:none;cursor:pointer;}
+    .leftIconBlock {top:15px; left:0;}
+    .rightIconBlock {top:15px; right:0;}
+</code>
+
+
+layoutConfig_468_60 = <code>
+    <%{
+        data=dataArray[0],
+        pageItemCollection = data.pageBlocks,
+        pageItem_1 = pageItemCollection["normalBlock"];
+    }%>
+    <div id="adWrap">
+        <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <% for(var i = 0, l = pageItem_1.length; i < l; i++) {
+                        var curl = pageItem_1[i].curl || pageItemCollection.curl;
+                        var title = pageItem_1[i].title.value || '';
+                        var subTitle1 = pageItem_1[i].subTitle1.value || '';
+                        var subTitle2 = pageItem_1[i].subTitle2.value || '';
+                        var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+                        var type = pageItem_1[i].type.value || 1;
+                %>
+                <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                    <div class="item0_block" style="background-color:<%bgColor%>">
+                        <div class="logoBox"></div>
+                        <div class="titleBox">
+                            <div class="title"><%title%></div>
+                            <div class="border"></div>
+                            <div class="subTitleBox">
+                                <div class="subTitle1"><%subTitle1%></div>
+                                <div class="subTitle2"><%subTitle2%></div>
+                            </div>
+                        </div>
+                        <div class="knowMore"></div>
+                        <div class="people">
+                            <% if(type == 1) { %>
+                                <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img" />
+                            <% } else if (type == 2) { %>
+                                <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img" />
+                            <% } else { %>
+                                <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img" />
+                            <%}%>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_468_60 = <code>
+{
+            isLunbo: true,
+            isAnimation: true,
+            lunboTimeArray: [5000, 3000, 2000],
+            lunboStep: 468,
+            lunboBlock: "item0",
+            showPageNumBlock: false,
+            lunboType: 2
+}
+</code>
+
+cssConfig_468_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:468px; height:60px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:468px;height:60px;overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:60px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:468px;height:60px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:58px; height:36px; background-size: 58px 36px; text-align:center; top:0; left:11px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;top:0;right:-7px;width:72px;}
+    .people img{width:100%;}
+    .titleBox{position:absolute; top:18px; left:70px;}
+    .title{float:left; font-size:12px; line-height:24px;}
+    .border{float:left; width:0; height:24px; border:1px solid #fff; margin-left:2px; margin-right:2px;}
+    .subTitleBox{float:left; font-size:12px; line-height:12px;}
+    .knowMore{position:absolute; width:73px; height:18px; background-size: 73px 18px;top:20px; left:322px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock,.rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:15px!important;height:30px!important;}
+    .leftIcon,.rightIcon{width:15px!important;height:30px!important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png')!important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png')!important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:14px;left:0;}
+    .rightIconBlock{top:14px;right:0;}
+</code>
+
+
+layoutConfig_460_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+     }%>
+    <div id="adWrap">
+        <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+            var curl = pageItem_1[i].curl || pageItemCollection.curl;
+            var title = pageItem_1[i].title.value || '';
+            var subTitle1 = pageItem_1[i].subTitle1.value || '';
+            var subTitle2 = pageItem_1[i].subTitle2.value || '';
+            var bgColor = '#' + pageItem_1[i].bgColor.value || '#4c75dc';
+            var type = pageItem_1[i].type.value || 1;
+        %>
+            <a href="<%curl%>" target="_blank" id="product_<%pageItem_1[i].midIndex%>_<%i%>">
+                <div class="item0_block" style="background-color:<%bgColor%>">
+                    <div class="logoBox"></div>
+                    <div class="titleBox">
+                        <div class="title">
+                            <%title%>
+                        </div>
+                        <div class="border"></div>
+                        <div class="subTitleBox">
+                            <div class="subTitle1">
+                                <%subTitle1%>
+                            </div>
+                            <div class="subTitle2">
+                                <%subTitle2%>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="knowMore"></div>
+                    <div class="people">
+                        <%if(type == 1){%>
+                            <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_1.png" class="people_img" />
+                            <%}else if(type == 2){%>
+                                <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_2.png" class="people_img" />
+                                <%}else{%>
+                                    <img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/horizontal_people_3.png" class="people_img" />
+                                    <%}%>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_460_60 = <code>
+{
+        isLunbo: true,
+        isAnimation: true,
+        lunboTimeArray: [5000, 3000, 2000],
+        lunboStep: 460,
+        lunboBlock: "item0",
+        showPageNumBlock: false,
+        lunboType: 2
+}
+</code>
+
+cssConfig_460_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative; width:460px; height:60px; border:0; margin:0 auto;}
+    .container a{text-decoration:none; cursor:pointer; font-family:'微软雅黑'; display:block; overflow:hidden; color:#fff;}
+    #adWrap{width:460px;height:60px;overflow:hidden;}
+    .itemBox{overflow:hidden;}
+    .item0{position:relative;width:100%;height:60px;margin:0 auto;overflow:hidden;}
+    .item0_block{position:relative;margin-top:0;width:460px;height:60px;text-align:center;overflow:visible;}
+    .logoBox{position:absolute; width:58px; height:36px; background-size: 58px 36px; text-align:center; top:0; left:11px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/bdqn_logo.png')\9;background:none\9;}
+    .people{position:absolute;top:0;right:-7px;width:72px;}
+    .people img{width:100%;}
+    .titleBox{position:absolute; top:18px; left:70px;}
+    .title{float:left; font-size:12px; line-height:24px;}
+    .border{float:left; width:0; height:24px; border:1px solid #fff; margin-left:2px; margin-right:2px;}
+    .subTitleBox{float:left; font-size:12px; line-height:12px;}
+    .knowMore{position:absolute; width:73px; height:18px; background-size: 73px 18px;top:20px; left:319px;background-image:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png'); background-repeat:no-repeat; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/know_more.png')\9;background:none\9;}
+    .leftIconBlock,.rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:15px!important;height:30px!important;}
+    .leftIcon,.rightIcon{width:15px!important;height:30px!important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_small_1.png');*background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/left_icon_hover_small_1.png')!important;*background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png')!important;*background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_small_1.png');*background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png') no-repeat 0 0!important;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/bdqn_education_agg/right_icon_hover_small_1.png')!important;*background:none;cursor:pointer;}
+    .leftIconBlock{top:14px;left:0;}
+    .rightIconBlock{top:14px;right:0;}
+</code>

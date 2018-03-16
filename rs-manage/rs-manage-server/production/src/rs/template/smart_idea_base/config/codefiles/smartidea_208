@@ -1,0 +1,1140 @@
+#daoxila template
+
+GlobalCss = <code>
+{}
+</code>
+
+layoutConfig_960_90 = <code>
+    <%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 2;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <div id="item0">
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){%>
+            <div>
+            <div class="itemBox">           
+                <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+                <div class="itemDes">
+                <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+                <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+                <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+                var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+                for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+                </div>
+                <div class="itemSubmit">
+                <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+                <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+                </div>
+            </div>
+            <%if((i+1)<pageItem_1.length){
+                        i=i+1;
+                        %>
+            <div class="itemBox">           
+                <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+                <div class="itemDes">
+                <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+                <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+                <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+                var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+                for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+                </div>
+                <div class="itemSubmit">
+                <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+                <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+                </div>
+            </div>
+             <% } %>
+            </div>      
+            <%} %>  
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_90 = <code>
+{
+    isLunbo:true,
+    isAnimation:true,
+    lunboTimeArray:[5000,3000,2000],
+    lunboStep:88,
+    lunboBlock:"item0",
+    cssStr:'.leftIconBlock {top:29px;left:5px;}.rightIconBlock {top:29px;right:5px;}',
+    showPageNumBlock:false,
+    lunboType:3,
+    lunboDirection:"vertical"
+}
+</code>
+
+cssConfig_960_90 = <code>
+    .container{position:relative;width:958px;height:88px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:958px;height:88px;}
+    .logoBox{width:175px;height:88px;overflow:hidden;margin-right:35px;float:left;}
+    .logoBox img{width:175px;height:88px;overflow:hidden;}
+    .itemBox{width:374px;height:88px;float:left;}
+    .itemImg{width:94px;height:88px;text-align:center;float:left;}
+    .itemImg img{width:80px;height:80px;margin:4px 0px 4px 0px;}
+    .itemDes{width:150px;height:73px;middle;float:left;margin-top:15px;overflow:hidden;}
+    .title{height:24px;width:150px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:20px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:31px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:130px;float:left;margin-top:15px;overflow:hidden;}
+    .submit{width:90px;height:32px;line-height:32px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+    #item0{position:relative;width:748px;height:88px;}
+</code>
+
+layoutConfig_460_60 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_460_60 = <code>
+</code>
+
+cssConfig_460_60 = <code>
+.container{position:relative;width:458px;height:58px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:458px;height:58px;}
+    .logoBox{width:150px;height:58px;overflow:hidden;float:left;}
+    .logoBox img{width:140px;height:58px;overflow:hidden;}
+    .itemBox{width:308px;height:58px;float:left;}
+    .itemImg{width:76px;height:58px;text-align:center;float:left;}
+    .itemImg img{width:56px;height:56px;margin:2px 0px;}
+    .itemDes{width:124px;height:55px;middle;float:left;margin-top:3px;overflow:hidden;}
+    .title{height:18px;line-height:18px;width:130px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:14px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:16px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:26px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:108px;float:left;overflow:hidden;margin-top:3px;} .submit{width:66px;height:22px;line-height:22px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:12px;display:block;}
+    .spriceNum{font-size:18px;color:#f95d50;}
+    .spricePer{font-size:12px;color:#9c9c9c;}
+</code>
+
+layoutConfig_580_90 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_580_90 = <code>
+</code>
+
+cssConfig_580_90 = <code>
+.container{position:relative;width:578px;height:88px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:578px;height:88px;}
+    .logoBox{width:188px;height:88px;overflow:hidden;float:left;}
+    .logoBox img{width:172px;height:88px;overflow:hidden;}
+    .itemBox{width:390px;height:88px;float:left;}
+    .itemImg{width:96px;height:88px;text-align:center;float:left;}
+    .itemImg img{width:82px;height:82px;margin:2px 0px;}
+    .itemDes{width:150px;height:73px;middle;float:left;margin-top:15px;overflow:hidden;}
+    .title{height:24px;width:150px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:20px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:31px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:130px;float:left;margin-top:15px;overflow:hidden;}    .submit{width:90px;height:32px;line-height:32px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+</code>
+
+layoutConfig_640_60 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_640_60 = <code>
+</code>
+
+cssConfig_640_60 = <code>
+.container{position:relative;width:638px;height:58px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:638px;height:58px;}
+    .logoBox{width:252px;height:58px;overflow:hidden;float:left;}
+    .logoBox img{width:252px;height:58px;overflow:hidden;}
+    .itemBox{width:386px;height:58px;float:left;}
+    .itemImg{width:72px;height:58px;text-align:center;float:left;}
+    .itemImg img{width:56px;height:56px;margin:2px 0px;}
+    .itemDes{width:156px;height:55px;middle;float:left;margin-top:3px;overflow:hidden;}
+    .title{height:18px;line-height:18pxwidth:150px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:14px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:16px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:26px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:154px;float:left;overflow:hidden;margin-top:3px;}
+    .submit{width:66px;height:22px;line-height:22px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:12px;display:block;}
+    .spriceNum{font-size:18px;color:#f95d50;}
+    .spricePer{font-size:12px;color:#9c9c9c;}
+</code>
+
+layoutConfig_728_90 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_728_90 = <code>
+</code>
+
+cssConfig_728_90 = <code>
+.container{position:relative;width:726px;height:88px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:726px;height:88px;}
+    .logoBox{width:256px;height:88px;overflow:hidden;float:left;}
+    .logoBox img{width:200px;height:88px;overflow:hidden;}
+    .itemBox{width:470px;height:88px;float:left;}
+    .itemImg{width:120px;height:88px;text-align:center;float:left;}
+    .itemImg img{width:80px;height:80px;margin:4px 20px;}
+    .itemDes{width:200px;height:65px;middle;float:left;margin-top:15px;overflow:hidden;}
+    .title{height:24px;width:200px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:20px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:31px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:130px;float:left;margin-top:15px;overflow:hidden;}    .submit{width:90px;height:32px;line-height:32px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_760_90 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_760_90 = <code>
+</code>
+
+cssConfig_760_90 = <code>
+.container{position:relative;width:758px;height:88px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:758px;height:88px;}
+    .logoBox{width:256px;height:88px;overflow:hidden;float:left;}
+    .logoBox img{width:200px;height:88px;overflow:hidden;}
+    .itemBox{width:502px;height:88px;float:left;}
+    .itemImg{width:120px;height:88px;text-align:center;float:left;}
+    .itemImg img{width:80px;height:80px;margin:4px 20px;}
+    .itemDes{width:200px;height:65px;middle;float:left;margin-top:15px;overflow:hidden;}
+    .title{height:24px;width:200px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:20px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:31px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:130px;float:left;margin-top:15px;overflow:hidden;}    .submit{width:90px;height:32px;line-height:32px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_960_60 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_960_60 = <code>
+</code>
+
+cssConfig_960_60 = <code>
+.container{position:relative;width:958px;height:58px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:958px;height:58px;}
+    .logoBox{width:175px;height:58px;overflow:hidden;margin-right:35px;float:left;}
+    .logoBox img{width:175px;height:58px;overflow:hidden;}
+    .itemBox{width:374px;height:58px;float:left;}
+    .itemImg{width:94px;height:58px;text-align:center;float:left;}
+    .itemImg img{width:56px;height:56px;margin:2px 0px;}
+    .itemDes{width:142px;height:55px;middle;float:left;margin-top:3px;overflow:hidden;}
+    .title{height:18px;line-height:18pxwidth:140px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:14px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:16px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:26px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:138px;float:left;overflow:hidden;margin-top:3px;} .submit{width:66px;height:22px;line-height:22px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:12px;display:block;}
+    .spriceNum{font-size:18px;color:#f95d50;}
+    .spricePer{font-size:12px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_468_60 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+        <div class="itemBox">
+            
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+    </div>
+</code>
+
+lunboConfig_468_60 = <code>
+</code>
+
+cssConfig_468_60 = <code>
+.container{position:relative;width:466px;height:58px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:466px;height:58px;}
+    .logoBox{width:150px;height:58px;overflow:hidden;float:left;}
+    .logoBox img{width:140px;height:58px;overflow:hidden;}
+    .itemBox{width:316px;height:58px;float:left;}
+    .itemImg{width:76px;height:58px;text-align:center;float:left;}
+    .itemImg img{width:56px;height:56px;margin:2px 0px;}
+    .itemDes{width:134px;height:55px;middle;float:left;margin-top:3px;overflow:hidden;}
+    .title{height:18px;line-height:18px;width:130px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:14px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:16px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:26px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:106px;float:left;overflow:hidden;margin-top:3px;}
+    .submit{width:66px;height:22px;line-height:22px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'Î¢ÈíÑÅºÚ';font-size:12px;display:block;}
+    .spriceNum{font-size:18px;color:#f95d50;}
+    .spricePer{font-size:12px;color:#9c9c9c;}
+</code>
+ 
+
+
+layoutConfig_400_300 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_400_300 = <code>
+</code>
+
+cssConfig_400_300 = <code>
+    .container{position:relative;width:398px;height:298px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:398px;height:298px;}
+    .logoBox{width:398px;height:70px;overflow:hidden;}
+    .logoBox img{width:398px;height:70px;overflow:hidden;}
+    .itemBox{width:398px;height:228px;}
+    .itemImg{width:216px;height:228px;text-align:center;float:left;}
+    .itemImg img{width:190px;height:190px;margin:19px 13px 19px 13px;}
+    .itemDes{width:182px;height:228px;float:left;margin-top:35px;}
+    .title{height:28px;width:180px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:18px;color:#000;}
+    .num{height:20px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:38px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .submit{width:120px;height:40px;line-height:40px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:18px;display:block;}
+    .spriceNum{font-size:26px;color:#f95d50;}
+    .spricePer{font-size:18px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_200_200 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:1px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:1px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_200_200 = <code>
+</code>
+
+cssConfig_200_200 = <code>
+.container{position:relative;width:198px;height:198px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:198px;height:198px;}
+    .logoBox{width:198px;height:42px;overflow:hidden;}
+    .logoBox img{width:198px;height:42px;overflow:hidden;}
+    .itemBox{width:198px;height:156px;}
+    .itemImg{width:88px;height:156px;text-align:center;float:left;}
+    .itemImg img{width:84px;height:84px;margin:35px 2px}
+    .itemDes{width:110px;height:136px;float:left;margin-top:20px;}
+    .title{height:22px;width:110px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:12px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:10px;color:#9c9c9c;}
+    .comments{height:24px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:10px;color:#9c9c9c;}
+    .sprice{height:24px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:10px;color:#f95d50;}
+    .submit{width:70px;height:22px;line-height:22px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:12px;display:block;}
+    .spriceNum{font-size:18px;color:#f95d50;}
+    .spricePer{font-size:12px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_250_200 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:1px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_200 = <code>
+</code>
+
+cssConfig_250_200 = <code>
+.container{position:relative;width:248px;height:198px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:248px;height:198px;}
+    .logoBox{width:248px;height:42px;overflow:hidden;}
+    .logoBox img{width:248px;height:42px;overflow:hidden;}
+    .itemBox{width:248px;height:156px;}
+    .itemImg{width:132px;height:156px;text-align:center;float:left;}
+    .itemImg img{width:116px;height:116px;margin:20px 8px}
+    .itemDes{width:116px;height:170px;float:left;margin-top:20px;}
+    .title{height:22px;width:116px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:12px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:10px;color:#9c9c9c;}
+    .comments{height:24px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:10px;color:#9c9c9c;}
+    .sprice{height:26px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:10px;color:#f95d50;}
+    .submit{width:92px;height:30px;line-height:30px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:14px;display:block;}
+    .spriceNum{font-size:20px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_250_250 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div id="item0">
+                <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                    %>
+            <div class="itemBox">
+                <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+                <div class="itemDes">
+                <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+                <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+                <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+                var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+                for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>
+                <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+                <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+                </div>
+            </div>
+                <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_250 = <code>
+{
+    isLunbo:true,
+    isAnimation:true,
+    lunboTimeArray:[5000,3000,2000],
+    lunboStep:248,
+    lunboBlock:"item0",
+    cssStr:'.leftIconBlock {top:110px;left:5px;}.rightIconBlock {top:110px;right:5px;}',
+    showPageNumBlock:false,
+    lunboType:1
+}
+</code>
+
+cssConfig_250_250= <code>
+.container{position:relative;width:248px;height:248px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:248px;height:248px;}
+    .logoBox{width:248px;height:52px;overflow:hidden;}
+    .logoBox img{width:248px;height:52px;overflow:hidden;}
+    .itemBox{width:248px;height:196px;}
+    .itemImg{width:124px;height:196px;text-align:center;float:left;}
+    .itemImg img{width:116px;height:116px;margin:40px 4px}
+    .itemDes{width:124px;height:170px;float:left;margin-top:32px;}
+    .title{height:24px;width:124px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:14px;color:#000;}
+    .num{height:16px;line-height:16px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:24px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:30px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:12px;color:#f95d50;}
+    .submit{width:92px;height:32px;line-height:30px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:14px;display:block;}
+    .spriceNum{font-size:20px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}   
+    #item0{position:relative;width:248px;height:196px;}
+</code>
+ 
+
+layoutConfig_300_250 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_300_250 = <code>
+</code>
+
+cssConfig_300_250 = <code>
+.container{position:relative;width:298px;height:248px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:298px;height:248px;}
+    .logoBox{width:298px;height:60px;overflow:hidden;}
+    .logoBox img{width:298px;height:60px;overflow:hidden;}
+    .itemBox{width:298px;height:190px;}
+    .itemImg{width:154px;height:190px;text-align:center;float:left;}
+    .itemImg img{width:132px;height:132px;margin:26px 11px 26px 11px;}
+    .itemDes{width:144px;height:155px;float:left;margin-top:26px;}
+    .title{height:26px;width:144px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:34px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:12px;color:#f95d50;}
+    .submit{width:92px;height:30px;line-height:30px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_336_280 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_336_280 = <code>
+</code>
+
+cssConfig_336_280 = <code>
+.container{position:relative;width:334px;height:278px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:334px;height:278px;}
+    .logoBox{width:334px;height:60px;overflow:hidden;}
+    .logoBox img{width:334px;height:60px;overflow:hidden;}
+    .itemBox{width:334px;height:218px;}
+    .itemImg{width:188px;height:218px;text-align:center;float:left;}
+    .itemImg img{width:168px;height:168px;margin:20px 10px 20px 10px;}
+    .itemDes{width:146px;height:183px;float:left;margin-top:35px;}
+    .title{height:26px;width:146px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .sprice{height:34px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:12px;color:#f95d50;}
+    .submit{width:120px;height:40px;line-height:40px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:18px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_360_300 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_360_300 = <code>
+</code>
+
+cssConfig_360_300 = <code>
+.container{position:relative;width:358px;height:298px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:358px;height:298px;}
+    .logoBox{width:358px;height:70px;overflow:hidden;}
+    .logoBox img{width:358px;height:70px;overflow:hidden;}
+    .itemBox{width:358px;height:228px;}
+    .itemImg{width:216px;height:228px;text-align:center;float:left;}
+    .itemImg img{width:190px;height:190px;margin:19px 13px 19px 13px;}
+    .itemDes{width:142px;height:228px;float:left;margin-top:35px;}
+    .title{height:28px;width:142px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:18px;color:#000;}
+    .num{height:20px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:38px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .submit{width:120px;height:40px;line-height:40px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:18px;display:block;}
+    .spriceNum{font-size:24px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+</code>
+ 
+
+layoutConfig_160_600 = <code>
+    <%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[0].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%
+            var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_160_600 = <code>
+</code>
+
+cssConfig_160_600 = <code>
+    .container{position:relative;width:158px;height:598px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:158px;height:598px;}
+    .logoBox{width:158px;height:170px;overflow:hidden;}
+    .logoBox img{width:158px;height:115px;overflow:hidden;}
+    .itemBox{width:158px;height:428px;}
+    .itemImg{width:158px;height:160px;text-align:center;}
+    .itemImg img{width:145px;height:145px;margin-left:6px;}
+    .itemDes{width:158px;height:113px;margin-left:15px;}
+    .title{height:28px;width:143px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:18px;color:#000;}
+    .num{height:20px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:43px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{height:155px;margin-left:15px;}
+    .submit{width:72px;height:26px;background-color:#f95d50;padding:7px 24px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:18px;}
+    .spriceNum{font-size:24px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+</code>
+
+
+layoutConfig_120_270 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div> 
+        <div id="item0">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>  
+        <div class="itemBox">
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[0].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+        </div>
+            <% } %> 
+        </div>  
+    </div>
+</code>
+
+lunboConfig_120_270 = <code>
+{
+    isLunbo:true,
+    isAnimation:true,
+    lunboTimeArray:[5000,3000,2000],
+    lunboStep:118,
+    lunboBlock:"item0",
+    cssStr:'.leftIconBlock {top:44px;le2f9t:5px;}.rightIconBlock {top:92px;right:5px;}',
+    showPageNumBlock:false,
+    lunboType:1
+}
+</code>
+
+cssConfig_120_270 = <code>
+.container{position:relative;width:118px;height:268px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:118px;height:268px;}
+    .logoBox{width:118px;height:54px;overflow:hidden;}
+    .logoBox img{width:118px;height:46px;overflow:hidden;}
+    .itemBox{width:118px;height:214px;}
+    .itemImg{width:118px;height:86px;text-align:center;}
+    .itemImg img{width:86px;height:86px;}
+    .itemDes{width:118px;height:58px;margin-left:3px;}
+    .title{height:20px;width:118px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:24px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments a img{margin:0px;padding:0px;}
+    .sprice{height:33px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:12px;color:#f95d50;}
+    .itemSubmit{height:70px;margin-left:3px;}   .submit{width:92px;height:30px;line-height:30px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:16px;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}
+    #item0{position:relative;width:1180x;height:214px;}
+</code>
+ 
+
+
+layoutConfig_120_600 = <code>
+<%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>   
+        <div class="itemBox">
+            <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+                %>
+            <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+            <div class="itemDes">
+            <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+            <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">ÈÝÄÉ×ÀÊý£º<%pageItem_1[i].acceptable.value%>×À</a></div>
+            <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[0].score.midIndex%>" target="_blank">ÓÃ»§ÆÀ·Ö£º<%var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+            for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+            </div>
+            <div class="itemSubmit">
+            <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">£¤</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>Ôª</span><span class="spricePer">/×À</span></a></div>
+            <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">Á¢¼´Ô¤¶©</a></div>
+            </div>
+            <% } %> 
+        </div>
+    </div>
+</code>
+
+lunboConfig_120_600 = <code>
+</code>
+
+cssConfig_120_600 = <code>
+.container{position:relative;width:118px;height:598px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ'}
+     #adWrap{width:118px;height:598px;}
+    .logoBox{width:118px;height:160px;overflow:hidden;}
+    .logoBox img{width:118px;height:100px;overflow:hidden;}
+    .itemBox{width:118px;height:438px;}
+    .itemImg{width:118px;height:138px;text-align:center;}
+    .itemImg img{width:112px;height:112px;}
+    .itemDes{width:118px;height:140px;margin-left:3px;}
+    .title{height:25px;width:118px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:20px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments{height:26px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:12px;color:#9c9c9c;}
+    .comments a img{margin:0px;padding:0px;}
+    .sprice{height:43px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:12px;color:#f95d50;}
+    .itemSubmit{height:160px;margin-left:3px;}
+    .submit{width:92px;height:30px;line-height:30px;text-align:center;background-color:#f95d50;margin-left:10px;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-size:16px;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:14px;color:#9c9c9c;}
+</code>
+ 

@@ -1,0 +1,1610 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+
+
+layoutConfig_400_300 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midIndex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_400_300 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:396,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:150px;left:10px;}.rightIconBlock {top:150px;right:10px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_400_300 = <code>
+	.container{position:relative;width:398px;height:298px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:398px;height:298px;}
+	.logoBox{position:relative;width:398px;;height:57px;overflow:hidden;text-align:center;}
+	.logo{display:inline-block;width:398px;height:57px;top:0px;}
+	.logo img{width:398px;;height:57px;overflow:hidden;}
+	.itemBox{position:relative;left:50px;width:308px;height:243px;}
+	.item0{position:relative;width:308px;height:243px;}
+	.item0_block{position:absolute;width:308px;height:243px;}
+	.subitem0{height:120px;width:308px;position:relative;}
+	.item0_res_block{position:absolute;width:120px;height:90px;left:10px;top:10px;background:#fff;}
+	.item0_res{position:absolute;width:178px;height:155px;top:0px;left:0px;}
+	.item0_res img {position:absolute;top:0px;left:12px;width:120px;height:90px;}
+	.item0_info_block{position:absolute;width:160px;height:100px;left:140px;top:20px;display:inline-block;}
+	.title{position:absolute;width:160px;height:36px;left:0px;top:0px;line-height:17px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:17px;text-align:center;}
+	.sprice {position:relative;display:inline-block;left:0px;top:50px;height:22px;}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:22px;line-height:22px;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:50px;height:22px;width:60px;display:inline-block;}
+	.buttonText{position:relative;float:left;left:0px;top:0px;height:22px;background:#c81623;text-align:center;padding-left:4px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;width:100px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+    .aditemspace{position:absolute;top:117px;width:293px;border-top:1px dotted #dadada;margin-left:10px;}
+</code>
+
+
+layoutConfig_360_300 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_360_300 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:356,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:150px;left:10px;}.rightIconBlock {top:150px;right:10px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_360_300 = <code>
+	.container{position:relative;width:358px;height:298px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:358px;height:298px;}
+	.logoBox{position:relative;width:358px;height:51px;overflow:hidden;text-align:center;}
+	.logo{display:inline-block;width:358px;height:51px;top:0px;}
+	.logo img{width:358px;;height:51px;overflow:hidden;}
+	.itemBox{position:relative;width:268px;height:249px;margin-left:43px;}
+	.item0{position:relative;width:268px;height:249px;}
+	.item0_block{position:absolute;width:268px;height:249px;}
+	.subitem0{height:120px;width:268px;position:relative;}
+	.item0_res_block{position:absolute;width:120px;height:90px;left:5px;top:10px;background:#fff;}
+	.item0_res{position:absolute;width:120px;height:90px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:4px;width:120px;height:90px;}
+	.item0_info_block{position:absolute;width:138px;height:100px;left:130px;top:20px;display:inline-block;}
+	.title{position:absolute;width:138px;height:36px;left:0px;top:0px;line-height:17px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:17px;text-align:center;}
+	.sprice {position:relative;left:0px;top:50px;height:22px;display:inline-block}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:20px;;line-height:22px;}
+	.sprice span{color:#c81623;line-height:17px;}
+	.button{position:relative;top:50px;height:22px;width:60px;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;left:0px;top:0px;height:30px;background:#c81623;text-align:center;float:left;padding-left:5px}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+    .aditemspace{position:absolute;top:117px;width:238px;border-top:1px dotted #dadada;margin-left:10px;}
+</code>
+
+
+layoutConfig_336_280 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_336_280 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:332,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:155px;left:10px;}.rightIconBlock {top:155px;right:10px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_336_280 = <code>
+	.container{position:relative;width:334px;height:278px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:334px;height:278px;}
+	.logoBox{position:relative;width:334px;height:48px;overflow:hidden;text-align:center;}
+	.logo{display:inline-block;width:334px;height:48px;}
+	.logo img{width:334px;;height:48px;overflow:hidden;}
+	.itemBox{position:relative;width:244px;height:230px;margin-left:45px}
+	.item0{position:relative;width:244px;height:230px;}
+	.item0_block{position:absolute;width:244px;height:230px;}
+	.subitem0{height:114px;width:254px;position:relative;}
+	.item0_res_block{position:absolute;width:100px;height:74px;left:5px;top:18px;background:#fff;}
+	.item0_res{position:absolute;width:100px;height:74px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:100px;height:74px;}
+	.item0_info_block{position:absolute;width:120px;height:74px;left:110px;top:18px;display:inline-block;}
+	.title{position:absolute;width:120px;height:36px;left:0px;top:0px;line-height:17px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:17px;text-align:center;}
+	.sprice {position:relative;top:50px;height:27px;float:left}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:50px;height:22px;margin-left:3px;width:60px;float:left;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;left:0px;top:0px;height:30px;background:#c81623;text-align:center;float:left;padding-left:4px}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;float:left;}
+    .aditemspace{position:absolute;top:112px;width:230px;border-top:1px dotted #dadada;margin-left:10px;}
+</code>
+
+
+layoutConfig_300_250 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+                            <div class="button">
+                                <div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+                                <div class="buttonArrow"></div>
+                            </div>
+						</div>
+					</div>
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_300_250 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:296,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:130px;left:15px;}.rightIconBlock {top:130px;right:15px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_300_250 = <code>
+	.container{position:relative;width:298px;height:248px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:298px;height:248px;}
+	.logoBox{position:relative;width:298px;height:42.5px;overflow:hidden;text-align:center;}
+	.logo{position:absolute;display:inline-block;width:298px;height:42.5px;top:0px;left:0px;}
+	.logo img{width:298px;;height:42.5px;overflow:hidden;}
+	.itemBox{position:relative;width:208px;height:200px;margin-left:43px}
+	.item0{position:relative;width:208px;height:200px;}
+	.item0_block{position:absolute;width:208px;height:200px;}
+	.item0_res_block{position:absolute;width:120px;height:90px;left:44px;top:8px;background:#fff;}
+	.item0_res{position:absolute;width:120px;height:90px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:120px;height:90px;}
+	.item0_info_block{position:absolute;width:160px;height:80px;left:24px;top:108px;display:inline-block;}
+	.title{position:absolute;width:160px;height:36px;left:0px;top:0px;line-height:17px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:17px;text-align:center;}
+	.sprice {position:relative;top:48px;height:27px;float:left}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:20px;;line-height:22px;}
+	.sprice span{color:#c81623;line-height:22px;}
+	.button{position:relative;margin-left:5px;top:48px;width:60px;height:22px;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;float:left;left:0px;top:0px;height:22px;background:#c81623;text-align:center;padding-left:4px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_250_250 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+                            <div class="button">
+                                <div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+                                <div class="buttonArrow"></div>
+                            </div>
+						</div>
+					</div>
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+
+</code>
+
+lunboConfig_250_250 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:248,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:130px;left:15px;}.rightIconBlock {top:130px;right:15px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_250_250 = <code>
+	.container{position:relative;width:248px;height:248px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:248px;height:248px;}
+	.logoBox{position:relative;width:248px;height:35.4px;overflow:hidden;text-align:center;}
+	.logo{position:absolute;display:inline-block;width:248px;height:35.4px;top:0px;left:0px;}
+	.logo img{width:248px;;height:35.4px;overflow:hidden;}
+	.itemBox{position:relative;width:158px;height:205px;margin-left:43px}
+	.item0{position:relative;width:158px;height:205px;}
+	.item0_block{position:absolute;width:158px;height:205px;}
+	.item0_res_block{position:absolute;width:120px;height:90px;left:19px;top:10px;background:#fff;}
+	.item0_res{position:absolute;width:120px;height:90px;top:0px;left:6px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:120px;height:90px;}
+	.item0_info_block{position:absolute;width:140px;height:80px;left:9px;top:118px;display:inline-block;}
+	.title{position:absolute;width:140px;height:36px;top:0px;line-height:17px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:17px;text-align:center;}
+	.sprice {position:relative;display:inline-block;top:45px;height:27px;}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:20px;;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:45px;height:22px;width:58px;left:0px;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;float:left;left:0px;top:0px;height:30px;background:#c81623;text-align:center;padding-left:3px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_250_200 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+                            <div class="button">
+                                <div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+                                <div class="buttonArrow"></div>
+                            </div>
+						</div>
+					</div>
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_250_200 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:246,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:105px;left:15px;}.rightIconBlock {top:105px;right:15px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_250_200 = <code>
+	.container{position:relative;width:248px;height:198px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:248px;height:198px;}
+	.logoBox{position:relative;width:248px;height:35.4px;overflow:hidden;text-align:center;}
+	.logo{position:absolute;display:inline-block;width:248px;height:35.4px;top:0px;left:0px;}
+	.logo img{width:248px;;height:35.4px;overflow:hidden;}
+	.itemBox{position:relative;width:158px;height:155px;left:43px}
+	.item0{position:relative;width:158px;height:155px;}
+	.item0_block{position:absolute;width:158px;height:155px;}
+	.item0_res_block{position:absolute;width:86px;height:70px;left:37px;top:8px;background:#fff;}
+	.item0_res{position:absolute;width:86px;height:70px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:86px;height:70px;}
+	.item0_info_block{position:absolute;width:140px;height:70px;left:13px;top:79px;display:inline-block;}
+	.title{position:absolute;width:140px;height:32px;left:9px;top:0px;line-height:15px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:15px;text-align:center;}
+	.sprice {position:relative;display:inline-block;top:39px;height:27px;}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:20px;;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:37px;height:22px;width:58px;left:0px;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;float:left;left:0px;top:0px;height:30px;background:#c81623;text-align:center;padding-left:3px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+
+</code>
+
+
+layoutConfig_200_200 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZaGZ1eTW4Qu440.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+                            <div class="button">
+                                <div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+                                <div class="buttonArrow"></div>
+                            </div>
+						</div>
+					</div>
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_200_200 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:198,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:100px;left:10px;}.rightIconBlock {top:100px;right:10px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_200_200 = <code>
+	.container{position:relative;width:198px;height:198px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:198px;height:198px;}
+	.logoBox{position:relative;width:198px;height:28px;overflow:hidden;text-align:center;}
+	.logo{position:absolute;display:inline-block;width:198px;height:28px;top:0px;left:0px;}
+	.logo img{width:198px;height:28px;overflow:hidden;}
+	.itemBox{position:relative;width:118px;height:160px;margin-left:40px}
+	.item0{position:relative;width:118px;height:160px;}
+	.item0_block{position:absolute;width:118px;height:160px;}
+	.item0_res_block{position:absolute;width:96px;height:80px;left:11px;top:5px;background:#fff;}
+	.item0_res{position:absolute;width:90px;height:90px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:96px;height:80px;}
+	.item0_info_block{position:absolute;width:118px;height:80px;left:10px;top:90px;display:inline-block;}
+	.title{position:absolute;width:118px;height:32px;left:0px;line-height:15px;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:15px;text-align:center;}
+	.sprice {position:relative;display:inline-block;top:41px;height:27px;float:left;}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:14px;;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:39px;height:22px;width:55px;display:inline-block;}
+	.buttonText{position:relative;display:inline-block;float:left;left:0px;top:0px;height:30px;background:#c81623;text-align:center;padding-left:2px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;display:inline-block;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_120_270 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f0002Ehawu9tXXoEw2v7s.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_120_270 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:116,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:230px;left:23px;}.rightIconBlock {top:230px;left:68px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_120_270 = <code>
+	.container{position:relative;width:118px;height:268px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:118px;height:268px;}
+	.logoBox{position:relative;width:118px;height:39px;overflow:hidden;text-align:left;}
+	.logo{position:absolute;display:inline-block;width:118px;height:39px;left:0px;}
+	.logo img{position:absolute;left:0px;top:0px;width:118px;height:39px;overflow:hidden;}
+	.itemBox{position:relative;width:118px;height:207px;}
+	.item0{position:relative;width:118px;height:207px;}
+	.item0_block{position:absolute;width:118px;height:207px;}
+	.item0_res_block{position:absolute;width:90px;height:72px;left:12px;top:8px;background:#fff;}
+	.item0_res{position:absolute;width:90px;height:72px;top:0px;left:0px;}
+	.item0_res img {position:absolute;top:2px;left:2px;width:90px;height:72px;}
+	.item0_info_block{position:absolute;width:118px;height:110px;left:0px;top:75px;display:inline-block;}
+	.title{position:absolute;width:118px;height:34px;top:10px;line-height:16px;text-align:center;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:16px;text-align:center;}
+	.sprice {position:relative;top:50px;height:22px;text-align:center}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:22px;}
+	.sprice span{color:#c81623;line-height:22px;}
+	.button{position:relative;top:65px;left:30px;height:22px;width:60px;display:inline-block;}
+	.buttonText{position:relative;float:left;left:0px;top:0px;height:22px;background:#c81623;text-align:center;padding-left:4px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;width:100px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_120_600 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f0002Ehawu9tXXoEw2v7s.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+            </div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_120_600 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:116,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:540px;left:23px;}.rightIconBlock {top:540px;left:68px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_120_600 = <code>
+	.container{position:relative;width:118px;height:598px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:118px;height:598px;}
+	.logoBox{position:relative;width:118px;;height:39px;overflow:hidden;text-align:left;}
+	.logo{position:absolute;display:inline-block;width:118px;height:39px;left:0px;}
+	.logo img{position:absolute;width:118px;height:39px;overflow:hidden;}
+	.itemBox{position:relative;width:118px;height:480px;}
+	.item0{position:relative;width:118px;height:480px;}
+	.item0_block{position:absolute;width:118px;height:480px;}
+	.subitem0{height:250px;width:118px;position:relative;}
+	.item0_res_block{position:absolute;width:90px;height:60px;left:12px;top:30px;background:#fff;}
+	.item0_res{position:absolute;width:90px;height:60px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:90px;height:60px;}
+	.item0_info_block{position:absolute;width:118px;height:110px;left:0px;top:120px;display:inline-block;}
+	.title{position:absolute;width:100px;height:34px;left:7px;top:5px;line-height:16px;text-align:center;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:16px;text-align:center;}
+	.sprice {position:relative;top:50px;height:20px;text-align:center}
+	.sprice a,..sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:22px;}
+	.sprice span{color:#c81623;line-height:22px;}
+	.button{position:relative;top:65px;left:30px;height:22px;width:60px;display:inline-block;}
+	.buttonText{position:relative;float:left;left:0px;top:0px;height:22px;background:#c81623;text-align:center;padding-left:4px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;width:100px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+    .aditemspace{position:absolute;top:250px;width:90px;border-top:1px dotted #dadada;margin-left:14px;}
+</code>
+
+
+layoutConfig_160_600 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f0002Ehawu9tXXoEw2v7s.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+					<div class="aditemspace"></div>
+                    </div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_160_600 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:156,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:525px;left:42px;}.rightIconBlock {top:525px;left:86px;}',
+            lunboDirection:"horizonta",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_160_600 = <code>
+	.container{position:relative;width:158px;height:598px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:158px;height:598px;}
+	.logoBox{position:relative;width:158px;height:53px;overflow:hidden;text-align:left;}
+	.logo{position:absolute;display:inline-block;width:158px;height:53px;}
+	.logo img{position:absolute;width:158px;height:53px;overflow:hidden;}
+	.itemBox{position:relative;width:158px;height:520px;margin-top:30px}
+	.item0{position:relative;width:158px;height:520px;}
+	.item0_block{position:absolute;width:158px;height:520px;}
+	.subitem0{height:260px;width:158px;position:relative;}
+	.item0_res_block{position:absolute;width:90px;height:60px;left:32px;top:10px;background:#fff;}
+	.item0_res{position:absolute;width:90px;height:60px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:90px;height:60px;}
+	.item0_info_block{position:absolute;width:158px;height:100px;left:0px;top:80px;display:inline-block;}
+	.title{position:absolute;width:120px;height:34px;left:17px;line-height:16px;text-align:center;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:16px;text-align:center;}
+	.sprice {position:relative;top:40px;width:158px;height:22px;text-align:center;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:22px;text-align:center;}
+	.sprice span{color:#c81623;line-height:22px;}
+	.button{position:relative;top:55px;left:55px;height:22px;width:60px;display:inline-block;}
+	.buttonText{position:relative;float:left;left:0px;top:0px;height:22px;background:#c81623;text-align:center;padding-left:4px;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;width:100px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:relative;float:left;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+    .aditemspace{position:absolute;top:202px;width:120px;border-top:1px dotted #dadada;margin-left:19px;}
+</code>
+
+
+layoutConfig_960_90 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 3;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+			<div id="slogan" class="slogan"><a id="slogan_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000qtx4f7k_tdvtocd26.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+2)<pageItem_1.length){
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i+1%>_<%pageItem_1[i+1].res.midindex%>" href="<%pageItem_1[i+1].res.curl%>" target="_blank"><img src="<%pageItem_1[i+1].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i+1%>_<%pageItem_1[i+1].title.midindex%>" href="<%pageItem_1[i+1].title.curl%>" target="_blank"><%pageItem_1[i+1].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i+1%>_<%pageItem_1[i+1].sprice.midindex%>" href="<%pageItem_1[i+1].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i+1].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i+1%>_<%pageItem_1[i+1].midindex%>" href="<%pageItem_1[i+1].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+                    <div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i+2%>_<%pageItem_1[i+2].res.midindex%>" href="<%pageItem_1[i+2].res.curl%>" target="_blank"><img src="<%pageItem_1[i+2].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i+2%>_<%pageItem_1[i+2].title.midindex%>" href="<%pageItem_1[i+2].title.curl%>" target="_blank"><%pageItem_1[i+2].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i+2%>_<%pageItem_1[i+2].sprice.midindex%>" href="<%pageItem_1[i+2].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i+2].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i+2%>_<%pageItem_1[i+2].midindex%>" href="<%pageItem_1[i+2].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%i=i+2;}%>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_960_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:958,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:182px;}.rightIconBlock {top:30px;right:5px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_960_90 = <code>
+	.container{position:relative;width:958px;height:88px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:958px;height:88px;}
+	.logoBox{position:absolute;width:176px;;height:88px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:176px;height:88px;left:0px;top:0px;}
+	.logo img{position:absolute;width:176px;height:88px;overflow:hidden;}
+	.slogan{position:absolute;width:150px;height:86px;left:800px;top:0px;}
+	.slogan img{position:absolute;width:142px;height:80px;left:0px;top:0px;}
+	.itemBox{position:absolute;left:215px;top:0px;width:700px;height:88px;}
+	.item0{position:absolute;left:0px;width:700px;height:88px;}
+	.item0_block{position:absolute;width:700px;height:88px;}
+	.subitem0{float:left;height:88px;width:233px;position:relative;}
+	.item0_res_block{position:absolute;width:100px;height:74px;left:0px;top:6px;background:#fff;}
+	.item0_res{position:absolute;width:100px;height:74px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:100px;height:74px;}
+	.item0_info_block{position:absolute;width:120px;height:88px;left:105px;top:0px;display:inline-block;}
+	.title{position:absolute;width:120px;height:35px;top:13px;line-height:17px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:13px;color:#333333;line-height:17px;text-align:left;}
+	.sprice {position:relative;display:inline-block;float:left;top:60px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+  .button{position:relative;top:58px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_960_60 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 3;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+			<div id="slogan" class="slogan"><a id="slogan_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000qtx4f7k_tdvtocd26.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+				    <%if((i+2)<pageItem_1.length){
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i+1%>_<%pageItem_1[i+1].res.midindex%>" href="<%pageItem_1[i+1].res.curl%>" target="_blank"><img src="<%pageItem_1[i+1].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i+1%>_<%pageItem_1[i+1].title.midindex%>" href="<%pageItem_1[i+1].title.curl%>" target="_blank"><%pageItem_1[i+1].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i+1%>_<%pageItem_1[i+1].sprice.midindex%>" href="<%pageItem_1[i+1].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i+1].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i+1%>_<%pageItem_1[i+1].midindex%>" href="<%pageItem_1[i+1].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+                    <div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i+2%>_<%pageItem_1[i+2].res.midindex%>" href="<%pageItem_1[i+2].res.curl%>" target="_blank"><img src="<%pageItem_1[i+2].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i+2%>_<%pageItem_1[i+2].title.midindex%>" href="<%pageItem_1[i+2].title.curl%>" target="_blank"><%pageItem_1[i+2].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i+2%>_<%pageItem_1[i+2].sprice.midindex%>" href="<%pageItem_1[i+2].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i+2].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i+2%>_<%pageItem_1[i+2].midindex%>" href="<%pageItem_1[i+2].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%i=i+2;}%>
+
+        
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_960_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:958,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:15px;left:155px;}.rightIconBlock {top:15px;right:15px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_960_60 = <code>
+	.container{position:relative;width:958px;height:58px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:958px;height:58px;}
+	.logoBox{position:absolute;width:116px;;height:56px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:116px;height:56px;left:0px;top:0px;}
+	.logo img{position:absolute;width:116px;height:56px;overflow:hidden;}
+	.slogan{position:absolute;width:100px;height:56px;left:850px;top:0px;}
+	.slogan img{position:absolute;width:92px;height:56px;left:0px;top:0px;}
+	.itemBox{position:absolute;left:185px;top:0px;width:728px;height:56px;}
+	.item0{position:absolute;width:728px;height:56px;}
+	.item0_block{position:absolute;width:728px;height:56px;}
+	.subitem0{float:left;height:58px;width:242px;position:relative;}
+	.item0_res_block{position:absolute;width:70px;height:50px;left:5px;top:3px;background:#fff;}
+	.item0_res{position:absolute;width:70px;height:50px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:70px;height:50px;}
+	.item0_info_block{position:absolute;width:140px;height:58px;left:80px;top:0px;display:inline-block;}
+	.title{position:absolute;width:140px;height:28px;top:2px;line-height:13px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#333333;line-height:13px;text-align:left;}
+	.sprice {position:relative;display:inline-block;float:left;top:30px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+    .button{position:relative;display:inline-block;float:left;top:30px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+
+</code>
+
+
+layoutConfig_760_90 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midIndex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+
+
+</code>
+
+lunboConfig_760_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:758,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:185px;}.rightIconBlock {top:30px;right:5px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_760_90 = <code>
+	.container{position:relative;width:758px;height:88px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:758px;height:88px;}
+	.logoBox{position:absolute;width:176px;;height:88px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:176px;height:88px;left:0px;top:0px;}
+	.logo img{position:absolute;width:176px;height:88px;overflow:hidden;}
+	.slogan{position:absolute;width:150px;height:86px;left:600px;top:0px;}
+	.slogan img{position:absolute;width:142px;height:86px;left:0px;top:0px;}
+	.itemBox{position:absolute;left:215px;top:0px;width:515px;height:88px;}
+	.item0{position:absolute;left:0px;width:515px;height:88px;}
+	.item0_block{position:absolute;width:515px;height:88px;}
+	.subitem0{height:88px;width:240px;position:relative;float:left}
+    .item0_res_block{position:absolute;width:100px;height:74px;left:5px;top:5px;background:#fff;}
+	.item0_res{position:absolute;width:100px;height:74px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:100px;height:74px;}
+	.item0_info_block{position:absolute;width:120px;height:88px;left:120px;top:0px;display:inline-block;}
+	.title{position:absolute;width:120px;height:35px;left:0px;top:10px;line-height:17px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:16px;color:#333333;line-height:17px;text-align:left;}
+	.sprice {position:relative;left:0px;top:55px;height:20px;text-align:left;line-height:20px;float:left}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+    .button{position:relative;top:52px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;padding-left:3px}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_728_90 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midIndex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_728_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:726,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:185px;}.rightIconBlock {top:30px;right:5px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_728_90 = <code>
+	.container{position:relative;width:726px;height:88px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:726px;height:88px;}
+	.logoBox{position:absolute;width:176px;;height:88px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:176px;height:88px;left:0px;top:0px;}
+	.logo img{position:absolute;width:176px;height:88px;overflow:hidden;}
+	.slogan{position:absolute;width:160px;height:86px;left:566px;top:0px;}
+	.slogan img{position:absolute;width:142px;height:86px;left:0px;top:0px;}
+	.itemBox{position:absolute;left:210px;top:0px;width:486px;height:88px;}
+	.item0{position:absolute;left:0px;width:486px;height:88px;}
+	.item0_block{position:absolute;width:486px;height:88px;}
+	.subitem0{height:88px;width:240px;position:relative;float:left}
+	.item0_res_block{position:absolute;width:100px;height:74px;left:5px;top:6px;background:#fff;}
+	.item0_res{position:absolute;width:100px;height:74px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:100px;height:74px;}
+	.item0_info_block{position:absolute;width:200px;height:88px;left:120px;top:0px;display:inline-block;}
+	.title{position:absolute;width:120px;height:35px;left:0px;top:10px;line-height:17px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:13px;color:#333333;line-height:17px;text-align:left;}
+	.sprice {position:relative;display:inline-block;float:left;left:0px;top:52px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+    .button{position:relative;top:52px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_580_90 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_580_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:578,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:30px;left:180px;}.rightIconBlock {top:30px;right:15px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_580_90 = <code>
+	.container{position:relative;width:578px;height:88px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:578px;height:88px;}
+	.logoBox{position:absolute;width:176px;height:88px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:176px;height:88px;left:0px;top:0px;}
+	.logo img{position:absolute;width:176px;height:88px;overflow:hidden;}
+	.itemBox{position:absolute;left:205px;top:0px;width:330px;height:87px;}
+	.item0{position:absolute;left:0px;width:330px;height:87px;}
+	.item0_block{position:absolute;width:330px;height:87px;}
+	.item0_res_block{position:absolute;width:100px;height:74px;left:15px;top:6px;background:#fff;}
+	.item0_res{position:absolute;width:100px;height:74px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:100px;height:74px;}
+	.item0_info_block{position:absolute;width:200px;height:88px;left:120px;top:0px;display:inline-block;}
+	.title{position:absolute;width:200px;height:32px;left:0px;top:13px;line-height:15px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:14px;color:#333333;line-height:15px;text-align:left;}
+	.sprice {position:relative;float:left;display:inline-block;left:0px;top:52px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:16px;text-align:left;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:52px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_640_60 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 2;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midIndex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%if((i+1)<pageItem_1.length){
+						i=i+1;
+					%>
+					<div class="subitem0">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midIndex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midIndex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midIndex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midIndex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+						
+					</div>
+					<%}%>
+                    <div class="aditemspace"></div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_640_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:638,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:15px;left:150px;}.rightIconBlock {top:15px;right:3px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_640_60 = <code>
+	.container{position:relative;width:638px;height:58px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:638px;height:58px;}
+	.logoBox{position:absolute;width:116px;height:58px;overflow:hidden;;}
+	.logo{position:absolute;display:inline-block;width:116px;height:58px;left:0px;top:0px;}
+	.logo img{position:absolute;width:116px;height:58px;overflow:hidden;}
+	.itemBox{position:absolute;left:182px;top:0px;width:426px;height:56px;}
+	.item0{position:absolute;width:426px;height:56px;}
+	.item0_block{position:absolute;width:426px;height:56px;}
+	.subitem0{height:54px;width:213px;position:relative;float:left}
+	.item0_res_block{position:absolute;width:70px;height:50px;left:5px;top:3px;background:#fff;}
+	.item0_res{position:absolute;width:70px;height:50px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:70px;height:50px;}
+	.item0_info_block{position:absolute;width:125px;height:58px;left:80px;top:2px;display:inline-block;}
+	.title{position:absolute;width:125px;height:28px;left:5px;top:0px;line-height:13px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#333333;line-height:13px;text-align:left;}
+	.sprice{position:relative;display:inline-block;float:left;left:5px;top:32px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;float:left;top:32px;height:22px;width:60px;display:inline-block;margin-left:9px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>
+
+
+layoutConfig_468_60 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_468_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:466,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:15px;left:150px;}.rightIconBlock {top:15px;right:8px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_468_60 = <code>
+	.container{position:relative;width:466px;height:58px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:466px;height:58px;}
+	.logoBox{position:absolute;width:116px;height:58px;overflow:hidden;}
+	.logo{position:absolute;display:inline-block;width:116px;height:58px;left:0px;top:0px;}
+	.logo img{position:absolute;width:116px;height:58px;overflow:hidden;}
+	.itemBox{position:absolute;left:180px;top:0px;width:251px;height:54px;}
+	.item0{position:absolute;left:0px;width:251px;height:54px;}
+	.item0_block{position:absolute;width:251px;height:54px;}
+	.item0_res_block{position:absolute;width:70px;height:50px;left:10px;top:4px;background:#fff;}
+	.item0_res{position:absolute;width:70px;height:50px;top:0px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:70px;height:50px;}
+	.item0_info_block{position:absolute;width:155px;height:58px;left:80px;top:0px;display:inline-block;}
+	.title{position:absolute;width:155px;height:28px;top:2px;line-height:13px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#333333;line-height:13px;text-align:left;}
+	.sprice {position:relative;display:inline-block;left:5px;top:30px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:16px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;}
+	.button{position:relative;top:30px;height:22px;width:60px;display:inline-block;margin-left:4px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:30px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+
+</code>
+
+
+layoutConfig_460_60 = <code>
+	<%{var data=dataArray[0],
+		   pageItemCollection=data.pageBlocks,
+		   pageItem_1=pageItemCollection["normalBlock"];
+		   var itemNum = 1;
+	 }%>
+	<div id="adWrap">
+        <div id="logoBox" class="logoBox">
+			<div id="logo" class="logo"><a id="logo_0_<%pageItem_1[0].slogan.midindex%>" href="<%pageItem_1[0].slogan.curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000QNpZKFZ1eTW4Qu4j0.jpg"></img></a></div>
+		</div>   
+		<div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+				<%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){
+				%>
+					<div class="item0_block">
+						<div class="item0_res_block">
+							<div class="item0_res"><a id="res_<%i%>_<%pageItem_1[i].res.midindex%>" href="<%pageItem_1[i].res.curl%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+						</div>
+						<div class="item0_info_block">
+							<div class="title"><a id="title_<%i%>_<%pageItem_1[i].title.midindex%>" href="<%pageItem_1[i].title.curl%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+							<div class="sprice"><a id="sprice_<%i%>_<%pageItem_1[i].sprice.midindex%>" href="<%pageItem_1[i].sprice.curl%>" target="_blank"><span>￥<%pageItem_1[i].sprice.value%></span></a></div>
+							<div class="button">
+								<div class="buttonText"><a id="button_<%i%>_<%pageItem_1[i].midindex%>" href="<%pageItem_1[i].curl%>" target="_blank">查看详情</a></div>
+								<div class="buttonArrow"></div>
+							</div>
+						</div>
+					</div>
+					
+				<% } %>	
+			</div> 		
+        </div>
+	</div>
+</code>
+
+lunboConfig_460_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[3000],
+            lunboStep:458,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:15px;left:150px;}.rightIconBlock {top:15px;right:8px;}',
+            lunboDirection:"horizontal",//horizonta为水平，vertical为垂直
+            lunboType:2//第四种轮播方式
+}
+</code>
+
+cssConfig_460_60 = <code>
+	.container{position:relative;width:458px;height:58px;border:1px solid #c81623;background:#fff;}
+	.container div{overflow:hidden;}
+	.container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+	 #adWrap{width:458px;height:58px;}
+	.logoBox{position:absolute;width:116px;height:58px;overflow:hidden;}
+	.logo{position:absolute;display:inline-block;width:116px;height:58px;left:0px;top:0px;}
+	.logo img{position:absolute;left:0px;top:0px;width:116px;height:58px;overflow:hidden;}
+	.itemBox{position:absolute;left:169px;top:0px;width:243px;height:54px;}
+	.item0{position:absolute;left:0px;width:243px;height:54px;}
+	.item0_block{position:absolute;width:243px;height:54px;}
+	.item0_res_block{position:absolute;width:70px;height:50px;left:5px;top:4px;background:#fff;}
+	.item0_res{position:absolute;width:70px;height:50px;top:0px;left:9px;}
+	.item0_res img {position:absolute;top:0px;left:0px;width:70px;height:50px;}
+	.item0_info_block{position:absolute;width:152px;height:58px;left:90px;top:0px;display:inline-block;}
+	.title{position:absolute;width:152px;height:28px;top:2px;line-height:13px;text-align:left;}
+	.title a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#333333;line-height:13px;text-align:left;}
+	.sprice {position:relative;float:left;left:5px;top:30px;height:20px;text-align:left;line-height:20px;}
+	.sprice a{font-family:微软雅黑;font-weight:normal;font-size:15px;;line-height:20px;text-align:left;}
+	.sprice span{color:#c81623;line-height:22px;}
+	.button{position:relative;top:32px;height:22px;width:60px;display:inline-block;margin-left:14px;}
+	.buttonText{position:absolute;left:0px;top:0px;width:55px;height:32px;background:#c81623;text-align:center;}
+	.buttonText a{font-family:微软雅黑;font-weight:normal;font-size:12px;color:#ffffff;line-height:22px;}
+	.buttonArrow{position:absolute;display:inline-block;float:left;left:55px;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c81623;}
+</code>

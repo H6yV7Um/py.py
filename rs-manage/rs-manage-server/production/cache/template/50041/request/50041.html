@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!--50011-->
+        <title>百度网盟推广</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="https://cpro.baidustatic.com/cpro/ui/noexpire/css/2.1.5/template.min.css">
+        <style type="text/css">.item{width:100%;height:100%;}.container{width:640px;height:178px;padding:0px 0 px0 px0 px;background:#fff;position:relative;}.container:hover{background:#f0f0f0;}.title{font-size:18px;font-family:"Microsoft Yahei","B8BF53","Hiragino Sans GB";color:#333;margin-top:0px;margin-left:18px;margin-right:0px;margin-bottom:14px;}.desc{color:#333;font-size:14px;font-family:"Microsoft Yahei","B8BF53","Hiragino Sans GB";margin-left:18px;margin-right:0px;}.imgCon{width:154px;height:89px;margin-top:44.5px;float:left;overflow:hidden;}.imgAD{width:154px;height:89px;-webkit-transition:transform .5s ease-in;transition:transform .5s ease-in;}.imgCon:hover img{-webkit-transform:scale(1.1);transform:scale(1.1);}.text{float:left;width:468px;height:89px;margin-top:44.5px;overflow:hidden;}.item a{display:block;width:100%;height:100%;text-decoration:none;box-sizing:border-box;}.logoArea{height:16px;width:30px;position:absolute;bottom:0px;right:0px;cursor:pointer;z-index:2147483648;}</style>
+    </head>
+    <body>
+        <div  class="container"  id="container" ><div  class="item" ><a  style=""  target="_blank"  id="item0"  title=""  href="pos.baidu.com" ><div  class="content" ><div  class="imgCon" ><img  class="imgAD"  src="http://ubmcmm.baidustatic.com/media/v1/0f000a4uVQhMnybd8Iwjsf.jpg" /></div><div  class="text" ><div  id="title0"  class="title" >企业法律风险防控</div><div  id="desc0"  class="desc" >企业法律风险免费识别，30天评估法律风险 盈科润达高级律师企业法律风险免费识别，30天评估法律风险 盈科润达高级律师专业法律风险防控团队</div></div></div></a></div><a  class="bd-logo"  href="//wangmeng.baidu.com/"  title="百度网盟推广"  target="_blank"  id="bd-logo" >&nbsp;</a><div  class="bd-adIcon"  id="bd-adIcon" >&nbsp;</div><div  class="logoArea"  id="logoArea" ></div></div><script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/noexpire/js/rs/template/logoIsShowEvents_1.min.js"></script>
+        <script src="https://cpro.baidustatic.com/cpro/ui/noexpire/js/2.0.1/oojs.js"></script>
+        <script type="text/javascript">
+            var config = {"width":154,"height":89,"titleFontColor":"000","pdp":1,"templateWidth":640,"templateHeight":178};
+            var antiArray = [123456];
+        </script>
+        <script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/noexpire/js/rs/template/common.min.js"></script>
+        <script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/noexpire/js/rs/business/1.0.2/anticheat_mob.min.js"></script>
+        
+        <script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/noexpire/js/rs/business/feedbackMobile.min.js"></script>
+        <script type="text/javascript">/* global oojs */
+/* global actionTypeInfo */
+/**
+* @file 50041
+* @author qianxiaoli
+*/
+/* eslint-disable max-len */
+oojs.define({
+    name: 'page',
+    namespace: '',
+    deps: {},
+   
+    $page: function () {
+       
+    },
+    bind: function (element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false);
+        }
+        else {
+            element.attachEvent('on' + type, handler);
+        }
+    },
+    getAttr: function (element, key) {
+        if (element && element.getAttribute) {
+            return element.getAttribute(key);
+        }
+
+        return element[key];
+
+    },
+    formatEventObj: function (e) {
+        e = e || window.event;
+        e.target = e.target || e.srcElement;
+        return e;
+    },
+    // 阻止默认行为
+    stopEvent: function (event) {
+        if (event && event.stopPropagation) {
+            event.stopPropagation();
+        }
+        else {
+            window.event.cancelBubble = true;
+        }
+        if (event && event.stopPropagation) {
+            event.preventDefault();
+        }
+        return false;
+    },
+    // 模板支持分区的模式，广告标识会移动到左侧
+    changeStyle: function () {
+        var logo = document.getElementById('bd-logo');
+        var bdIcon = document.getElementById('mob-bd-adIcon');
+        var logoArea = document.getElementById('logoArea');
+        if (logo) {
+            logo.style.bottom = 0;
+            logo.style.left = 0;
+        }
+        if (bdIcon) {
+            bdIcon.style.bottom = 0;
+            bdIcon.style.left = 14 + 'px';
+        }
+        if (logoArea) {
+            logoArea.style.bottom = 0;
+            logoArea.style.left = 14 + 'px';
+        }
+    },
+    leftClick: function () {
+        var aThis = this;
+        var itemLp = document.getElementById('item0');
+        var isPause = aThis.getAttr(itemLp, 'data-ispause');
+        var admcurl = parseInt(aThis.getAttr(itemLp, 'mcurl-val'), 10);
+        aThis.bind(itemLp, 'click', function (ev) {
+            // 停止轮播
+            aThis.mobInterface && aThis.mobInterface.pause && aThis.mobInterface.pause();
+            var target = ev.target || ev.srcElement;
+            if (isPause) {
+                // 支持下载暂停且分区
+                if (admcurl) {
+                    aThis.onAdClick(ev);
+                } else {
+                    aThis.handleDownload(ev);
+                }
+            };
+        });
+    },
+    rightClick: function () {
+        var aThis = this;
+        var itemDown = document.getElementById('item_btn0');
+        aThis.bind(itemDown, 'click', function (ev) {
+            // 暂停轮播
+            aThis.mobInterface && aThis.mobInterface.pause && aThis.mobInterface.pause();
+            aThis.handleDownload(ev);
+        });
+    },
+    handleDownload: function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // 判断逻辑
+        if (this.sdk && this.sdk.getDownloadStatus) {
+            this.handlePkgStatus(true, e);
+        } else {
+            this.onAdClick();
+        }
+    },
+    handlePkgStatus: function (clicking, ev) {
+        var events = ev;
+        var aThis = this;
+        var itemBtn = document.getElementById('item_btn0');
+        for (var i = 0; i < window.adsExtention.length; i++) {
+            var pkg = window.adsExtention[i].pk;
+        }
+        if (typeof pkg === 'string') {
+            aThis.sdk && aThis.sdk.getDownloadStatus(function (jsonStatus) {
+                var data = JSON.parse(jsonStatus);
+                var status = data.status;
+                // 点击按钮之后的处理逻辑
+                if (clicking) {
+                    // 如果是已经下载还没安装 或 已经安装, 不用管, 直接调用download
+                    if (status === 102 || status === 103) {
+                        aThis.onAdClick(events);
+                    }
+                    // 如果是101,未下载状态,调用download，开启轮询，更新进度
+                    else if (status === 101) {
+                        aThis.onAdClick(events);
+                        // 清除定时器
+                        clearInterval(aThis.downloadingIntervel);
+                        // 开启定时器
+                        aThis.downloadingIntervel = setInterval(aThis.updateDownloadingContent.proxy(aThis), 2000);
+                    } else if (status <= 100 && status >= 0) {
+                        // 如果是正在下载中的状态,再次点击需要暂停下载
+                        if (data.isPaused === 0) {
+                            // 继续轮播
+                            aThis.mobInterface && aThis.mobInterface.play && aThis.mobInterface.play();
+                            // 暂停下载
+                            aThis.sdk.pauseDownload(pkg);
+                            // 清除定时器
+                            clearInterval(aThis.downloadingIntervel);
+                            // 继续下载
+                            itemBtn.innerHTML = '\u7ee7\u7eed';
+                        }
+                        // 如果是没有在下载的状态，就调用download，同时开启轮询，更新进度
+                        else if (data.isPaused === 1) {
+                            aThis.onAdClick(events);
+                            // 清除定时器
+                            clearInterval(aThis.downloadingIntervel);
+                            // 开启定时器
+                            aThis.downloadingIntervel = setInterval(aThis.updateDownloadingContent.proxy(aThis), 2000);
+                        }
+                    }
+                } else {
+                    // 处理非点击事件 eg:refresh
+                    // 已经下载，没有安装
+                    if (status === 102) {
+                        // 立即安装
+                        itemBtn.innerHTML = '\u5b89\u88c5';
+
+                    }
+                    // 已经下载，已经安装
+                    else if (status === 103) {
+                        // 立即打开
+                        itemBtn.innerHTML = '\u6253\u5f00';
+                    }
+                    // 下载到了一半
+                    else if (status <= 100 && status >= 0) {
+                        // 写入下载进度
+                        itemBtn.innerHTML = status + '%';
+                        // 正在下载中
+                        if (data.isPaused === 0) {
+                            // 清除定时器
+                            clearInterval(aThis.downloadingIntervel);
+                            // 开启定时器
+                            aThis.downloadingIntervel = setInterval(aThis.updateDownloadingContent.proxy(aThis), 2000);
+                        // 还未下载
+                        } else if (data.isPaused === 1) {
+                            itemBtn.innerHTML = '\u7ee7\u7eed';
+                        }
+                    }
+                }
+            }, pkg);
+        }
+    },
+    updateDownloadingContent: function () {
+        var aThis = this;
+        var itemBtn = document.getElementById('item_btn0');
+        for (var i = 0; i < window.adsExtention.length; i++) {
+            var pkg = window.adsExtention[i].pk;
+        };
+        aThis.sdk && aThis.sdk.getDownloadStatus(function (jsonStatus) {
+            var data = JSON.parse(jsonStatus);
+            var status = data.status;
+            // 如果正在下载中,写入进度
+            if (status <= 100 && status >= 0) {
+                itemBtn.innerHTML = status + '%';
+                return;
+            }
+            // 如果状态大于等于100,直接清除轮询
+            if (status === 102) {
+                clearInterval(aThis.downloadingIntervel);
+                itemBtn.innerHTML = '\u5b89\u88c5';
+            }
+        }, pkg);
+    }
+});</script>
+    </body>
+</html>

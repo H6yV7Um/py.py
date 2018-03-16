@@ -1,0 +1,821 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+layoutConfig_960_90 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+<div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+</div>
+</code>
+
+lunboConfig_960_90 = <code>
+</code>
+
+cssConfig_960_90 = <code>
+    .container { position: relative; width: 960px; height: 90px;background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 280px; height: 90px; position: relative; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/960x90-banner_03.png) no-repeat; }
+    .ad-banner-title { position: absolute; left:6px; font-size: 22px; line-height: 90px;height:90px;letter-spacing:2px; color: white;width:280px;overflow:hidden; }
+    .ad-content { float: left; overflow: hidden; position: relative;width:680px; margin-top: 10px;*margin-top: 10px; }
+	.ad-intro { margin-bottom: -5px;float:left; }
+    .ad-intro-list { display: inline-block; width: 270px;float:left; padding-right: 20px; margin-left: 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-intro-list p { text-overflow: ellipsis; white-space: nowrap; overflow: hidden;padding-top:3px;padding-bottom:3px; }
+    .ad-intro-list-title { text-decoration: none; font-size: 17px; color: #29a5df; line-height: 22px;  }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 14px; color: #323232; }
+    .ad-links li { display: inline-block;*float:left; margin-left: 10px; list-style: none; padding-left: 10px; padding-top: 12px; padding-bottom: 5px; padding-right: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat 0 18px; width: 270px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-links li a { text-decoration: none; font-size: 15px; color: #29a6dc; }
+    .footer { position: absolute; height: 100%; width: 78px; right: 5px; top: 28px;}
+    .logo { display: block; margin: 10px auto 6px auto; }
+    .learn-more { position: absolute; width: 66px; margin: 0 auto; display: block; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }	
+	.bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+
+layoutConfig_580_90 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_580_90 = <code>
+</code>
+
+cssConfig_580_90 = <code>
+    .container { position: relative; width: 580px; height: 90px; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 70px; height: 90px; position: relative; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/580x90-banner_03.png) no-repeat; }
+    .ad-banner-title { position: absolute; left:2px; top: 30px; font-size: 13px; color: white;height:45px;line-height: 15px;width:68px;overflow:hidden; }
+    .ad-content { float: left; overflow: hidden; position: relative; margin-top: 5px; }
+    .ad-intro { float: left; }
+    .ad-intro-list { padding-right: 5px; margin-left: 10px; border-right: solid 1px #c8c8c8; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 224px; }
+    .ad-intro-list p { width: 17em; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list-title { font-size: 14px; text-decoration: none; color: #29a5df; line-height: 22px; font-weight:normal; }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 12px; color: #323232; }
+    .ad-links { float: left; margin-left: 5px; }
+    .ad-links li { font-size: 12px; width: 13em; list-style: none; padding-left: 10px; padding-top: 5px; padding-bottom: 18px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat 0 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li a { text-decoration: none; color: #29a6dc;font-size:15px; }
+    .footer { position: absolute; height: 100%; width: 78px; right: 10px; top: 28px; }
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 66px; margin: 0 auto; display: block; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }	.bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+
+layoutConfig_728_90 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+<div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_728_90 = <code>
+</code>
+
+cssConfig_728_90 = <code>
+    .container { position: relative; width: 728px; height: 90px;    /*overflow: hidden;*/ background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 80px; height: 90px; position: relative; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/728x90-banner_03.png) no-repeat; }
+    .ad-banner-title { position: absolute; left: 5px; top: 30px; width: 71px; font-size: 13px;letter-spacing:1px;color: white;height:50px;overflow:hidden; }
+    .ad-content { float: left; overflow: hidden; position: relative; margin-top: 10px; }
+    .ad-intro { margin-bottom: -5px; }
+    .ad-intro-list { display: inline-block;*float:left; width: 255px; padding-right: 20px; margin-left: 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-intro-list p { text-overflow: ellipsis; white-space: nowrap; overflow: hidden;padding-top:3px; }
+    .ad-intro-list-title { text-decoration: none; font-size: 17px; color: #29a5df; line-height: 22px; }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 15px; color: #323232; }
+    .ad-links li { display: inline-block; margin-left: 10px;*float:left; list-style: none; padding-left: 10px; padding-top: 12px; padding-bottom: 3px;*padding-bottom: 3px; padding-right: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat 0 18px; width: 255px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-links li a { text-decoration: none; font-size: 16px; color: #29a6dc; }
+    .footer { position: absolute; height: 100%; width: 78px; right: 5px; top: 28px;}
+    .logo { display: block; margin: 10px auto 6px auto; }
+    .learn-more { position: absolute; width: 66px; margin: 0 auto; display: block; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+
+</code>
+
+layoutConfig_760_90 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_760_90 = <code>
+</code>
+
+cssConfig_760_90 = <code>
+.container { position: relative; width: 760px; height: 90px; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 112px; height: 90px; position: relative; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/760x90-banner_03.png) no-repeat; }
+    .ad-banner-title { position: absolute; left: 10px; top: 22px; width: 5em; font-size: 18px; color: white; line-height: 22px;height: 66px;overflow:hidden; }
+    .ad-content { float: left; overflow: hidden; position: relative; margin-top: 10px; }
+    .ad-intro { margin-bottom: -5px; }
+    .ad-intro-list { display: inline-block; width: 255px; padding-right: 20px;*float:left; margin-left: 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-intro-list p { text-overflow: ellipsis; white-space: nowrap; overflow: hidden;padding-top:4px; }
+    .ad-intro-list-title { text-decoration: none; font-size: 17px; color: #29a5df; line-height: 22px;  }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 14px; color: #323232; }
+    .ad-links li { display: inline-block;*display:inline;_zoom:1;*float:left; margin-left: 10px; list-style: none; padding-left: 10px; padding-top: 12px; padding-bottom: 3px; padding-right: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat 0 18px; width: 255px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li:first-child { border-right: solid 1px #c8c8c8; }
+    .ad-links li a { text-decoration: none; font-size: 16px; color: #29a6dc; }
+    .footer { position: absolute; height: 100%; width: 78px; right: 5px; top: 28px;}
+    .logo { display: block; margin: 10px auto 6px auto; }
+    .learn-more { position: absolute; width: 66px; margin: 0 auto; display: block; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_250_250 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+     <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_250 = <code>
+</code>
+
+cssConfig_250_250= <code>
+    .container { position: relative; width: 250px; height: 250px; overflow: hidden; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 250px; height: 53px; position: relative; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/250x250-banner_03.png) no-repeat; }
+    .ad-banner-title { position: absolute; left: 3px; font-size: 16px; top: 20px; color: white;width:194px;height:18px;line-height:18px;overflow:hidden;}
+    .ad-content { overflow: hidden; margin: 5px 4px 0 4px; }
+    .ad-intro-list { margin-bottom: 7px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list p { white-space: nowrap; text-overflow: ellipsis; overflow: hidden;line-height:21px; }
+    .ad-intro-list-title { text-decoration: none; font-size: 16px; color: #29a5df;}
+    .ad-intro-list-desc { text-decoration: none; font-size: 14px; color: #323232; }
+    .ad-links { border-top: solid 1px #c8c8c8; }
+    .ad-links ul { margin-top: 9px; }
+    .ad-links li { list-style: none; padding-left: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat 0 6px; margin-bottom: 7px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li a { text-decoration: none; font-size: 13px; color: #29a6dc; }
+    .footer { position: absolute; overflow: hidden; bottom: 8px; width: 100%; }
+    .learn-more { display: block; width: 66px; float: right; margin-right: 10px; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+  </code>
+
+layoutConfig_300_250 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_300_250 = <code>
+</code>
+
+cssConfig_300_250 = <code>
+.container { position: relative; width: 300px; height: 250px; overflow: hidden; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 300px; height: 58px; position: relative; background: url(http://ubmcmm.baidustatic.com/media/v1/0f000D3wcBsG0it9kUN9Zf.jpg) no-repeat; }
+    .ad-banner-title { position: absolute; left: 10px; font-size: 17px; top: 22px; color: white; width:190px;overflow:hidden;line-height:20px; height:22px;white-space: nowrap;}: hidden; margin: 10px; }
+    .ad-intro,.ad-links{padding: 10px 0 0 10px;}
+    .ad-intro-list { margin-bottom: 6px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list p { margin-top: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+    .ad-intro-list-title { text-decoration: none; font-size: 16px; color: #29a5df; font-weight:normal; }
+    .ad-intro-list-desc { text-decoration: none; font-size: 12px; color: #323232; }
+    .ad-links { border-top: solid 1px #c8c8c8; }
+    .ad-links li { list-style: none; padding-left: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat left center; margin-bottom: 6px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li a { text-decoration: none; font-size: 13px; color: #29a6dc; }
+    .footer { position: absolute; overflow: hidden; bottom: 10px; width: 100%; }
+    .learn-more { display: block; width: 66px; float: right; margin-right: 10px; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_336_280 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_336_280 = <code>
+</code>
+
+cssConfig_336_280 = <code>
+    .container { position: relative; width: 336px; height: 280px; overflow: hidden; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 336px; height: 53px; position: relative; background: url(http://ubmcmm.baidustatic.com/media/v1/0f000jlhjyFBjv7-PvRHrf.jpg) no-repeat; }
+    .ad-banner-title { position: absolute; left: 10px; font-size: 21px; top: 20px; color: white;width:237px;height:20px;line-height:20px;overflow:hidden; }
+    .ad-content { overflow: hidden; margin: 10px; }
+    .ad-intro-list { margin-bottom: 13px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list p { margin-top: 7px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+    .ad-intro-list-title { text-decoration: none; font-size: 18px; color: #29a5df; }
+    .ad-intro-list-desc { text-decoration: none; font-size: 14px; color: #323232; }
+    .ad-links { border-top: solid 1px #c8c8c8; }
+    .ad-links ul { margin-top: 10px; }
+    .ad-links li { list-style: none; padding-left: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat left center; margin-bottom: 8px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li a { text-decoration: none; font-size: 15px; color: #29a6dc; }
+    .footer { position: absolute; overflow: hidden; bottom: 19px; width: 100%; }
+    .learn-more { display: block; width: 66px; float: right; margin-right: 10px; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+   </code>
+
+layoutConfig_360_300 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+<div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_360_300 = <code>
+</code>
+
+cssConfig_360_300 = <code>
+    .container { position: relative; width: 360px; height: 300px; overflow: hidden; background: white; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1; overflow: hidden; }
+    .ad-banner { width: 360px; height: 58px; position: relative; background: url(http://ubmcmm.baidustatic.com/media/v1/0f000ZcS7m9VvDhV7KNp80.jpg) no-repeat; }
+    .ad-banner-title { position: absolute; left: 13px;letter-spacing:2px; font-size: 21px; top: 22px; color: white;width:254px;height:22px;line-height:22px;overflow:hidden; }
+    .ad-content { overflow: hidden; margin: 14px 20px 16px 21px; }
+    .ad-intro-list { margin-bottom: 13px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list p { margin-top: 7px; white-space: nowrap; text-overflow:ellipsis; overflow: hidden; }
+    .ad-intro-list-title { text-decoration: none; font-size: 18px; color: #29a5df;}
+    .ad-intro-list-desc { text-decoration: none; font-size: 15px; color: #323232; }
+    .ad-links { border-top: solid 1px #c8c8c8; }
+    .ad-links ul { margin-top: 12px; }
+    .ad-links li { list-style: none; padding-left: 10px; background: url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat left center; margin-bottom: 8px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-links li a { text-decoration: none; font-size: 16px; color: #29a6dc; }
+    .footer { position: absolute; overflow: hidden; bottom: 19px; width: 100%; }
+    .learn-more { display: block; width: 66px; float: right; margin-right: 10px; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+   .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+    </code>
+
+layoutConfig_160_600 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_160_600 = <code>
+</code>
+
+cssConfig_160_600 = <code>
+.container{position:relative;width:160px;height:600px;overflow:hidden;background:white}.adWrap{font-family:"微软雅黑",arial,sans-serif;line-height:1em;overflow:hidden}.ad-banner{width:160px;height:90px;position:relative;background:url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/160x600-banner_03.png) no-repeat}.ad-banner-title{position:absolute;left:3px;font-size:14px;top:61px;color:white;width:155px;height:36px;line-height:18px;overflow:hidden}.ad-content{overflow:hidden;margin:20px 10px 0 10px}.ad-intro-list{margin-bottom:10px;height:93px;width:144px;overflow:hidden}.ad-intro-list-title{text-overflow:ellipsis;white-space:nowrap;text-decoration:none;font-size:17px;color:#29a5df;line-height:25px}.ad-intro-list-title p{line-height:18px;height:36px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.ad-intro-list-desc{display:block;text-decoration:none;margin-top:7px;height:64px;font-size:14px;line-height:21px;color:#323232}.ad-intro-list-desc p{text-decoration:none;font-size:14px;color:#323232;height:40px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.ad-links{border-top:solid 1px #c8c8c8;margin-top:20px}.ad-links ul{margin-top:15px}.ad-links li{width:8.6em;list-style:none;font-size:15px;padding-left:10px;background:url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat left 10px;margin-bottom:12px;height:64px;overflow:hidden}.ad-links li a{text-decoration:none;word-break:break-all;color:#29a6dc}.ad-links li a p{line-height:18px;height:54px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}.footer{position:absolute;bottom:25px;width:100%}.learn-more{display:block;width:66px;margin:0 auto;border:1px solid #646464;border-radius:6px;text-decoration:none;padding:5px;color:#8c8787;font-size:13px}.bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0}.ad-intro ul{width:140px;height:195px;overflow:hidden}.intro_title_0_1{width:136px;height:47px;overflow:hidden;display:block}.intro_title_0_1 p{width:140px;height:60px;overflow:hidden;display:block}.ad-intro-list-title{overflow:hidden;display:block}.ad-intro-list p{width:140px;height:67px;overflow:hidden}.ad-links ui{width:140px;height:143px;overflow:hidden}#links_title_2_1{width:139px;height:42px;overflow:hidden}#links_title_3_1{width:139px;height:69px;overflow:hidden;) #links_title_2_1 a{width:120px;height:43px;overflow:hidden;display:block}#links_title_3_1 a{width:129px;height:65px;overflow:hidden;display:block}
+</code>
+
+layoutConfig_120_600 = <code>
+	<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        category = item_1[0].category && item_1[0].category.value ?item_1[0].category.value : "让云计算大道至简";
+        
+        var dataLength = item_1.length;
+        var l0,l1;
+        if (dataLength <= 2){
+            l0 = dataLength;
+        }else{
+            l0 = 2;
+        }
+        if(dataLength <= 4){
+            l1 = dataLength;
+        }else{
+            l1 = 4;
+        }
+    }%>
+   <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-title">
+                <%category%>
+            </div>
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0;i<l0;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <p>
+                                <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                    <%item_1[i].services.value%>
+                                </a>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2;i<l1;i++){ %>
+                        <li id="links_title_<%i%>_<%item_1[i].title.midIndex%>">
+                            <a href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">更多知识 &gt; </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_120_600 = <code>
+</code>
+
+cssConfig_120_600 = <code>
+.container{position:relative;width:120px;height:600px;overflow:hidden;background:white}.adWrap{font-family:"微软雅黑",arial,sans-serif;line-height:1em;overflow:hidden}.ad-banner{width:120px;height:90px;position:relative;background:url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/120x600-banner_03.png) no-repeat}.ad-banner-title{position:absolute;display:block;width:7em;left:8px;font-size:15px;top:50px;color:white;line-height:17px;overflow:hidden;height:34px}.ad-content{overflow:hidden;margin:17px 5px 0 5px}.ad-intro-list{margin-bottom:10px}.ad-intro-list-title{text-decoration:none;font-size:14px;color:#29a5df;line-height:21px}.ad-intro-list-title p{line-height:18px;height:36px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.ad-intro-list-desc{display:block;text-decoration:none;font-size:12px;color:#323232;line-height:20px}.ad-intro-list-desc p{line-height:18px;color:#323232;height:36px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.ad-links{border-top:solid 1px #c8c8c8;margin-top:15px}.ad-links ul{margin-top:15px}.ad-links li{list-style:none;font-size:13px;padding-left:10px;background:url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/list-item.png) no-repeat left 7px;margin-bottom:12px;height:76px;overflow:hidden}.ad-links li a{text-decoration:none;word-break:break-all;color:#29a6dc;line-height:19px}.ad-links li a p{line-height:18px;height:54px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}.footer{position:absolute;bottom:20px;width:100%;z-index:9999}.learn-more{display:block;width:66px;margin:0 auto;border:1px solid #646464;border-radius:6px;text-decoration:none;padding:5px;color:#8c8787;font-size:13px}.bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0}.ad-intro ul{width:110px;height:213px;overflow:hidden}.ad-intro-list{width:110px;height:100px;overflow:hidden}.ad-intro-list .ad-intro-list-title{width:110px;height:25px;overflow:hidden;display:block;text-overflow:ellipsis;white-space:nowrap}.ad-intro-list p{width:110px;height:60px;overflow:hidden;margin-top:6px}.ad-links ul{width:110px;height:145px;overflow:hidden}.links_title_3_0{width:110px;height:57px;overflow:hidden}.links_title_3_0{width:110px;height:57px;overflow:hidden}.links_title_2_0{width:110px;height76px;overflow:hidden}
+</code>

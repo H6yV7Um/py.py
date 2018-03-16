@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- image_base_dspauto -->
+        <title>百度网盟推广</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {{timeStatistic}}
+        <link rel="stylesheet" href="{{baseCssUrl}}" />
+        <style>{{style}}</style>
+    </head>
+    <body>
+        {{html}}
+        <script src="{{baseJsUrl}}"></script>
+        <script>
+            var config = {{config}};
+            var antiArray = {{antiArray}};
+            {{common.js}}
+        </script>
+        <!-- <script type="text/javascript" src="{{feedbackPC}}"></script> -->
+        <script>
+        var fbIcon = document.getElementById('fbIconDiv');
+        var flowType = 1;
+        if (fbIcon) {
+            flowType = fbIcon.getAttribute('flowtype');
+            document.write('<scr' + 'ipt src="{{dupDomain}}/cpro/ui/noexpire/js/rs/business/' + (parseInt(flowType, 10) === '2' ? 'feedbackPC' : 'feedbackMobile') + '.min.js"></scr' + 'ipt>');
+        }
+        </script>
+    </body>
+</html>

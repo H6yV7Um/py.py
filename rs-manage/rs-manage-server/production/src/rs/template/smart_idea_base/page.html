@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- $bdCadsNoadreason$|$bdAllRetAdType$ -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- smart_idea_base -->
+        <title>百度网盟推广</title>
+        <link rel="stylesheet" href="{{baseCssUrl}}" />
+        <style type="text/css">
+            .bd-logo-310-260{
+                bottom:5px;
+                right:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+            var ads = {{ads}};
+            var config = {{config}};
+            var layoutConfig = {};
+            var antiArray = {{antiArray}};
+            var smGlobleCss ={{smGlobleCss}};
+            var smLayoutconfig = {{smLayoutConfig}};
+            var smLunboConfig = {{smLunboConfig}};
+        </script>
+
+        <!-- main -->
+        <div id="loader" class="loader">loading......</div>
+        <div id="lu_loader" class="loader">loading......</div>
+        <!-- //main -->
+
+        <script type="text/javascript" src="https://cpro.baidustatic.com/static/js/rs/1.0.0/rsBase.min.js"></script>
+        <script type="text/javascript">
+            {{common.js}}
+        </script>
+        <script type="text/javascript">
+            // 判断是否显示网盟logo
+            if(window.config && window.config.logoIsShow === 0) {
+                var bdLogo5 = document.getElementsByClassName('bd-logo5')[0];
+                bdLogo5.setAttribute('style','display:none');
+            }
+            // 添加广告标识
+            if (window.config && window.config.adIconIsShow !== 0) {
+                var adIconWrap = document.createElement('div');
+                adIconWrap.className = 'bd-adIcon';
+                adIconWrap.innerHTML = '&nbsp';
+                var containerWrap = document.getElementById('containerWrap');
+                containerWrap.appendChild(adIconWrap);
+            }
+        </script>
+    </body>
+
+</html>

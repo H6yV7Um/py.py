@@ -1,0 +1,28 @@
+# for daodao
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none}',
+'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid #009900;background:#FFFFFF;}',
+'.title':'{color:#009900;}',
+'.price':'{color:#000;}',
+'.bookButtonText':'{color:#009900}',
+}
+</code>
+layoutConfig_960_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:295px;width:100px;height:50px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:100px;height:50px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000g7bNnyhrdbUffiVs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:398px;height:298px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:15px;left:20px;width:260px;height:26px;font-size:24px;line-height:26px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:90px;left:74px;width:250px;height:200px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:20px;width:220px;height:40px;font-size:18px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:60px;left:295px;width:80px;height:24px;background:#009900',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:60px;left:295px;width:80px;line-height:24px;height:24px;font-size:14px;text-align:center;',type:'text',content:'现在去比价',isShow:true}}
+</code>

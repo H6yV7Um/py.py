@@ -1,0 +1,219 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+layoutConfig_960_90 = <code>
+     <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"];
+     }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0,l=2;i<l;i++){
+                    %>
+                    <li class="ad-intro-list">
+                        <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank"><%item_1[i].title.value%></a>
+                        <a id="intro_arrow_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-arrow" href="<%item_1[i].title.curl%>" target="_blank"></a>
+                        <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                            <p>
+                                <%item_1[i].services.value%>
+                            </p>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2,l=4;i<l;i++){
+                    %>
+                    <li class="ad-links-list">
+                        <a id="links_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-links-list-title" href="<%item_1[i].title.curl%>" target="_blank"><%item_1[i].title.value%></a>
+                        <a id="links_arrow_<%i%>_<%item_1[i].title.midIndex%>" class="ad-links-list-arrow" href="<%item_1[i].title.curl%>" target="_blank"></a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl||'#'%>" target="_blank"><p>查看更多</p></a>
+        </div>
+    </div> 
+</code>
+
+lunboConfig_960_90 = <code>
+</code>
+
+cssConfig_960_90 = <code>
+    .container { position: relative; width: 960px; height: 90px; background: #0060aa; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; color: white; }
+    .ad-banner { float: left; width: 110px; height: 90px; position: relative; background: #007fd9 url(http://bs.baidu.com/adtest/dukeke/intel2/images/logo-white.png) no-repeat 50% 50%; }
+    .ad-content { float: left; overflow: hidden; position: relative; border-left: #005291 2px solid; }
+    .ad-intro { float: left; width: 525px; height: 60px; margin: 15px 0 0 20px; border-right: solid 1px #4ba0e0; }
+    .ad-intro-list { float: left; margin-right: 30px; }
+    .ad-intro-list:last-child { margin-right: 20px }
+    .ad-intro-list-title { display: inline-block; font-size: 16px; font-weight: bold; text-decoration: none; color: #ffe747; line-height: 22px; max-width: 13em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list-arrow { display: inline-block; width: 8px; height: 22px; margin-left: 12px; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-yellow.png) no-repeat center center; }
+    .ad-intro-list-desc { display: block; text-decoration: none; }
+    .ad-intro-list-desc p { line-height: 18px; font-size: 12px; color: white; width: 19em; height: 36px; text-overflow: ellipsis;        /*white-space: nowrap;*/ overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .ad-links { float: left; margin: 15px 0 0 15px; }
+    .ad-links-list { list-style: none; margin-top: 8px; }
+    .ad-links-list-title { display: inline-block; text-decoration: none; color: white; font-size: 14px; max-width: 12em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ad-links-list-arrow { display: inline-block; width: 6px; height: 14px; margin-left: 10px; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-white-small.png) no-repeat center center; }
+    .footer { position: absolute; height: 70px; width: 79px; right: 0; bottom: 0; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/960x90-shadow.png); }
+    .learn-more { display: block; position: relative; width: 50px; height: 50px; background: #0dbcfe; text-decoration: none; }
+    .learn-more:hover { background: #3ccaff; }
+    .learn-more p { position: absolute; margin: auto; left: 0; right: 0; top: 0; bottom: 0; width: 2em; color: #FFFFFF; font-size: 14px; line-height: 20px; height: 40px; }
+</code>
+
+
+layoutConfig_300_250 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"];
+     }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0,l=2;i<l;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-title" href="<%item_1[i].title.curl%>" target="_blank">
+                                <%item_1[i].title.value%>
+                            </a>
+                            <a id="intro_arrow_<%i%>_<%item_1[i].title.midIndex%>" class="ad-intro-list-arrow" href="<%item_1[i].title.curl%>" target="_blank"></a>
+                            <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" class="ad-intro-list-desc" href="<%item_1[i].services.curl%>" target="_blank">
+                                <%item_1[i].services.value%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2,l=4;i<l;i++){ %>
+                        <li class="ad-links-list">
+                            <a id="links_title_<%i%>_<%item_1[i].title.midIndex%>" class="ad-links-list-title" href="<%item_1[i].title.curl%>" target="_blank"><%item_1[i].title.value%></a>
+                            <a id="links_arrow_<%i%>_<%item_1[i].title.midIndex%>" class="ad-links-list-arrow" href="<%item_1[i].title.curl%>" target="_blank"></a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl||'#'%>" target="_blank">
+                <p>查看更多</p> </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_300_250 = <code>
+</code>
+
+cssConfig_300_250 = <code>
+    .container { position: relative; width: 300px; height: 250px; overflow: hidden; background: #0060aa; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 300px; height: 50px; position: relative; background: #007fd9 url(http://bs.baidu.com/adtest/dukeke/intel2/images/logo-white.png) center center no-repeat; }
+    .ad-content { overflow: hidden; padding: 10px 25px; border-top: #005291 2px solid; }
+    .ad-intro-list { margin-bottom: 10px; }
+    .ad-intro-list-title { display: inline-block; font-size: 16px; font-weight: bold; text-decoration: none; color: #ffe747; line-height: 16px; max-width: 14em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list-arrow { display: inline-block; margin-left: 12px; width: 8px; height: 16px; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-yellow.png) no-repeat center center; }
+    .ad-intro-list-desc { display: block; text-decoration: none; font-size: 12px; color: #FFFFFF; margin-top: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+    .ad-links { border-top: solid 1px #4ba0e0; }
+    .ad-links ul { margin-top: 22px; width: 80%; }
+    .ad-links-list { list-style: none; margin-bottom: 10px; }
+    .ad-links-list-title { display: inline-block; text-decoration: none; color: white; font-size: 14px; max-width: 12em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ad-links-list-arrow { display: inline-block; width: 6px; height: 14px; margin-left: 10px; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-white-small.png) no-repeat center center; }
+    .footer { position: absolute; width: 66px; height: 71px; bottom: 0; right: 0; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/300x250-shadow.png) no-repeat; }
+    .learn-more { display: block; position: relative; width: 45px; height: 45px; background: #0dbcfe; text-decoration: none; }
+    .learn-more:hover { background: #3ccaff; }
+    .learn-more p { position: absolute; margin: auto; left: 0; right: 0; top: 0; bottom: 0; width: 2em; color: #FFFFFF; font-size: 12px; line-height: 15px; height: 30px; }
+</code>
+
+
+layoutConfig_120_600 = <code>
+    <%{ var data=dataArray[0], itemCollection=data.pageBlocks, item_1=itemCollection[ "normalBlock"]; }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+        </div>
+        <div class="ad-content">
+            <div id="ad-intro" class="ad-intro">
+                <ul>
+                    <%for(var i=0,l=2;i<l;i++){ %>
+                        <li class="ad-intro-list">
+                            <a id="intro_title_<%i%>_<%item_1[i].title.midIndex%>" href="<%item_1[i].title.curl%>" target="_blank" class="ad-intro-list-title">
+                                <p>
+                                    <%item_1[i].title.value%>
+                                </p>
+                            </a>
+                            <a id="intro_desc_<%i%>_<%item_1[i].services.midIndex%>" href="<%item_1[i].services.curl%>" target="_blank" class="ad-intro-list-desc">
+                                <p>
+                                    <%item_1[i].services.value%>
+                                </p>
+                            </a>
+                            <a id="intro_arrow_<%i%>_<%item_1[i].title.midIndex%>" href="<%item_1[i].title.curl%>" target="_blank" class="ad-intro-list-arrow">
+                                
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="ad-links" class="ad-links">
+                <ul>
+                    <%for(var i=2,l=4;i<l;i++){ %>
+                        <li >
+                            <a id="links_title_<%i%>_<%item_1[i].title.midIndex%>" href="<%item_1[i].title.curl%>" target="_blank">
+                                <p>
+                                    <%item_1[i].title.value%>
+                                </p>
+                            </a>
+                            <a id="links_arrow_<%i%>_<%item_1[i].title.midIndex%>" href="<%item_1[i].title.curl%>" target="_blank" class="ad-links-list-arrow"></a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer">
+            <a id="learn_more_<%item_1[0].learnMore.midIndex%>" class="learn-more" href="<%item_1[0].learnMore.curl||'#'%>" target="_blank">
+                <p>查看更多</p>
+            </a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_120_600 = <code>
+</code>
+
+cssConfig_120_600 = <code>
+    .container { position: relative; width: 120px; height: 600px; overflow: hidden; background: #0060aa; }
+    .adWrap { font-family: "微软雅黑", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 120px; height: 90px; position: relative; background: #007fd9 url(http://bs.baidu.com/adtest/dukeke/intel2/images/logo-white.png) center center no-repeat; }
+    .ad-content { overflow: hidden; padding: 20px 10px 0 10px; border-top: #005291 2px solid; }
+    .ad-intro-list-title { display: block; text-decoration: none; }
+    .ad-intro-list-title p { height: 40px; font-size: 15px; font-weight: bold; color: #ffe747; line-height: 20px; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .ad-intro-list-desc { display: block; text-decoration: none; margin-top: 5px; font-size: 12px; width: 8em;                    /*height: 36px;*/ }
+    .ad-intro-list-desc p { line-height: 15px; height: 30px; color: #FFFFFF; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .ad-intro-list-arrow { display: block; height: 15px; margin: 10px 0; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-yellow.png) no-repeat 50% 50%; }
+    .ad-links { border-top: solid 1px #4ba0e0; margin-top: 20px; }
+    .ad-links ul { margin-top: 20px; }
+    .ad-links li { margin: 0 auto; width: 6em; list-style: none; font-size: 14px; }
+    .ad-links li a { text-decoration: none; display: block; }
+    .ad-links li a p { word-break: break-all; color: #FFFFFF; line-height: 18px; height: 36px; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .ad-links-list-arrow { display: block; height: 15px; margin: 10px 0; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/arrow-white.png) no-repeat 50% 50%; }
+    .footer { position: absolute; bottom: 0px; width: 100%; height: 83px; background: url(http://bs.baidu.com/adtest/dukeke/intel2/images/120x600-shadow.png) 30px 0px no-repeat; }
+    .learn-more { display: block; position: relative; width: 60px; height: 60px; margin: 0 auto; background: #0dbcfe; text-decoration: none; }
+    .learn-more:hover { background: #3ccaff; }
+    .learn-more p { position: absolute; margin: auto; left: 0; right: 0; top: 0; bottom: 0; width: 2em; color: #FFFFFF; font-size: 15px; line-height: 20px; height: 40px; }
+</code>
+

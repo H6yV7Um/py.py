@@ -1,0 +1,14 @@
+{
+  "templateId": 20006,
+  "size": [
+    {
+      "sizeType": 1,
+      "valueType": 2,
+      "width": 80,
+      "widthEnd": 1000,
+      "height": 60,
+      "heightEnd": 1000
+    }
+  ],
+  "updateTime": 1000
+}

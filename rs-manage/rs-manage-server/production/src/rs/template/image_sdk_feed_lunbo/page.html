@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- image_sdk_feed_lunbo -->
+        <title>百度网盟推广</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {{timeStatistic}}
+        <link rel="stylesheet" href="{{baseCssUrl}}" >
+        <style>{{style}}</style>
+    </head>
+
+    <body>
+
+        {{html}}
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+        var config = {{config}};
+        var antiArray = {{antiArray}};
+        </script>
+        <script type="text/javascript">
+            try {
+                var winUrlArr = %%winnoticeArr%%;
+            } catch (e) {
+                // 可能存在单个轮播广告，这个情况下winUrlArr就不会有任何赋值
+            }
+        </script>
+        <script type="text/javascript" src="{{dupDomain}}/cpro/ui/noexpire/js/rs/business/1.0.0/anticheat_mob.min.js"></script>
+        <script type="text/javascript">
+        oojs.config({basePath: "{{dupDomain}}/cpro/ui/noexpire/js/3.2.4/rs_js/"});
+        </script>
+        <script type="text/javascript" src="{{dupDomain}}/cpro/ui/noexpire/js/3.2.4/rs_js/image_sdk_feed_lunbo_page.min.js?v=1.0.0"></script>
+    </body>
+
+</html>

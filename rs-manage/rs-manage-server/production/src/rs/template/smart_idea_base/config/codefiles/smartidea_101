@@ -1,0 +1,62 @@
+GlobalCss = <code>
+{}
+</code>
+
+layoutConfig_960_90 = <code>
+</code>
+
+cssConfig_960_90 = <code>
+</code>
+
+layoutConfig_700_144 = <code>
+<%{var data=dataArray[0],
+    pageItemCollection=data.pageBlocks,
+    pageItem_1=pageItemCollection["normalBlock"];
+    var itemNum = 1;
+}%>
+
+<div class="threadlist_left j_threadlist_li_left"><div class="threadlist_rep_num"><a title="百度网盟推广" href="http://wangmeng.baidu.com" target="_blank" >推广</a></div></div>   
+<div class="threadlist_right">
+<div class="threadlist_lz clearfix">
+<div class="threadlist_text threadlist_title j_th_tit  member_thread_title_frs ">
+<a id="title_0"  class="j_th_tit" target="_blank" title="<%pageItem_1[0].title.value%>" href="<%pageItem_1[0].title.curl%>" target="_blank"><%pageItem_1[0].title.value%></a>
+</div>
+<div class="threadlist_author">
+<span class="tb_icon_author"><a id="merchant_0" class="j_user_card" target="_blank" href="<%pageItem_1[0].merchant.curl%>"><%pageItem_1[0].merchant.value%></a></span>
+</div>
+</div>
+<div class="threadlist_detail clearfix">
+<div class="threadlist_text">
+<div class="threadlist_abs threadlist_abs_onlyline"><a id="desc_0" class="desc" target="_blank" href="<%pageItem_1[0].desc.curl%>"><%pageItem_1[0].desc.value%></a></div>
+<div class="small_wrap j_small_wrap">
+<a id="res_0"  target="_blank" href="<%pageItem_1[0].res.curl%>" target="_blank"><img src="<%pageItem_1[0].res.value%>"></img></a>
+</div>
+</div>
+</div>
+</div>
+
+</code>
+
+cssConfig_700_144 = <code>
+.container{position:relative;width:700px;height:144px;}
+.container div{overflow:hidden;}
+.container a{text-decoration:none;cursor:pointer;font-family:'宋体':outline:none;}
+.threadlist_left{float:left;width:70px;}
+.threadlist_rep_num{background:url("http://tb2.bdstatic.com/tb/static-frs/img/frs_bright/images_bmg/f_reply_bg_89030dc.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);color:#666;height:30px;line-height:25px;margin:0;width:50px;text-align:center;display:block;}
+.threadlist_rep_num a{font-size:12px;color:#666;}
+.threadlist_right{float:left;}
+.threadlist_lz{height:23px;line-height:23px;}
+.threadlist_text{display:inline;float:left;margin-right:20px;padding-top:3px;width:454px;}
+.threadlist_title{height:20px;line-hegiht:20px;text-overflow:ellipsis;white-space:nowrap;}
+.threadlist_title a{font-size:14px;color:#2d64b3}
+.threadlist_title a:hover{text-decoration:underline;}
+.threadlist_author{float:right;width:155px;color:#999;}
+.tb_icon_author{background:url("http://tb2.bdstatic.com/tb/static-frs/img/frs_bright/images_bmg/tb_icon_7d46d43.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);background-position:3px -849px;padding-top:2px;width:135px;float:left;height:20px;line-height:20px;margin-right:12px;padding-left:21px;}
+.j_user_card{color:#999;font-size:12px;}
+.threadlist_detail{padding-top:3px;}
+.threadlist_abs{width:451px;color:#666;line-height:18px;text-overflow:ellipsis;white-space:nowrap;}
+.threadlist_detail a{font-size:12px;color:#666;}
+.j_small_wrap{margin:7px 0 0;}
+.small_wrap{width:460px;}
+.small_wrap img{height:89px;}
+</code>

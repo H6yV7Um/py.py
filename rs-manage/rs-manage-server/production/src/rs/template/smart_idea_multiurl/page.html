@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <!-- $bdCadsNoadreason$|$bdAllRetAdType$ -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>百度网盟推广</title>
+        <!-- smart_idea_multiurl -->
+        <link rel="stylesheet" href="{{baseCssUrl}}" />
+        <style type="text/css">
+            .bd-logo-310-260{
+                bottom:5px;
+                right:5px;
+            }
+            {{smCssConfig}}
+        </style>
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>        
+        <script src="{{dupDomain}}/cpro/ui/noexpire/js/smartIdea/template.js"></script>
+        <script  id="smTpl" type="text/html">
+            {{smLayoutConfig}}
+        </script>
+        <script type="text/javascript">
+            var ads = {{ads}};
+            var config = {{config}};            
+            var layoutConfig = {};
+            var antiArray = new Array();
+            for(var i=0;i<50;i++){
+                antiArray.push(ads[0].smartIdeaProduct[0].midTime);
+            }
+            var smGlobleCss ={{smGlobleCss}};
+            var smLunboConfig = {{smLunboConfig}};
+        </script>
+        <div id="container" class="container"></div>
+        <!-- main -->
+        <div id="loader" class="loader">loading......</div>
+        <div id="lu_loader" class="loader">loading......</div>
+        <!-- //main -->
+        <script type="text/javascript">
+            {{page.js}}
+
+            {{common.js}}       
+        </script>
+        <script>
+            // 判断是否显示网盟logo
+            if (window.config && window.config.logoIsShow === 0) {
+                var bdLogo5 = document.getElementsByClassName('bd-logo5')[0];
+                bdLogo5.setAttribute('style', 'display:none');
+            }
+            // 添加广告标识
+            if (window.config && window.config.adIconIsShow !== 0) {
+                var adIconWrap = document.createElement('div');
+                adIconWrap.className = 'bd-adIcon';
+                adIconWrap.innerHTML = '&nbsp';
+                var container = document.getElementById('container');
+                container.appendChild(adIconWrap);
+            }
+            if(smLunboConfig && smLunboConfig.isLunbo){
+                if(smLunboConfig.lunboType == 4){
+                    document.write('<scr' + 'ipt src="{{dupDomain}}/cpro/ui/noexpire/js/smartIdea/lunbo' + 4 + '.js"></scr' + 'ipt>');
+                }else{
+                    document.write('<scr' + 'ipt src="{{dupDomain}}/cpro/ui/noexpire/js/smartIdea/lunbo.js"></scr' + 'ipt>');
+                }
+                
+            }   
+        </script>
+    </body>
+
+</html>

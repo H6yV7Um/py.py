@@ -1,0 +1,2049 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+
+
+layoutConfig_400_300 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" class="item0_prod" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+    </div> 
+</code>
+
+lunboConfig_400_300 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:398,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:145px;left:40px;}.rightIconBlock {top:145px;right:40px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_400_300 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:398px;height:298px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:398px;height:298px; overflow: hidden;}
+    .logoBox{ padding-right: 1px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:98px;;height:48px; }
+    .logoBox{position:absolute; left: 94px; top:11px; z-index: 9; overflow:hidden;}
+    .logo img{overflow:hidden;}
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 28px; line-height: 28px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:270px;height:296px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:64px; margin-left: 64px; _margin-left: 0; width:270px;text-align:center;      overflow: visible;}
+    .item0_logo{width:186px;height:143px;margin: 0 auto;}
+    .item0_logo img{width: 186px; height: 140px;}
+    .item0_info{width:146px;margin: 12px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 39px; top: -53px; }
+    .item0_price img{ width: 98px;height: 48px; }
+    .item0_prod{ padding-top: 3px;}
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:14px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -28px; top: 0; _top:-1px; }
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:14px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px;width:36px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:14px;color:#989898;}
+    .buy_discont{ height: 28px; padding-top: 8px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 80px; height: 28px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:28px; text-indent: 4px; white-space: nowrap; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_360_300 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" class="item0_prod" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_360_300 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:358,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:145px;left:30px;}.rightIconBlock {top:145px;right:30px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_360_300 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:358px;height:298px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:358px;height:298px; overflow: hidden;}
+    .logoBox{ padding-right: 1px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:98px;;height:48px; }
+    .logoBox{position:absolute; left: 77px; top:11px; z-index: 9; overflow:hidden;}
+    .logo img{overflow:hidden;}
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 28px;padding-right:8px;line-height: 28px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:230px;height:298px; margin: 0 auto;overflow: hidden; }
+    .item0_block{position:relative;margin-top:64px; margin-left: 64px; _margin-left: 0; width:230px; text-align:center; overflow: visible; }
+    .item0_logo{width:186px;height:143px;margin: 0 auto;}
+    .item0_logo img{width: 186px; height: 140px;}
+    .item0_info{width:146px;margin: 12px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 14px; top: -53px; }
+    .item0_price img{ width: 98px;height: 48px; }
+    .item0_prod{ padding-top: 3px;}
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:14px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -28px; top: 0; _top:-1px; }
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:14px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:14px;color:#989898;}
+    .buy_discont{ height: 28px; padding-top: 8px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 80px; height: 28px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:28px; text-indent: 4px; white-space: nowrap; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_336_280 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" class="item0_prod" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_336_280 = <code>
+{
+          isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:358,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:145px;left:30px;}.rightIconBlock {top:145px;right:30px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_336_280 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:334px;height:278px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:334px;height:278px; overflow: hidden;}
+    .logoBox{ padding-right: 1px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:98px;;height:48px; }
+    .logoBox{position:absolute; left: 80px; top:11px; z-index: 9; overflow:hidden;}
+    .logo img{overflow:hidden;}
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 28px;padding-right:8px;line-height: 28px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:230px;height:278px; margin: 0 auto;overflow: hidden; }
+    .item0_block{position:relative;margin-top:57px; margin-left: 53px; _margin-left: 0; width:230px; text-align:center; overflow: visible;}
+    .item0_logo{width:169px;height:130px;margin: 0 auto;}
+    .item0_logo img{width: 169px; height: 130px;}
+    .item0_info{width:146px;margin: 12px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 3px; top: -47px; }
+    .item0_price img{ width: 98px;height: 48px; }
+    .item0_prod{ padding-top: 3px;}
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:14px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -28px; top: 0; _top:-1px; }
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:14px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px;width:36px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:14px;color:#989898;}
+    .buy_discont{ height: 28px; padding-top: 8px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 80px; height: 28px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:28px; text-indent: 4px; white-space: nowrap; }
+
+
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_300_250 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_300_250 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:298,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:110px;left:32px;}.rightIconBlock {top:110px;right:32px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_300_250 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:298px;height:248px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:298px;height:248px; overflow: hidden;}
+    .logoBox{ padding-right: 7px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:69px;;height:34px; }
+    .logoBox{position:absolute; left: 74px; top: 21px; z-index: 9; overflow:hidden;}
+    .logo img{overflow:hidden;}
+
+
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 23px; line-height: 23px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:210px;height:248px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:64px; margin-left: 44px; _margin-left: 0; width:210px;text-align:center; overflow: visible;}
+    .item0_logo{width:157px;height:118px;margin: 0 auto;}
+    .item0_logo img{width: 157px; height: 118px;}
+    .item0_info{width:125px;margin: 5px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 26px; top: -42px; }
+    .item0_price img{ width: 69px;height: 34px; }
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 22px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 61px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:21px; _line-height:24px; text-indent: 4px; white-space: nowrap; }
+
+
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_250_250 = <code>
+    <%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+   <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_250_250 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:298,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:121px;left:16px;}.rightIconBlock {top:121px;right:16px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_250 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:248px;height:248px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:248px;height:248px; overflow: hidden;}
+    .logoBox{ padding-right: 7px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:69px;;height:34px; }
+    .logoBox{position:absolute; left: 54px; top: 26px; z-index: 9; overflow:hidden; }
+    .logo img{overflow:hidden;}
+
+
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 23px; line-height: 23px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 18px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:210px;height:248px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:64px; margin-left: 19px; _margin-left: 0; width:210px;text-align:center; overflow: visible;}
+    .item0_logo{width:151px;height:116px;margin: 0 auto;}
+    .item0_logo img{width: 151px; height: 116px;}
+    .item0_info{width:125px;margin: 5px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 26px; top: -38px; }
+    .item0_price img{ width: 69px;height: 34px; }
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:14px;height: 32px; text-align: left; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 19px; width:24px;overflow:hidden;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 22px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 61px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:21px; _line-height:24px; text-indent: 4px; white-space: nowrap; }
+
+
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_250_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_250_200 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:298,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:89px;left:10px;}.rightIconBlock {top:89px;right:10px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_250_200 = <code>
+   a{ cursor: pointer;}
+    .container{position:relative;width:248px;height:198px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:248px;height:198px; overflow: hidden;}
+    .logoBox{ padding-right: 7px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:69px;;height:34px; }
+    .logoBox{position:absolute; left: 54px; top: 10px; z-index: 9; overflow:hidden; }
+    .logo img{overflow:hidden;}
+
+
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 23px; line-height: 23px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:210px;height:198px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:48px; margin-left: 20px; _margin-left: 0; width:210px;text-align:center; overflow: visible;}
+    .item0_logo{width:118px;height:90px;margin: 0 auto;}
+    .item0_logo img{width: 118px; height: 90px;}
+    .item0_info{width:125px;margin: 5px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 26px; top: -38px; }
+    .item0_price img{ width: 69px;height: 34px; }
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+    .title1{height:30px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:14px;height: 28px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px; width:24px;overflow:hidden;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 22px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 61px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:21px; _line-height:24px; text-indent: 4px; white-space: nowrap; }
+
+
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_200_200 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>   
+        </div>
+         
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item0_logo">
+                        <a  id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>"  class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>   
+                    <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>"  href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>    
+            </div>         
+        </div>  
+    </div> 
+</code>
+
+lunboConfig_200_200 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:198,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:89px;left:8px;}.rightIconBlock {top:89px;right:8px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_200_200 = <code>
+   a{ cursor: pointer;}
+    .container{position:relative;width:198px;height:198px;border:1px solid #FF82EF; overflow: hidden; }
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+    #adWrap{width:198px;height:198px; overflow: hidden;}
+    .logoBox{ padding-right: 7px; border-right: 1px solid #959595; }
+    .logoBox,.logoBox img,.logo,.logo img{ width:69px;;height:34px; }
+    .logoBox{position:absolute; left: 24px; top: 10px; z-index: 9; overflow:hidden; }
+    .logo img{overflow:hidden;}
+
+
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 54px; height: 23px; line-height: 23px; float: left; text-align: left;overflow:hidden; }
+    .discount a{ font-size: 18px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{ position: relative; overflow: hidden;}
+    .item0{width:210px;height:198px; margin: 0 auto; }
+    .item0_block{position:relative;margin-top:48px; margin-left: 0; _margin-left: 0; width:198px;text-align:center; overflow: visible;}
+    .item0_logo{width:115px;height:88px;margin: 0 auto;}
+    .item0_logo img{width: 115px; height: 88px;}
+    .item0_info{width:125px;margin: 5px auto;}
+    .item0_price{display: inline-block; position: absolute; right: 26px; top: -38px; }
+    .item0_price img{ width: 69px;height: 34px; }
+    .mid-pic{position: relative; height: 34px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+    .title1{height:30px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:14px;height: 28px; text-align: left; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 18px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 22px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 61px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:21px; _line-height:24px; text-indent: 4px; white-space: nowrap; }
+
+
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:30px;height:30px;}
+    .leftIcon,.rightIcon{width:30px;height:30px;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png');_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png');_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png') no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png');_background:none;cursor:pointer;}
+</code>
+
+
+layoutConfig_120_270 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+
+                <div class="item0_block">
+                    <div class="item_panel">
+                       <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                        <div class="item0_info">
+                        <div class="title1">
+                           <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                <% } %>    
+                </div>
+            </div>         
+        </div>    
+    </div> 
+</code>
+
+lunboConfig_120_270 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:118,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {display:none}.rightIconBlock {display:none}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_120_270 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:118px;height:268px;border:1px solid #FF82EF; margin: 0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:118px;height:268px; overflow: hidden;}
+    .logoBox{ position: relative; width:100%;height:35px; text-align: center; margin-top: 10px; }
+    .logoBox .logo_img{ width: 72px; height: 35px; }
+    .logoBg{ color:#fff; padding-top: 12px; position: relative; z-index: 1;}
+    .logoBg img{width:72px;height:35px;overflow:hidden;}
+   
+    .discount a{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:215px; margin: 0 auto; overflow: hidden; }
+    .item0_block{position:relative;margin-top:10px;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:100px;height:78px;margin: 10px auto;}
+    .item0_logo img{width: 100px; height: 78px;}
+    .item0_info{margin: 0 auto;width: 105px;}
+    .item0_price{display: inline-block; }
+    .mid-pic{position: relative; height: 35px; margin: 0 auto; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+
+    .title1{height:36px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:18px;height: 36px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 7px; bottom: -1px; height: 19px;width:36px;overflow:hidden; }
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 38px; height: 22px; line-height: 22px; float: left; text-align: left;overflow:hidden; }
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 26px; margin-top: 4px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 58px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:22px; text-indent: 3px; white-space: nowrap; }
+    image{border:0}
+    
+    .item_panel{ position: relative; }
+    .item_panel .border{ position: absolute; left: 7px; bottom: 0; width: 105px; height: 1px; background: #959595; }
+</code>
+
+
+layoutConfig_120_600 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+   <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a "id="logolink_0_0"" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+
+                <div class="item0_block">
+                    <div class="item_panel">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                        <div class="item0_info">
+                        <div class="title1">
+                            <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[0]['discount'].midIndex%>" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                        <div class="item0_info">
+                        <div class="title1">
+                            <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                            <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[1]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                
+                <% } %>    
+                </div>
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_120_600 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:476,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:74px;left:49px;}.rightIconBlock {bottom:13px;left:49px;}',
+            showPageNumBlock:false,
+            lunboDirection:"vertical",
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_120_600 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:118px;height:598px;border:1px solid #FF82EF; margin: 0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:118px;height:598px; overflow: hidden;}
+    .logoBox{ position: relative; width:100%;height:48px; text-align: center;  margin-top: 20px; }
+    .logoBox .logo_img{ width: 98px; height: 48px; }
+    .logoBg{ color:#fff; padding-top: 12px; position: relative; z-index: 1;}
+    .logoBg img{width:98px;height:48px;overflow:hidden;}
+   
+    .discount a{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:505px; margin: 0 auto; overflow: hidden; }
+    .item0_block{position:relative;margin-top:25px;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:118px;height:88px;margin: 10px auto 7px;}
+    .item0_logo img{width: 118px; height: 88px;}
+    .item0_info{margin: 0 auto;width: 105px;}
+    .item0_price{display: inline-block; margin-top: 10px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -22px; top: 0; _top:-1px; }
+
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:12px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 7px; bottom: -1px; height: 17px;width:25px;overflow:hidden; }
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 38px; height: 22px; line-height: 22px; float: left; text-align: left;overflow:hidden; }
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 26px; margin-top: 4px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 58px; height: 22px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px;color:#fff;line-height:22px; text-indent: 3px; white-space: nowrap; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_hover_1.png') !important;_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {bottom:34px;left:30px;}
+    .rightIconBlock {bottom:34px;right:30px;}
+    .item_panel{ position: relative; padding-bottom: 10px; }
+    .item_panel .border{ position: absolute; left: 7px; bottom: 0; width: 105px; height: 1px; background: #959595; }
+</code>
+
+
+layoutConfig_160_600 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+                <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+
+                <div class="item0_block">
+                    <div class="item_panel">
+                        <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                        <div class="item0_info">
+                        <div class="title1">
+                            <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                            <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_<%i%>_<%pageItem_1[0]['discount'].midIndex%>" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                        <div class="item0_info">
+                        <div class="title1">
+                            <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                            <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[1]['title']['curl']%>" target="_blank">xxxx</a>
+                        </div>
+                        <div class="buy_discont">
+                            <div class="discount">
+                               <a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a> 
+                            </div>
+                            <div class="button">
+                                <div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                <% } %>    
+                </div>
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_160_600 = <code>
+{
+             isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:474,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:74px;left:67px;}.rightIconBlock {bottom:11px;left:69px;}',
+            showPageNumBlock:false,
+            lunboDirection:"vertical",
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_160_600 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:158px;height:598px;border:1px solid #FF82EF; margin: 0 auto;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:158px;height:598px; overflow: hidden;}
+    .logoBox{ position: relative; width:100%;height:48px; text-align: center;  margin-top: 20px; }
+    .logoBox .logo_img{ width: 98px; height: 48px; }
+    .logoBg{ color:#fff; padding-top: 12px; position: relative; z-index: 1;}
+    .logoBg img{width:98px;height:48px;overflow:hidden;}
+   
+    .discount a{ font-size: 18px; font-family: "微软雅黑"; font-weight: bold;color: #666;}
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:100%;height:505px; margin: 0 auto; overflow: hidden; }
+    .item0_block{position:relative;margin-top:25px;width:100%;text-align:center; overflow: visible;}
+    .item0_logo{width:120px;height:90px;margin: 10px auto 7px;}
+    .item0_logo img{width: 120px; height: 90px;}
+    .item0_info{margin: 0 auto;width: 118px;}
+    .item0_price{display: inline-block; margin-top: 10px;}
+    .mid-pic{position: relative; height: 48px; margin: 0 auto; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:13px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -26px; top: 0; _top:-1px; }
+
+    .title1{height:32px; position: relative; }
+    .title1 a{font-size:14px;color:#666;line-height:16px;height: 32px; text-align: left; font-family: '微软雅黑'; }
+    .title1 .title_head{ position: absolute; right: 0; bottom: -1px; height: 20px;width:24px;overflow:hidden; }
+    .discount { display: inline-block; *display: inline; *zoom: 1; width: 50px; height: 28px; line-height: 28px; float: left; text-align: left;overflow:hidden; }
+    .discount .discount_bg{ position: absolute; top:0;left:0;width: 74px;height: 90px;}
+    .discount .dis_val{position: relative;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .buy_discont{ height: 26px; margin-top: 4px; }
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:16px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button,.buttonText,.buttonText a{ width: 67px; height: 26px; }
+    .button{ position: relative; display: inline-block; *display: inline; *zoom: 1; float: left; }
+    .buttonText{background:#ff3398;text-align:center}
+    .buttonText a{font-size:16px;color:#fff;line-height:28px; text-indent: 4px; white-space: nowrap; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+  .leftIcon{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_mouseover_1.png');_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowLeft1_hover_1.png') !important;_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_onmouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vipArrowRight1_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {bottom:34px;left:30px;}
+    .rightIconBlock {bottom:34px;right:30px;}
+    .item_panel{ position: relative; padding-bottom: 10px; }
+    .item_panel .border{ position: absolute; left: 20px; bottom: 0; width: 119px; height: 1px; background: #959595; }
+</code>
+
+
+layoutConfig_960_90 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                            <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                            <a id="discount_<%0%>_<%pageItem_1[0]['discount'].midIndex%>" class="discount" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                                <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[1]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                           <a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" class="discount" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:730,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:37px;left:142px;}.rightIconBlock {top:37px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_90 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:958px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:958px;}
+    .logoBox{position:absolute; left: 26px; top: 22px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:97px;height:48px; }
+    .container,.item0,#adWrap{ height: 88px; }
+
+    .item0_info .discount{ font-size: 20px; font-family: "微软雅黑"; font-weight: bold;color: #666;display:block;width:42px;height:24px;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:752px; overflow: hidden; margin:0 0 0 164px;}
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 78px; overflow: hidden; float: left; margin: 5px 0; background: #fff; }
+    .item0_logo{width:98px;height:78px;float: left;}
+    .item0_logo a{overflow:hidden;}
+
+    .item0_logo,.item0_logo a,.item0_logo img{ width:98px;height: 78px; }
+
+
+    .item0_info{width:135px;float: left; margin-left: 10px; }
+    .item0_price{display: inline-block;float: left;width: 98px;height: 48px;margin: 16px 10px 0 10px;_display:inline;}
+    .item0_price img{width: 98px;height: 48px;}
+    .mid-pic{position: relative; height: 48px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:13px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -26px; top: 0; _top:-1px; }
+
+    .title1{ margin-top: 3px; margin-bottom: 10px; position: relative;width: 100px;height: 32px;overflow:hidden; }
+    .title1 a{font-size:14px;color:#2c2c2c;line-height:16px;}
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:67px;height:26px; position: relative; margin-left: 5px; }
+    .buttonText{width:67px;height:26px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:16px; font-weight: bold; color:#fff;line-height:26px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:37px;left:142px;}
+    .rightIconBlock {top:37px;right:22px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 375px; position: relative; }
+    .item_panel .border{ position: absolute; right: 0; top: 6px; width: 1px; height: 66px; background: #959595; }
+</code>
+
+
+layoutConfig_960_60 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                            <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                            <a id="discount_<%0%>_<%pageItem_1[0]['discount'].midIndex%>" class="discount" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                                <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[1]['title']['curl']%>" target="_blank">xx</a>
+                            </div>
+                           <a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" class="discount" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_960_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:730,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:21px;left:150px;}.rightIconBlock {top:21px;right:33px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_960_60 = <code>
+      a{ cursor: pointer;}
+    .container{position:relative;width:958px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:958px;}
+    .logoBox{position:absolute; left: 20px; top: 7px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:93px;height:44px; }
+    .container,.item0,#adWrap{ height: 58px; }
+
+    .item0_info .discount{ font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px;display:block;width:42px;height:24px;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;width:720px; overflow: hidden; margin:0 0 0 200px;}
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 58px; overflow: hidden; float: left; margin: 0; background: #fff; }
+    .item0_logo{width:77px;height:58px;float: left;}
+    .item0_logo a{ width:77px;height: 58px;overflow:hidden;}
+    .item0_logo img{width:77px; height: 58px;}
+
+
+    .item0_info{width:110px;float: left; margin-left: 10px; margin-top: 1px; }
+    .item0_price{display: inline-block;float: left;width: 98px;height: 44px;margin: 7px 10px 0 10px;_display:inline;}
+    .item0_price img{width: 98px;height: 44px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:12px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -17px; top: 0; _top:-1px; }
+
+    .title1{ margin-top: 3px; position: relative;width: 100px;height: 28px; overflow:hidden;}
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px; width:24px;overflow:hidden;}
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:67px;height:24px; position: relative; margin-left: 1px; }
+    .buttonText{width:60px;height:24px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:24px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:21px;left:150px;}
+    .rightIconBlock {top:21px;right:33px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 360px; position: relative; }
+    .item_panel .border{ position: absolute; right: 0; top: 6px; width: 1px; height: 46px; background: #959595; }
+
+</code>
+
+
+layoutConfig_760_90 = <code>
+ <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                            <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                           <a id="discount_<%0%>_<%pageItem_1[0]['discount'].midIndex%>" class="discount" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                                <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                          <a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" class="discount" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_760_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:600,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:38px;left:116px;}.rightIconBlock {top:38px;right:16px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_760_90 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:758px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:758px;}
+    .logoBox{position:absolute; left: 12px; top: 24px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:96px;height:44px; }
+    .container,.item0,#adWrap{ height: 88px; }
+
+    .item0_info .discount{ font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px; display:block;width:42px;height:24px;overflow:hidden;}
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 137px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 51px; overflow: hidden; float: left; margin: 19px 0; background: #fff; }
+    .item0_logo{width:68px;height:51px;float: left;}
+    .item0_logo a{ width:68px;height: 51px;overflow:hidden;}
+    .item0_logo img{width:68px; height: 51px;}
+
+
+    .item0_info{width:115px;float: left; margin-left: 2px; margin-top: 1px; }
+    .item0_price{display: inline-block;float: left;width: 96px;height: 46px;margin: 4px 3px 0 0;_display:inline;}
+    .item0_price img{width: 96px;height: 45px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -15px; top: 0; _top:-1px; }
+
+    .title1{ width: 105px;height: 28px;position: relative;overflow:hidden; }
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:67px;height:23px; position: relative; margin-left: 1px; }
+    .buttonText{width:60px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 290px; position: relative; margin-right: 4px; }
+    .item_panel .border{ position: absolute; right: 0; top: 4px; width: 1px; height: 45px; background: #959595; }
+</code>
+
+
+layoutConfig_728_90 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+     <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                            <a id="brandLogo_<%i%>_<%pageItem_1[0]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[0]['image'].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_<%i%>_<%pageItem_1[0]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[0]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                          <a id="discount_<%0%>_<%pageItem_1[0]['discount'].midIndex%>" class="discount" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                    <div class="item_panel">
+                        <a id="brandLogo_1_<%i%>_<%pageItem_1[1]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[1]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[1]['brandLogo']['value']%>"/></a>
+                        <div class="item0_logo"><a id="image_1_<%i%>_<%pageItem_1[1]['image'].midIndex%>" href="<%pageItem_1[1]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[1]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                                <a id="title_1_<%i%>_<%pageItem_1[1]['title'].midIndex%>" href="<%pageItem_1[1]['title']['curl']%>" target="_blank"><%pageItem_1[1]['title'].value%></a>
+                                <a id="title_head_1_0_0"class="title_head" href="<%pageItem_1[1]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+<a id="discount_1_<%i%>_<%pageItem_1[1]['discount'].midIndex%>" class="discount" href="<%pageItem_1[1]['discount']['curl']%>" target="_blank"><%pageItem_1[1]['discount']['value']%></a>  
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_1_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_728_90 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:700,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:38px;left:116px;}.rightIconBlock {top:38px;right:7px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_728_90 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:726px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:716px;}
+    .logoBox{position:absolute; left: 12px; top: 23px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:96px;height:44px; }
+    .container,.item0,#adWrap{ height: 88px; }
+
+    .item0_info .discount{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px; discount:block;width:37px;height:24px;overflow:hidden;  }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 137px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 51px; overflow: hidden; float: left; margin: 19px 0; background: #fff; }
+    .item0_logo{width:68px;height:51px;float: left;}
+    .item0_logo a{ width:68px;height: 51px;overflow:hidden;}
+    .item0_logo img{width:68px; height: 51px;}
+
+
+    .item0_info{width:100px;float: left; margin-left: 2px; margin-top: 1px; }
+    .item0_price{display: inline-block;float: left;width: 83px;height: 40px;margin: 6px 3px 0 0;_display:inline;}
+    .item0_price img{width: 83px;height: 40px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:12px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -26px; top: 0; _top:-1px; }
+
+    .title1{ position: relative; width:100px;height: 28px;overflow:hidden;}
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:58px;height:23px; position: relative; margin-left: 4px; }
+    .buttonText{width:60px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 275px; position: relative; margin-right: 4px; }
+    .item_panel .border{ position: absolute; right: 0; top: 4px; width: 1px; height: 45px; background: #959595; }
+</code>
+
+
+layoutConfig_580_90 = <code>
+     <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                           <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[0]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[0]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[0]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                               <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[0]['title']['curl']%>" target="_blank"><%pageItem_1[0]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                           <a id="discount_<%0%>_<%pageItem_1[0]['discount'].midIndex%>" class="discount" href="<%pageItem_1[0]['discount']['curl']%>" target="_blank"><%pageItem_1[0]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_580_90 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:340,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:37px;left:131px;}.rightIconBlock {top:37px;right:26px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_580_90 = <code>
+   a{ cursor: pointer;}
+    .container{position:relative;width:578px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:716px;}
+    .logoBox{position:absolute; left: 16px; top: 23px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:97px;height:42px; }
+    .container,.item0,#adWrap{ height: 88px; }
+
+    .item0_info .discount{ font-size: 21px; font-family: "微软雅黑"; color: #666; line-height: 24px;display:block;width:57px;height:24px;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 163px; width: 355px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 76px; overflow: hidden; float: left; margin: 6px 0; background: #fff; }
+    .item0_logo{width:100px;height:76px;float: left; margin-left: 20px; }
+    .item0_logo a{ width:100px;height: 76px;overflow:hidden;}
+    .item0_logo img{width:100px; height: 76px;}
+
+
+    .item0_info{width:125px;float: right; margin-top: 10px; }
+    .item0_price{display: inline-block;float: left;width: 83px;height: 40px;margin: 20px 0 0 0;_display:inline;}
+    .item0_price img{width: 83px;height: 40px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -29px; top: 0; _top:-1px; }
+
+    .title1{ position: relative; margin-bottom: 2px;width:125px;height:32px;overflow:hidden; }
+    .title1 a{font-size:14px;color:#666;line-height:16px; }
+    .title1 .title_head{ position: absolute; right: 13px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:58px;height:23px; position: relative; margin-left: 4px; }
+    .buttonText{width:65px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 337px; position: relative; }
+</code>
+
+
+layoutConfig_640_60 = <code>
+   <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+      <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                           <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%0%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                               <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                             <a id="discount_<%0%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_640_60 = <code>{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:370,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:22px;left:147px;}.rightIconBlock {top:22px;right:62px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_640_60 = <code>
+    a{ cursor: pointer;}
+    .container{position:relative;width:638px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:716px;}
+    .logoBox{position:absolute; left: 32px; top: 8px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:87px;height:42px; }
+    .container,.item0,#adWrap{ height: 58px; }
+
+    .item0_info .discount{ font-size: 16px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px;display:block;width:42px;height:24px;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 194px; width: 340px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 58px; overflow: hidden; float: left; margin: 3px 0; background: #fff; }
+    .item0_logo{width:68px;height:51px;float: left; margin-left: 36px; }
+    .item0_logo a{ width:68px;height: 51px;overflow:hidden;}
+    .item0_logo img{width:68px; height: 51px;}
+
+
+    .item0_info{width:105px;float: right; }
+    .item0_price{display: inline-block;float: left;width: 83px;height: 40px;margin: 6px 0 0 0;_display:inline;}
+    .item0_price img{width: 83px;height: 40px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -24px; top: 0; _top:-1px; }
+
+    .title1{ position: relative;width:105px;height:28px;overflow:hidden; }
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:58px;height:23px; position: relative; margin-left: 4px; }
+    .buttonText{width:60px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 325px; position: relative; }
+</code>
+
+
+layoutConfig_468_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+      <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                           <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>" href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                               <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_468_60 = <code>
+{
+            isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:290,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:21px;left:103px;}.rightIconBlock {top:21px;right:22px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_468_60 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:466px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:466px;}
+    .logoBox{position:absolute; left: 12px; top: 10px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:80px;height:40px; }
+    .container,.item0,#adWrap{ height: 58px; }
+
+    .item0_info .discount{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px;display:block;width:37px;height:24px;overflow:hidden;  }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 130px; width: 336px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 50px; overflow: hidden; float: left; margin: 4px 0; background: #fff; }
+    .item0_logo{width:66px;height:50px;float: left; margin-left: 8px; }
+    .item0_logo a{ width:66px;height: 50px;overflow:hidden;}
+    .item0_logo img{width:66px; height: 50px;}
+
+
+    .item0_info{width:105px;float: right; }
+    .item0_price{display: inline-block;float: left;width: 83px;height: 40px;margin: 6px 0 0 0;_display:inline;}
+    .item0_price img{width: 83px;height: 40px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -24px; top: 0; _top:-1px; }
+
+    .title1{ position: relative;width:105px;height:28px;overflow:hidden; }
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:58px;height:23px; position: relative; margin-left: 4px; }
+    .buttonText{width:60px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 270px; position: relative; }
+
+</code>
+
+
+layoutConfig_460_60 = <code>
+    <%{    data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 1;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <div id="logo" class="logo"><a id="logolink_0_0" href="<%pageItemCollection.curl%>" target="_blank">
+                <img src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/vip_wph2/vip_logo.png" class="logo_img"/>
+            </a></div>        
+        </div>  
+         <div id="itemBox" class="itemBox">
+            <div id="item0" class="item0">
+               <%for(var i=0,l=pageItem_1.length;i<l;i++){
+                    var curl = pageItem_1[i].curl||pageItemCollection.curl;
+                %>
+                <div class="item0_block">
+                    <div class="item_panel">
+                        
+                           <a id="brandLogo_<%i%>_<%pageItem_1[i]['brandLogo'].midIndex%>" class="item0_price" href="<%pageItem_1[i]['brandLogo']['curl']%>" target="_blank"><img class="mid-pic" src="<%pageItem_1[i]['brandLogo']['value']%>"/></a>
+                            <div class="item0_logo"><a id="image_<%i%>_<%pageItem_1[i]['image'].midIndex%>"  href="<%pageItem_1[i]['image']['curl']%>" target="_blank"><img src="<%pageItem_1[i]['image']['value']%>"></img></a></div>
+                            <div class="item0_info">
+                            <div class="title1">
+                               <a id="title_<%i%>_<%pageItem_1[i]['title'].midIndex%>" href="<%pageItem_1[i]['title']['curl']%>" target="_blank"><%pageItem_1[i]['title'].value%></a>
+                                <a id="title_head_0_0"class="title_head" href="<%pageItem_1[i]['title']['curl']%>" target="_blank">xxxxxx</a>
+                            </div>
+                            <a id="discount_<%i%>_<%pageItem_1[i]['discount'].midIndex%>" class="discount" href="<%pageItem_1[i]['discount']['curl']%>" target="_blank"><%pageItem_1[i]['discount']['value']%></a> 
+                            <div class="button"><div class="buttonText"><a id="osprice<%i%>_0>" href="<%curl%>" target="_blank">立即抢购<span class="arrow"></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>    
+            </div>         
+        </div>
+    </div> 
+</code>
+
+lunboConfig_460_60 = <code>
+{
+           isLunbo:true,
+            isAnimation:true,//切换的时候，是否需要动画效果
+            lunboTimeArray:[5000,3000,2000],
+            lunboStep:290,
+            lunboBlock:"item0",//item0下的子元素轮播
+            cssStr:'.leftIconBlock {top:21px;left:103px;}.rightIconBlock {top:21px;right:20px;}',
+            showPageNumBlock:false,
+            lunboType:2//第二种轮播方式
+}
+</code>
+
+cssConfig_460_60 = <code>
+     a{ cursor: pointer;}
+    .container{position:relative;width:458px;border:1px solid #ea0177;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑';display:block;overflow: hidden; color:#fff;}
+     #adWrap{width:458px;}
+    .logoBox{position:absolute; left: 12px; top: 10px; z-index: 9; overflow:hidden;/* background: url('./img/vip_title_bg.png') no-repeat -1px 0; */ }
+    .logo{position:relative;display:inline-block; }
+    .logo img{overflow:hidden;}
+
+    .logoBox,.logo,.logo img{ width:80px;height:40px; }
+    .container,.item0,#adWrap{ height: 58px; }
+
+    .item0_info .discount{ font-size: 14px; font-family: "微软雅黑"; font-weight: bold;color: #666; line-height: 24px;display:block;width:37px;height:24px;overflow:hidden; }
+    .discountBg{width: 74px;height: 90px;background: url('./img/vip_discount_bg.png') no-repeat; top: 0;right: 0;}
+    .logoTitle{margin-top:20px;margin-left:10px;border-left:1px solid #ccc;padding-left:10px;}
+    .itemBox{overflow: hidden;}
+    .item0{position:relative;overflow: hidden; margin:0 0 0 130px; width: 328px; }
+    .item0_block{position:relative;overflow: visible; width: 100%; height: 50px; overflow: hidden; float: left; margin: 4px 0; background: #fff; }
+    .item0_logo{width:66px;height:50px;float: left; margin-left: 8px; }
+    .item0_logo a{ width:66px;height: 50px;overflow:hidden;}
+    .item0_logo img{width:66px; height: 50px;}
+
+
+    .item0_info{width:105px;float: right; }
+    .item0_price{display: inline-block;float: left;width: 83px;height: 40px;margin: 6px 0 0 0;_display:inline;}
+    .item0_price img{width: 83px;height: 40px;}
+    .mid-pic{position: relative; height: 44px; display: block; }
+    .arrow{ border-color: transparent transparent transparent #ff3398; border-style: dashed dashed dashed solid; border-width:11px; display:inline-block; width:0; height:0; line-height:0; position: absolute; right: -24px; top: 0; _top:-1px; }
+
+    .title1{ position: relative;width:105px;height:28px;overflow:hidden; }
+    .title1 a{font-size:12px;color:#666;line-height:14px; font-family: '宋体'; }
+    .title1 .title_head{ position: absolute; right: 6px; bottom: 0; height: 16px;width:24px;overflow:hidden; }
+    .title2{padding-bottom:3px;}
+    .title2 a{font-size:12px;color:#989898;}
+    .sprice,.osprice{height:18px;}
+    .sprice a,.osprice a{font-size:12px;color:#2c2c2c;line-height:18px;}
+    .sprice span,.osprice span{color:#ff6601;font-weight:bold;}
+    .button{ float: left; width:58px;height:23px; position: relative; margin-left: 4px; }
+    .buttonText{width:60px;height:23px;background:#ff3398;text-align:center}
+    .buttonText a{font-size:14px; font-weight: bold; color:#fff;line-height:23px; text-align: center; white-space: nowrap; padding-left: 3px; }
+    image{border:0}
+    .leftIconBlock, .rightIconBlock{cursor:pointer;position:absolute;padding:0;margin:0;width:21px !important;height:21px !important;}
+    .leftIcon,.rightIcon{width:21px !important;height:21px !important;}
+    .leftIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png');_background:none;cursor:pointer;}
+    .rightIcon{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png') !important;_background:none;cursor:pointer;}
+    .rightIconMouseOver{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png');_background:none;cursor:pointer;}
+    .rightIconHover{background:url('http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') no-repeat 0 0 !important; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png') !important;_background:none;cursor:pointer;}
+    .leftIconBlock {top:38px;left:116px;}
+    .rightIconBlock {top:38px;right:16px;}
+    .discount{ float: left; }
+    .item_panel{ float: left; width: 270px; position: relative; }
+</code>

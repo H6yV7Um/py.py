@@ -1,0 +1,401 @@
+# for ctrip ticket danpin
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none;font-family:微软雅黑;}',
+			'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid rgb(29,136,231);background:#fff;}',
+			'.adItemSpace':'{width:400px;height:0px;border-top:1px dotted #dadada;position:relative;}',
+			'.adDesc':'{color:#fff}',
+			'.adPrice':'{color:#fff;}',
+			'.adShoppingCart':'{background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/shoppingCart.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/shoppingCart.png");_background:none;}',
+			'.clickButton':'{background:#f55800;border-radius:4px;}',
+			'.buttonText':'{color:#fff;}'
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+	container:{id:'container',style:'width:118px;height:268px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:80px;height:40px;top:10px;left:19px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:208px;background:#fff;left:0px;top:60px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:208px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'vertical'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:208px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:120px;height:68px;left:0px;top:0px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:120px;height:120px;left:-1px;top:-26px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:115px;height:24px;line-height:24px;padding-left:5px;left:0px;top:68px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:32px;left:9px;top:100px;font-size:12px;line-height:16px;text-align: center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:100px;height:24px;top:138px;left:10px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:14px;top:9px;font-size:14px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:24px;font-size:24px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:9px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:80px;height:26px;top:172px;left:19px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:80px;height:26px;line-height:26px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_120_600 = <code>
+{
+	container:{id:'container',style:'width:118px;height:598px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:100px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:100px;height:50px;top:25px;left:9px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:498px;left:0px;top:100px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:498px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'vertical'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:498px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:120px;height:68px;left:0px;top:0px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:120px;height:120px;left:-1px;top:-26px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:115px;height:30px;line-height:30px;padding-left:5px;left:0px;top:68px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:66px;left:9px;top:170px;font-size:16px;line-height:22px;text-align: center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:110px;height:28px;top:270px;left:5px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:18px;top:9px;font-size:20px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:28px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:13px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:90px;height:30px;top:360px;left:14px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+	container:{id:'container',style:'width:158px;height:598px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:158px;height:120px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:130px;height:65px;top:20px;left:14px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:158px;height:493px;background:#fff;left:0px;top:105px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:158px;height:493px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'vertical'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:158px;height:493px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:160px;height:90px;left:0px;top:0px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:160px;height:160px;left:0px;top:-35px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:160px;height:30px;line-height:30px;padding-left:5px;left:0px;top:90px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:130px;height:44px;left:14px;top:190px;font-size:16px;line-height:22px;text-align: center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:134px;height:36px;top:270px;left:12px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:26px;top:9px;font-size:26px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:40px;font-size:36px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:16px;top:19px;font-size:16px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:120px;height:40px;top:360px;left:19px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:120px;height:40px;line-height:40px;text-align:center;font-size:18px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_200_200 = <code>
+{
+	container:{id:'container',style:'width:198px;height:198px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:198px;height:48px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:80px;height:40px;top:4px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:198px;height:150px;left:0px;top:48px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:198px;height:150px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:198px;height:150px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:100px;height:56px;left:5px;top:26px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:100px;height:100px;left:0px;top:-22px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:95px;height:24px;line-height:24px;padding-left:5px;left:5px;top:82px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:88px;height:150px;left:110px;top:0px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:88px;height:48px;left:0px;top:25px;font-size:12px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:88px;height:20px;top:80px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:20px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:68px;height:22px;top:110px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:68px;height:22px;line-height:22px;text-align:center;font-size:12px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_250_200 = <code>
+{
+	container:{id:'container',style:'width:248px;height:198px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:48px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:80px;height:40px;top:4px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:248px;height:150px;left:0px;top:48px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:248px;height:150px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:248px;height:150px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:140px;height:78px;left:10px;top:22px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:135px;height:135px;left:0px;top:-31px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:130px;height:30px;line-height:30px;padding-left:5px;left:10px;top:100px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:80px;height:150px;left:160px;top:0px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:80px;height:48px;left:0px;top:20px;font-size:12px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:80px;height:20px;top:80px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:20px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:68px;height:22px;top:110px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:68px;height:22px;line-height:22px;text-align:center;font-size:12px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_250_250 = <code>
+{
+	container:{id:'container',style:'width:248px;height:248px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:68px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:100px;height:50px;top:9px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:248px;height:180px;left:0px;top:68px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:248px;height:180px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:248px;height:180px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:150px;height:84px;left:10px;top:35px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:150px;height:150px;left:0px;top:-33px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:145px;height:30px;line-height:30px;padding-left:5px;left:10px;top:119px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:78px;height:170px;left:166px;top:10px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:78px;height:48px;left:0px;top:20px;font-size:12px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:78px;height:20px;top:85px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:20px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:12px;top:7px;font-size:12px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:68px;height:22px;top:120px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:68px;height:22px;line-height:22px;text-align:center;font-size:12px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_300_250 = <code>
+{
+	container:{id:'container',style:'width:298px;height:248px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:298px;height:78px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:120px;height:60px;top:9px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:298px;height:170px;left:0px;top:78px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:298px;height:170px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:298px;height:170px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:160px;height:90px;left:10px;top:20px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:160px;height:160px;left:0px;top:-35px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:155px;height:30px;line-height:30px;padding-left:5px;left:10px;top:110px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:116px;height:170px;left:176px;top:0px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:116px;height:36px;left:0px;top:20px;font-size:14px;line-height:18px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:116px;height:30px;top:70px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:20px;top:9px;font-size:20px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:30px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:15px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:90px;height:30px;top:115px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_336_280 = <code>
+{
+	container:{id:'container',style:'width:334px;height:278px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:334px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:140px;height:70px;top:9px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:334px;height:190px;left:0px;top:88px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:334px;height:190px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:334px;height:190px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:180px;height:100px;left:10px;top:30px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:180px;height:180px;left:0px;top:-40px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:175px;height:30px;line-height:30px;padding-left:5px;left:10px;top:130px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:130px;height:190px;left:198px;top:10px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:130px;height:44px;left:0px;top:20px;font-size:16px;line-height:22px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:130px;height:30px;top:80px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:20px;top:9px;font-size:20px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:30px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:15px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:90px;height:30px;top:130px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_360_300 = <code>
+{
+	container:{id:'container',style:'width:358px;height:298px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:358px;height:98px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:140px;height:70px;top:14px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:358px;height:200px;left:0px;top:98px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:358px;height:200px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:358px;height:200px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:190px;height:106px;left:10px;top:30px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:190px;height:190px;left:0px;top:-42px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:185px;height:30px;line-height:30px;padding-left:5px;left:10px;top:136px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:140px;height:200px;left:210px;top:10px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:140px;height:44px;left:0px;top:20px;font-size:16px;line-height:22px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:140px;height:30px;top:80px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:20px;top:9px;font-size:20px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:30px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:15px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:90px;height:30px;top:130px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_400_300 = <code>
+{
+	container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:398px;height:78px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:120px;height:60px;top:9px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:398px;height:220px;left:0px;top:78px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:398px;height:220px;background:rgb(29,116,231);left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:398px;height:220px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogoBlock:{id:'adLogoBlock',parent:'adItem',style:'width:210px;height:118px;left:10px;top:40px;',isShow:true,type:"layout"},
+	adLogo:{id:'adLogo',parent:'adLogoBlock',style:'width:210px;height:210px;left:0px;top:-46px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:205px;height:30px;line-height:30px;padding-left:5px;left:10px;top:158px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adContent:{id:'adContent',parent:'adItem',style:'width:160px;height:220px;left:234px;top:10px;',isShow:true,type:"layout"},
+	adDesc:{id:'adDesc',parent:'adContent',style:'width:160px;height:48px;left:0px;top:20px;font-size:18px;line-height:24px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:160px;height:30px;top:85px;left:0px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:20px;top:9px;font-size:20px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:30px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:15px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adContent',style:'width:120px;height:40px;top:140px;left:0px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:120px;height:40px;line-height:40px;text-align:center;font-size:18px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_460_60 = <code>
+{
+	container:{id:'container',style:'width:458px;height:58px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:80px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:70px;height:35px;top:12px;left:5px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:378px;height:58px;background:rgb(29,116,231);left:80px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:378px;height:58px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:378px;height:58px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:102px;height:102px;left:0px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:97px;height:24px;line-height:24px;padding-left:5px;left:0px;top:34px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:32px;left:110px;top:13px;font-size:12px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:40px;left:210px;top:9px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:90px;height:22px;top:18px;left:220px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:22px;font-size:22px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:58px;height:22px;top:18px;left:315px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:58px;height:22px;line-height:22px;text-align:center;font-size:12px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_468_60 = <code>
+{
+	container:{id:'container',style:'width:466px;height:58px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:80px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:70px;height:35px;top:12px;left:5px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:386px;height:58px;background:rgb(29,116,231);left:80px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:386px;height:58px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:386px;height:58px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:102px;height:102px;left:0px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:97px;height:24px;line-height:24px;padding-left:5px;left:0px;top:34px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:32px;left:110px;top:13px;font-size:12px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:40px;left:210px;top:9px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:90px;height:22px;top:18px;left:220px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:22px;font-size:22px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:58px;height:22px;top:18px;left:320px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:58px;height:22px;line-height:22px;text-align:center;font-size:12px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_580_90 = <code>
+{
+	container:{id:'container',style:'width:578px;height:88px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:120px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:100px;height:50px;top:19px;left:10px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:458px;height:88px;background:rgb(29,116,231);left:120px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:458px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:458px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:0px;top:-34px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:145px;height:30px;line-height:30px;padding-left:5px;left:0px;top:58px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:110px;height:44px;left:160px;top:22px;font-size:13px;line-height:22px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:60px;left:270px;top:14px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:90px;height:22px;top:33px;left:280px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:22px;font-size:22px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:7px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:70px;height:30px;top:29px;left:380px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:70px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_640_60 = <code>
+{
+	container:{id:'container',style:'width:638px;height:58px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:120px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:100px;height:50px;top:4px;left:10px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:518px;height:88px;background:rgb(29,116,231);left:120px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:518px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:518px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:102px;height:102px;left:0px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:97px;height:24px;line-height:24px;padding-left:5px;left:0px;top:34px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:36px;left:115px;top:11px;font-size:14px;line-height:18px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:40px;left:245px;top:9px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:130px;height:32px;top:13px;left:260px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:22px;top:8px;font-size:22px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:32px;font-size:32px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:17px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:90px;height:30px;top:14px;left:400px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_728_90 = <code>
+{
+	container:{id:'container',style:'width:726px;height:88px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:160px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:120px;height:60px;top:14px;left:20px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:566px;height:88px;background:rgb(29,116,231);left:160px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:566px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:566px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:0px;top:-34px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:145px;height:30px;line-height:30px;padding-left:5px;left:0px;top:58px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:140px;height:48px;left:170px;top:20px;font-size:16px;line-height:24px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:60px;left:310px;top:14px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:130px;height:32px;top:28px;left:320px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:22px;top:8px;font-size:30px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:32px;font-size:32px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:14px;top:16px;font-size:14px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:80px;height:30px;top:29px;left:460px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:80px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+	container:{id:'container',style:'width:758px;height:88px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:140px;height:70px;top:9px;left:15px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:578px;height:88px;background:rgb(29,116,231);left:180px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:578px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:578px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:0px;top:-34px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:145px;height:30px;line-height:30px;padding-left:5px;left:0px;top:58px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:140px;height:48px;left:170px;top:20px;font-size:16px;line-height:24px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:60px;left:310px;top:14px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:130px;height:34px;top:27px;left:320px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:24px;top:8px;font-size:30px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:34px;font-size:34px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:16px;top:15px;font-size:16px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:80px;height:30px;top:29px;left:470px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:80px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_960_60 = <code>
+{
+	container:{id:'container',style:'width:958px;height:58px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:100px;height:50px;top:4px;left:40px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:778px;height:88px;background:rgb(29,116,231);left:180px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:778px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:778px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:102px;height:102px;left:0px;top:-23px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:97px;height:24px;line-height:24px;padding-left:5px;left:0px;top:34px;font-size:14px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:240px;height:22px;left:130px;top:18px;font-size:16px;line-height:22px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:40px;left:400px;top:9px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:150px;height:36px;top:11px;left:430px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:26px;top:8px;font-size:26px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:36px;font-size:36px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:16px;top:17px;font-size:16px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:90px;height:30px;top:14px;left:610px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:90px;height:30px;line-height:30px;text-align:center;font-size:14px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+	container:{id:'container',style:'width:958px;height:88px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:200px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'width:140px;height:70px;top:9px;left:25px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000j5XUfodA-bPcbnkOs.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:758px;height:88px;background:rgb(29,116,231);left:200px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:758px;height:88px;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:758px;height:88px;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:0px;top:-34px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adCategory:{id:'adCategory',parent:'adItem',style:'width:145px;height:30px;line-height:30px;padding-left:5px;left:0px;top:58px;font-size:15px;background:rgba(6,15,27,0.6);z-index:1;',isShow:true,type:'text',linkDisplay:"inline",k:'category'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:180px;height:48px;left:170px;top:20px;font-size:18px;line-height:24px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adDivider:{id:'adDivider',parent:'adItem',style:'width:1px;height:60px;left:380px;top:14px;background:rgb(79,150,246);',isShow:true,type:"text",linkDisplay:"inline"},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:150px;height:40px;top:24px;left:400px;',type:'layout',content:'',isShow:true},
+	adPricePrefix:{id:'adPricePrefix',parent:'adPriceBlock',style:'height:30px;top:8px;font-size:30px;position:relative;float:left;',type:'text',content:'&yen',isShow:true, className:'adPrice'},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:40px;font-size:40px;position:relative;float:left;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	adPriceSuffix:{id:'adPriceSuffix',parent:'adPriceBlock',style:'height:16px;top:21px;font-size:16px;position:relative;float:left;',type:'text',content:'元起',isShow:true, className:'adPrice'},
+	clickButton:{id:'clickButton',parent:'adItem',style:'width:120px;height:40px;top:24px;left:570px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'width:120px;height:40px;line-height:40px;text-align:center;font-size:18px;',type:'text',content:'现在预订',isShow:true,className:'buttonText'},
+}
+</code>
+

@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #ffde90;
+    height: 100%;
+    font-size: 16px;
+}
+body {
+    background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/bg-top.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+}
+#container {
+    padding: 7.5rem 3.4375rem 0;
+    box-sizing: border-box;
+    /*width: 750px;*/
+    /*border: 1px solid black;*/
+    position: relative;
+}
+.split-line {
+    border-bottom: 2px dashed #797979;
+}
+.clearfix {
+    display: block;
+    clear: both; 
+}
+.page1-title {
+    font-size: 2.125rem;
+    font-weight: bold;
+}
+.page1-desc {
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+/*PAGE 1*/
+.page1-top {
+    padding-top: 3.125rem;
+    padding-bottom: 2.5rem;
+}
+.page1-top-image {
+    background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/10-yuan.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+    width: 10rem;
+    height: 6.25rem;
+
+    float: left;
+}
+.page1-top-text {
+    float: left;
+    text-align: left;
+    margin-left: 1.875rem;
+    margin-top: 1rem;
+}
+.page1-top .page1-title,
+.page1-top .page1-desc {
+    color: #f40a0a;
+}
+.app-icon {
+    width: 8.125rem;
+    height: 8.125rem;
+    margin: 0 auto;
+}
+
+.app-icon img {
+    width: 8.125rem;
+    height: 8.125rem;    
+}
+
+/*page1-middle*/
+.page1-middle {
+    padding: 2.5rem 0;
+}
+.app-title .page1-title {
+    margin: 0.9375rem 0;
+}
+.app-desc .page1-desc {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+}
+
+/* page1-bottom*/
+.page1-bottom {
+    margin-top: 2.1875rem;
+    margin-bottom: 3rem;
+}
+.steps-diagram {
+    background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/steps.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 38.125rem;
+    height: 4.6875rem;
+
+    margin: 1.5625rem auto 0;
+}
+.steps-desc {
+    margin-top: 0.625rem;
+}
+.page1-btn-dl {
+    border-radius: 1.5625rem;
+    background: #f40a0a;
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 2.125rem;
+    padding: 1.5625rem 0;
+    margin-top: 3.75rem;
+    display: block;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.overlay img {
+    margin: 0 auto;
+    width: 15.625rem; /*250px*/
+    height: 25rem; /*400px*/
+    margin-top: 50%;
+    margin-left: 50%;
+    position: absolute;
+    /*top: -12.5rem;*/
+    top: -7.5rem;
+    left: -7.8125rem;
+}
+.page3 {
+    position: relative;
+}
+.fireworks {
+    display: block;
+
+    background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/fireworks.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 34.6875rem;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.envelope {
+    background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/envelope.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 30rem;
+    height: 25.9375rem;
+
+    margin: 7.5rem auto 3.75rem;
+    text-align: center;
+}
+.money {
+    text-align: center;
+    margin-top: 4.375rem;
+    color: #f40a0a;
+    display: inline-block;
+    font-size: 3.75rem;
+    font-weight: bold;
+}
+.page3-desc {
+    text-align: center;
+    color: #f40a0a;
+    margin-bottom: 0.9375rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.btn-show-money {
+    border-radius: 1.5625rem;
+    border: 2px solid #f40a0a;
+    color: #f40a0a;
+    background: transparent;
+    font-size: 2.125rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 3.75rem auto 0;
+    padding: 1.25rem  6.25rem;
+}
+.page3 .page4-btn-dl {
+    margin-top: 5.625rem;
+}
+.sorry-board {
+    background: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/A/sorry.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 27.0625rem;
+    height: 31.25rem;
+
+    margin: 5.625rem auto 0;
+}
+.page4-desc {
+    text-align: center;
+    color: #f40a0a;
+    margin-bottom: 0.625rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.page4-btn-dl {
+    border-radius: 1.5625rem;
+    background: #f4830a;
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 2.125rem;
+    padding: 1.5625rem 0;
+    margin-top: 12.5rem;
+    margin-bottom: 3rem;
+    display: block;
+}
+.page4-btn-dl p {
+    display: inline-block;
+    position: relative;
+    margin-left: 4.5rem;
+}
+
+.page4-btn-dl img {
+    width: 4.4375rem;
+    height: 4.4375rem;
+    position: absolute;
+    left: -5rem;
+    top: -0.875rem;
+}

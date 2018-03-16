@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="slide-in-login-container" style="display: block;">
+    <div class="slide-in-login-form">
+        <div class="login-title">登录百意平台</div>
+        <form id="login-form" method="POST" action="https://cas.baidu.com/?action=login">
+            <input type="hidden" name="appid" value="34">
+            <input type="hidden" name="charset" value="utf-8">
+            <input type="hidden" name="fromu" value="http://baiyi.baidu.com/user/account.html">
+            <input type="hidden" name="selfu" value="http://baiyi.baidu.com/home/index.html">
+            <input type="hidden" name="senderr" value="1">
+            <div>
+                <div class="input-area">
+                	<i class="user-icon"></i>
+                    <input autocomplete="off" name="entered_login" class="input-field" placeholder="用户名" type="text" id="username" tabindex="1">
+                </div>
+                <div class="input-area">
+                	<i class="password-icon"></i>
+                    <input class="input-field" placeholder="密码" type="password" id="password" name="entered_password" tabindex="2">
+                </div>
+                <div class="input-area">
+                    <input autocomplete="off" class="input-field small verify-code" placeholder="验证码" type="text" tabindex="3" maxlength="4" id="entered-imagecode" name="entered_imagecode">
+                    <a id="refresh-verify-code">
+                        <img alt="验证码" title="看不清？换一张" src="http://cas.baidu.com/?action=image2&appid=34&cb_random=0.040631995735216586" align="absmiddle" width="50" height="25" id="verify-code-image">
+                    </a>
+                </div>
+                <button id="login-submit" tabindex="4" type="submit" class="submit input-field">登录百意平台</button>
+            </div>
+            <div class="login-helper">
+                <label id="error" class="left"></label>
+                <div class="login-helper-link"> <a id="forget-password" href="https://aq.baidu.com/new/#/findpwd" target="_blank">忘记密码？</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+	
+
+
+	var navHeight = 60;
+	var loginFormHeight = 300;
+
+	var ucEnv = {
+	    QA: {
+	        // 表单提交的地址
+	        UC_LOGIN_POST_URL: 'https://cas-off.baidu.com:8443/?action=login',
+	        // 验证码地址
+	        UC_LOGIN_VERIFYCODE_URL: 'http://cas-off.baidu.com:8477/?action=image2&appid=34',
+	        // 退出的地址
+	        UC_LOGOUT_URL: '/importal/logout',
+	        // 登陆成功的地址
+	        UC_LOGIN_SUCCESS_URL: '/user/account.html',
+	        // 登录失败的地址
+	        UC_LOGIN_FAIL_URL: '/home/index.html',
+	        // 找回密码的地址
+	        UC_FIND_PWD: 'http://aq.baidu.com/findpwd/',
+	        // app id
+	        UC_APP_ID: 34
+	    },
+	    ONLINE: {
+	        // 表单提交的地址
+	        UC_LOGIN_POST_URL: 'https://cas.baidu.com/?action=login',
+	        // 验证码地址
+	        UC_LOGIN_VERIFYCODE_URL: 'http://cas.baidu.com/?action=image2&appid=34',
+	        // 退出的地址
+	        UC_LOGOUT_URL: '/importal/logout',
+	        // 登陆成功的地址
+	        UC_LOGIN_SUCCESS_URL: '/user/account.html',
+	        // 登录失败的地址
+	        UC_LOGIN_FAIL_URL: '/home/index.html',
+	        // 找回密码的地址
+	        UC_FIND_PWD: 'http://aq.baidu.com/findpwd/',
+	        // app id
+	        UC_APP_ID: 34
+	    }
+	};
+
+	var MODULE = location.hostname === 'baiyi.baidu.com' ? 'ONLINE' : 'QA';
+	var config = ucEnv[MODULE.toLocaleUpperCase()];
+	var $Dom = {};
+	var mainLoaded = false;
+	var loadStartTime = 0;
+	var TIME_OUT = 5000;
+
+	// 验证码刷新
+	function refreshCode(e) {
+	    $Dom.$verifyCodeImg.attr('src', config.UC_LOGIN_VERIFYCODE_URL + '&cb_random=' + Math.random());
+	    e.stopPropagation();
+	}
+
+	// 展示错误信息
+	function displayErrorMessage(a) {
+	    $Dom.$errorInfo.html(a).css('visibility', 'visible');
+	}
+
+	// 格式化url
+	function htmlEncode(a) {
+	    return String(a).replace(/&/g, '&amp;')
+	        .replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+	        .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+
+	// 表单提交函数
+	function submit() {
+	    var hasError = false;
+	    var errorText = null;
+	    if ($Dom.$username.val() === '') {
+	        hasError = true;
+	        // 请输入用户名
+	        errorText = '\u8bf7\u8f93\u5165\u7528\u6237\u540d';
+	    }
+	    else if ($Dom.$password.val() === '') {
+	        hasError = true;
+	        // 请输入密码
+	        errorText = '\u8bf7\u8f93\u5165\u5bc6\u7801';
+	    }
+	    else if ($Dom.$verifyCode.val() === '') {
+	        hasError = true;
+	        // 请输入验证码
+	        errorText = '\u8bf7\u8f93\u5165\u9a8c\u8bc1\u7801';
+	    }
+
+	    if (hasError) {
+	        displayErrorMessage(errorText);
+	    }
+	    else {
+	        login(this);
+	    }
+
+	    return false;
+	}
+
+	function login(form) {
+	    if (mainLoaded || $.now() - loadStartTime > TIME_OUT) {
+	        form.fromu.value += '?.stamp=' + $.now();
+	        return form.submit();
+	    }
+
+	    setTimeout($.proxy(login, null, form), 0);
+	}
+
+	function formInit() {
+	    $Dom.$username.placeholder();
+	    $Dom.$password.placeholder();
+	    $Dom.$verifyCode.placeholder();
+	    $Dom.$refreshVerifyCode.trigger('click');
+	    if (config) {
+	        var host = window.location.protocol + '//' + window.location.host;
+	        $Dom.$loginForm.attr('action', config.UC_LOGIN_POST_URL);
+	        $Dom.$loginForm.find('input[name=appid]').val(config.UC_APP_ID);
+	        $Dom.$loginForm.find('input[name=fromu]').val(host + config.UC_LOGIN_SUCCESS_URL);
+	        $Dom.$loginForm.find('input[name=selfu]').val(host + config.UC_LOGIN_FAIL_URL);
+	    }
+	    if (baiduQueryString('e')) {
+	        var e = baiduQueryString('errno');
+	        if (e === '135') {
+	            // 账户被锁定,请用“<a ...>忘记密码</a>”解锁
+	            displayErrorMessage(
+	                '账户被锁定,请用<a href="http://aq.baidu.com/findpwd/" '
+	                + 'style="position:relative;top:0;" target="_blank" >忘记密码</a>解锁'
+	            );
+	        }
+	        else {
+	            displayErrorMessage(htmlEncode(decodeURI(baiduQueryString('e'))));
+	        }
+	    }
+	    if (baiduQueryString('un')) {
+	        $Dom.$username.val(decodeURI(baiduQueryString('un').replace(/\+/g, '%20')));
+	    }
+	    // else {
+	    //     $Dom.$username.focus();
+	    // }
+	}
+
+	function baiduQueryString(a) {
+	    var c = top.location.href;
+	    c = c.replace('?', '?&').split('&');
+	    var b = '';
+	    for (var i = 1; i < c.length; i++) {
+	        if (c[i].indexOf(a + '=') === 0) {
+	            b = c[i].replace(a + '=', '');
+	            return b;
+	        }
+	    }
+	    return null;
+	}
+
+	function setElements() {
+	    $Dom = {
+	        $loginForm: $('#login-form'),
+	        $username: $('#username'),
+	        $password: $('#password'),
+	        $verifyCode: $('#entered-imagecode'),
+	        $refreshVerifyCode: $('#refresh-verify-code'),
+	        $verifyCodeImg: $('#verify-code-image'),
+	        $errorInfo: $('#error'),
+	        $changeVerifyCode: $('#verify-code-change'),
+	        $slideInForm: $('#slide-in-login-container'),
+	        $slideInLogin: $('#slide-in-login-action-login')
+	    };
+	}
+
+	function slideInLogin(e) {
+	    // $Dom.$slideInForm.animate({
+	    //     display: 'block'
+	    // });
+	    $Dom.$slideInForm.show();
+	    e.stopPropagation();
+	}
+
+	function bindEvent() {
+	    $Dom.$refreshVerifyCode.on('click', refreshCode);
+	    $Dom.$loginForm.on('submit', submit);
+	    $Dom.$changeVerifyCode.on('click', refreshCode);
+	    $Dom.$slideInLogin.on('click', slideInLogin);
+	    $(document).on('click', function () {
+	        // $Dom.$slideInForm.animate({
+	        //     display: 'none'
+	        // });
+	        $Dom.$slideInForm.hide();
+	    });
+	    $Dom.$slideInForm.on('click', function (e) {
+	        e.stopPropagation();
+	    });
+	}
+
+
+	setElements();
+	bindEvent();
+	formInit();
+</script>
+</html>

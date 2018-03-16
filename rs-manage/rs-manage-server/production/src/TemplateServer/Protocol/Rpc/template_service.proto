@@ -1,0 +1,74 @@
+import "ad_pos_info.proto";
+import "common_types.proto";
+package rs;
+
+// ========== 2016-模版渲染服务接口对象 ==========
+// 客户端对象
+message ClientInfo {
+    // DSP标示
+    optional cm.BuyerIDType dspId = 1;
+    // SSP标示
+    optional cm.SellerNetworkIDType sspId = 2;
+    // 请求id标示
+    optional string requestId = 3;
+}
+
+// 设备对象
+message DeviceInfo {
+    // userAgent
+    optional string userAgent = 1;
+}
+
+// 样式配置信息
+message StyleConfigInfo {
+    // 跳转类型
+    option adinfo.ActionType actionType = 1;
+    // 其他扩展配置信息.某个模板特有的非公共配置放在此字段.Json格式传递.
+    option string ext = 2;
+}
+
+// 渲染服务请求对象
+message RenderRequestInfo {
+    // 样式id
+    required uint32 styleId  = 1;
+    // 尺寸类型
+    required adinfo.SizeType sizeType = 2;
+    // 广告块宽
+    required uint32 width = 3;
+    // 广告块高
+    required uint32 height = 4;
+    // 客户端信息
+    required ClientInfo client = 5;
+    // 设备信息
+    optional DeviceInfo device = 6;
+    // 广告数据的JSON字符串
+    required string ads = 7;
+    // 样式配置信息
+    optional StyleConfigInfo styleConfig = 8;
+}
+
+// 渲染服务返回对象
+message RenderResponseInfo {
+    // 客户端信息, 只填充clientRequestId字段
+    optional ClientInfo client = 1;
+    // 状态码
+    enum StatusCode {
+        // 成功
+        SUCCESS = 1;
+        // 出现错误
+        ERROR = 2;
+    }
+    optional StatusCode status = 2;
+    // 错误内容明文
+    optional string error = 3;
+    // 渲染结果, 比如返回可展现的html页面内容
+    optional bytes result = 4;
+}
+// ========== //2016-模版渲染服务接口对象 ==========
+
+// ========== 服务定义 ==========
+service TemplateService {
+    // 2016-模板渲染服务, MessageId=600
+    rpc render(RenderRequestInfo) returns(RenderResponseInfo);
+}
+// ========== //服务定义 ==========

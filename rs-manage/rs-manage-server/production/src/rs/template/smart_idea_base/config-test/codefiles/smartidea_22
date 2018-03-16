@@ -1,0 +1,43 @@
+# for lefeng
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none}',
+'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid #000;background:#FFFFFF;}',
+'.title':'{color:#000;}',
+'.price':'{color:#FF6600}',
+'.priceUnit':'{color:#FF6600}'
+}
+</code>
+
+layoutConfig_400_300 = <code>
+{
+			// container
+			container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:398px;height:80px;background:#fff;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:398px;height:80px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005z7qbFkzZGFwg1UO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:80px;width:398px;height:218px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:5px;left:120px;width:160px;height:140px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			title:{id:'title',parent:'adBlock',style:'top:155px;left:0px;width:398px;height:24px;font-size:20px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			price:{id:'price',parent:'adBlock',style:'top:190px;left:139px;width:120px;height:24px;font-size:22px;text-align:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'}}
+</code>
+
+layoutConfig_200_200 = <code>
+{
+			// container
+			container:{id:'container',style:'width:198px;height:198px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:198px;height:40px;background:#fff;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:198px;height:40px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005z7qbFkzZGFwg1UO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:40px;width:198px;height:158px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:5px;left:50px;width:100px;height:90px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			title:{id:'title',parent:'adBlock',style:'top:98px;left:0px;width:198px;height:38px;line-height:18px;font-size:15px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:136px;left:60px;width:20px;height:20px;font-size:18px;',type:'text',content:'&yen;',isShow:false,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',style:'top:135px;left:39px;width:120px;height:20px;font-size:18px;text-align:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'}}
+</code>

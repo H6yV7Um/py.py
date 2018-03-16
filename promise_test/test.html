@@ -1,0 +1,89 @@
+<html>
+	<head>实现一个建议的promise</head>
+	<body>
+		<script>
+		/**
+		 * prarams fn 
+		 * desc:promise是用来解决异步回调的 ,使回调层次变的清晰
+		 * 原理: new promise时,promise接收的函数会发出一个异步请求,紧接着调用then 注册回调函数,
+		 * 当异步请求成功后,调用promise内部实现的resolve 或reject方法,该方法执行then中注册的回调函数;
+		 * 因此then注册必须在先!
+		 */
+		
+
+// 		function Promise1 (fn) {
+// 			var state = 'pending',
+// 			var value = null;
+// 			var cbs = [];
+// 			var promise = this;
+// 			// 注册回调韩式
+// 			this.then = function(onfufilled){
+// 				return Promise(function(resolve){
+//                       function handle(value) {
+//                       	var ret =isFunction(onfufilled)&&onfufilled(value) 
+//                       	resolve(ret)
+//                       }
+// 				})
+// 				if(state==='pending'){
+// 					cbs.push (handle(value));
+// 					return this;
+// 				}else{
+// 					 onFulfilled(value);
+// 	                 return this;
+// 				}
+				 
+// 			}
+// 			// value代表异步返回结果,执行回调函数
+//  			function resolve(value){
+
+//  				setTimeout(function(){
+//  					state = 'fulfilled';
+//  					cbs.forEach(function(cb){
+//  						cb(value)
+//  					})
+//  				},0)
+ 				
+
+//  			}
+// 			// 最终将promise内部实现的resolve方法作为参数,传入到fn中去执行
+// 			fn(resolve);
+// 		}
+// var p = new Promise1(function(r) {
+//   r('ok')
+// })
+// p.then(function(x) {
+//   console.log(x)
+// })
+// p.then(function(x) {
+//   console.log(x)
+// })
+// 函数
+var delegate = function(client, clientMethod) {
+        return function() {
+            return clientMethod.apply(client, arguments);
+        }
+  }
+    var ClassA = function() {
+        var _color = "red";
+        return {
+            getColor: function() {
+                console.log("Color: " + _color);
+            },
+            setColor: function(color) {
+                _color = color;
+            }
+        };
+    };
+
+    var a = new ClassA();
+    a.getColor();
+    a.setColor("green");
+    a.getColor();
+    console.log("执行代理！");
+    var d = delegate(a, a.setColor);
+    d("blue");
+    console.log("执行完毕！");
+    a.getColor();
+		</script>
+	</body>
+</html>

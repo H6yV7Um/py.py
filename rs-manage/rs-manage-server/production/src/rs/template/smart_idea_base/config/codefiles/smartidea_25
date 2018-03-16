@@ -1,0 +1,318 @@
+# tongcheng ticket
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none}',
+'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:3px solid #FF9000;background:#FFF;}',
+'.title':'{color:#FF9000;}',
+'.price':'{color:#000;}',
+'.bookButtonText':'{color:#FFF}'
+}
+</code>
+
+layoutConfig_400_300 = <code>
+{
+			// container
+			container:{id:'container',style:'width:394px;height:294px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:275px;width:120px;height:50px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:10px;left:0px;width:120px;height:30px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:394px;height:294px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:15px;left:20px;width:250px;height:26px;font-size:24px;line-height:26px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:90px;left:74px;width:250px;height:200px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:20px;width:250px;height:40px;font-size:18px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:60px;left:295px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:60px;left:295px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_360_300 = <code>
+{
+			// container
+			container:{id:'container',style:'width:354px;height:294px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:230px;width:120px;height:50px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:10px;left:0px;width:120px;height:30px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:358px;height:300px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:15px;left:10px;width:220px;height:25px;font-size:24px;line-height:25px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:100px;left:54px;width:250px;height:190px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:65px;left:15px;width:230px;height:20px;font-size:17px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:65px;left:255px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:65px;left:255px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_336_280 = <code>
+{
+			// container
+			container:{id:'container',style:'width:330px;height:274px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:10px;left:230px;width:100px;height:45px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:100px;height:25px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:334px;height:280px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:15px;left:10px;width:220px;height:25px;font-size:23px;line-height:25px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:90px;left:48px;width:240px;height:180px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:15px;width:220px;height:40px;font-size:18px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:60px;left:245px;width:75px;height:25px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:60px;left:245px;width:75px;height:25px;line-height:25px;font-size:13px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_300_250 = <code>
+{
+			// container
+			container:{id:'container',style:'width:294px;height:244px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:10px;left:210px;width:80px;height:40px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:80px;height:20px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:300px;height:250px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:10px;left:10px;width:200px;height:25px;font-size:24px;line-height:25px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:85px;left:50px;width:200px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:45px;left:10px;width:200px;height:40px;font-size:15px;line-height:18px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:50px;left:215px;width:75px;height:23px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:50px;left:215px;width:70px;height:23px;line-height:23px;font-size:13px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_250_250 = <code>
+{
+			// container
+			container:{id:'container',style:'width:244px;height:244px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:165px;width:80px;height:35px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:80px;height:20px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:244px;height:244px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:10px;left:10px;width:155px;height:20px;font-size:19px;line-height:20px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:75px;left:35px;width:180px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:35px;left:10px;width:150px;height:38px;font-size:16px;line-height:18px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:46px;left:175px;width:65px;height:25px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:46px;left:175px;width:65px;line-height:25px;height:25px;font-size:13px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_250_200 = <code>
+{
+			// container
+			container:{id:'container',style:'width:244px;height:194px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:165px;width:80px;height:30px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:80px;height:20px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:244px;height:194px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:10px;left:10px;width:150px;height:20px;font-size:19px;line-height:20px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:73px;left:49px;width:150px;height:120px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:35px;left:10px;width:170px;height:36px;font-size:16px;line-height:18px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:42px;left:175px;width:60px;height:23px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:42px;left:175px;width:60px;height:23px;line-height:23px;font-size:10px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_200_200 = <code>
+{
+			// container
+			container:{id:'container',style:'width:194px;height:194px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:130px;width:60px;height:30px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:10px;left:0px;width:60px;height:15px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:194px;height:194px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:3px;left:10px;width:120px;height:38px;font-size:16px;line-height:18px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:72px;left:30px;width:140px;height:120px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:40px;left:10px;width:110px;height:34px;font-size:14px;line-height:16px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:45px;left:130px;width:60px;height:23px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:45px;left:130px;width:60px;height:23px;line-height:23px;font-size:10px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:954px;height:84px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:200px;height:84px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:20px;left:10px;width:180px;height:45px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:200px;top:0px;width:760px;height:84px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:10px;left:170px;width:365px;height:32px;font-size:30px;line-height:32px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:50px;width:100px;height:80px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:173px;width:320px;height:25px;font-size:20px;line-height:23px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:27px;left:570px;width:86px;height:30px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:27px;left:570px;width:86px;height:30px;line-height:24px;font-size:16px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:754px;height:84px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:170px;height:84px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:22px;left:5px;width:160px;height:40px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:170px;top:0px;width:590px;height:84px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:10px;left:110px;width:320px;height:30px;font-size:25px;line-height:30px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:0px;width:100px;height:80px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:113px;width:320px;height:25px;font-size:20px;line-height:23px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:32px;left:450px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:32px;left:450px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_728_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:722px;height:84px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:170px;height:84px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:22px;left:5px;width:160px;height:40px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:170px;top:0px;width:558px;height:84px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:13px;left:110px;width:320px;height:30px;font-size:25px;line-height:30px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:0px;width:100px;height:80px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:110px;width:320px;height:25px;font-size:20px;line-height:24px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:32px;left:440px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:32px;left:440px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_580_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:574px;height:84px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:130px;height:84px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:26px;left:5px;width:120px;height:32px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:130px;top:0px;width:450px;height:84px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:20px;left:110px;width:235px;height:30px;font-size:24px;line-height:30px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:0px;width:100px;height:80px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:50px;left:115px;width:235px;height:36px;font-size:17px;line-height:18px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:32px;left:355px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:32px;left:355px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_960_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:954px;height:54px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:200px;height:54px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:2px;left:0px;width:200px;height:50px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:200px;top:0px;width:760px;height:54px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:5px;left:165px;width:320px;height:24px;font-size:22px;line-height:24px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:50px;width:60px;height:50px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:33px;left:170px;width:320px;height:20px;font-size:17px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:17px;left:540px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:17px;left:540px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_640_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:634px;height:54px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:130px;height:54px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:11px;left:1px;width:128px;height:32px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:120px;top:0px;width:500px;height:54px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:5px;left:100px;width:280px;height:24px;font-size:22px;line-height:24px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:15px;width:60px;height:50px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:33px;left:102px;width:280px;height:20px;font-size:17px;line-height:20px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:16px;left:410px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:16px;left:410px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_468_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:462px;height:54px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:110px;height:54px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:13px;left:1px;width:108px;height:27px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:110px;top:0px;width:358px;height:54px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:7px;left:70px;width:180px;height:20px;font-size:19px;line-height:20px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:5px;width:60px;height:50px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:33px;left:70px;width:230px;height:18px;font-size:15px;line-height:17px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:15px;left:265px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:15px;left:265px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_460_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:454px;height:54px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:110px;height:54px;background:#fff;z-index:9000',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:13px;left:1px;width:108px;height:27px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:110px;top:0px;width:350px;height:54px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:5px;left:70px;width:180px;height:20px;font-size:19px;line-height:20px;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:2px;left:5px;width:60px;height:50px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:33px;left:70px;width:230px;height:18px;font-size:15px;line-height:17px;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'top:15px;left:260px;width:80px;height:24px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'top:15px;left:260px;width:80px;height:24px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+			// container
+			container:{id:'container',style:'width:154px;height:594px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:20px;left:4px;width:150px;height:60px;background:#fff;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:11px;left:0px;width:150px;height:38px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:100px;width:154px;height:550px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:230px;left:2px;width:150px;height:54px;font-size:22px;line-height:26px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:60px;left:2px;width:150px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:300px;left:7px;width:144px;height:40px;font-size:17px;line-height:20px;text-align:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'width:100px;height:30px;top:390px;left:27px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'width:100px;height:30px;top:390px;left:27px;font-size:16px;line-height:30px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_120_600 = <code>
+{
+			// container
+			container:{id:'container',style:'width:114px;height:594px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:12px;left:5px;width:108px;height:60px;background:#fff;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:16px;left:0px;width:108px;height:27px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:110px;width:114px;height:550px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:180px;left:2px;width:110px;height:53px;font-size:16px;line-height:17px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:9px;width:100px;height:100px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:270px;left:0px;width:118px;height:60px;font-size:17px;line-height:19px;text-align:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'width:80px;height:24px;top:380px;left:19px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'width:80px;height:24px;top:380px;left:19px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+			// container
+			container:{id:'container',style:'width:114px;height:264px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:5px;left:5px;width:108px;height:40px;background:#fff;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:108px;height:27px;',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:50px;width:118px;height:220px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			title:{id:'title',parent:'adBlock',style:'top:105px;left:1px;width:112px;height:32px;font-size:15px;line-height:16px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:9px;width:100px;height:100px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			price:{id:'price',parent:'adBlock',style:'top:145px;left:1px;width:112px;height:31px;font-size:13px;line-height:15px;text-align:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			bookButton:{id:'bookButton',parent:'adBlock',style:'width:80px;height:24px;top:180px;left:17px;background:#8AB923',type:'layout',content:'',isShow:true},
+			bookButtonText:{id:'bookButtonText',parent:'adBlock',style:'width:80px;height:24px;top:180px;left:17px;line-height:24px;font-size:14px;text-align:center;',type:'text',content:'Á¢¼´Ô¤¶©',isShow:true}}
+</code>

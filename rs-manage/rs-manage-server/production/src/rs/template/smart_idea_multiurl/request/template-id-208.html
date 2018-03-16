@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <!-- $bdCadsNoadreason$|$bdAllRetAdType$ -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>百度网盟推广</title>
+        <link rel="stylesheet" href="http://cpro.baidustatic.com/cpro/ui/noexpire/css/2.0.0/template.css" />
+        <style type="text/css">
+            .bd-logo-310-260{
+                bottom:5px;
+                right:5px;
+            }
+            .container{position:relative;width:958px;height:88px;border:1px solid #888888;background:#fff;}
+    .container div{overflow:hidden;}
+    .container a{text-decoration:none;cursor:pointer;font-family:'微软雅黑'}
+     #adWrap{width:958px;height:88px;}
+    .logoBox{width:175px;height:88px;overflow:hidden;margin-right:35px;float:left;}
+    .logoBox img{width:175px;height:88px;overflow:hidden;}
+    .itemBox{width:374px;height:88px;float:left;}
+    .itemImg{width:94px;height:88px;text-align:center;float:left;}
+    .itemImg img{width:80px;height:80px;margin:4px 0px 4px 0px;}
+    .itemDes{width:150px;height:73px;middle;float:left;margin-top:15px;overflow:hidden;}
+    .title{height:24px;width:150px;white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+    .title a{text-decoration:none;cursor:pointer;font-size:16px;color:#000;}
+    .num{height:18px;}
+    .num a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .comments{height:20px;}
+    .comments a{text-decoration:none;cursor:pointer;font-size:14px;color:#9c9c9c;}
+    .sprice{height:31px;}
+    .sprice a{text-decoration:none;cursor:pointer;}
+    .sign{font-size:14px;color:#f95d50;}
+    .itemSubmit{width:130px;float:left;margin-top:15px;overflow:hidden;}
+    .submit{width:90px;height:32px;line-height:32px;text-align:center;background-color:#f95d50;}
+    .submit a{text-decoration:none;cursor:pointer;color:#fff;font-family:'微软雅黑';font-size:14px;display:block;}
+    .spriceNum{font-size:22px;color:#f95d50;}
+    .spricePer{font-size:16px;color:#9c9c9c;}
+    #item0{position:relative;width:748px;height:88px;}
+
+        </style>
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/noexpire/js/2.0.1/oojs.js"></script>        
+        <script src="http://cpro.baidustatic.com/cpro/ui/noexpire/js/smartIdea/template.js"></script>
+        <script  id="smTpl" type="text/html">
+            <%{var data=dataArray[0],
+           pageItemCollection=data.pageBlocks,
+           pageItem_1=pageItemCollection["normalBlock"];
+           var itemNum = 2;
+     }%>
+    <div id="adWrap">
+        <div id="logoBox" class="logoBox">
+            <a id="logo_0_<%pageItem_1[0].midIndex%>" href="<%pageItem_1[0].curl%>" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000KaTWEjX1gYc3cD136.jpg"></img></a>
+        </div>
+        <div id="item0">
+        <%for(var j=0,i=0,l=pageItem_1.length;j<l/itemNum;j++,i++){%>
+            <div>
+            <div class="itemBox">           
+                <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+                <div class="itemDes">
+                <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+                <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">容纳桌数：<%pageItem_1[i].acceptable.value%>桌</a></div>
+                <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">用户评分：<%
+                var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+                for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+                </div>
+                <div class="itemSubmit">
+                <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">￥</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>元</span><span class="spricePer">/桌</span></a></div>
+                <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">立即预订</a></div>
+                </div>
+            </div>
+            <%if((i+1)<pageItem_1.length){
+                        i=i+1;
+                        %>
+            <div class="itemBox">           
+                <div class="itemImg"><a href="<%pageItem_1[i].res.curl%>" id="img_0_<%pageItem_1[i].res.midIndex%>" target="_blank"><img src="<%pageItem_1[i].res.value%>"></img></a></div>
+                <div class="itemDes">
+                <div class="title"><a href="<%pageItem_1[i].title.curl%>" id="title_0_<%pageItem_1[i].title.midIndex%>" target="_blank"><%pageItem_1[i].title.value%></a></div>
+                <div class="num"><a href="<%pageItem_1[i].acceptable.curl%>" id="num_0_<%pageItem_1[i].acceptable.midIndex%>" target="_blank">容纳桌数：<%pageItem_1[i].acceptable.value%>桌</a></div>
+                <div class="comments"><a href="<%pageItem_1[i].score.curl%>" id="comments_0_<%pageItem_1[i].score.midIndex%>" target="_blank">用户评分：<%
+                var score=Math.ceil(parseFloat(pageItem_1[i].score.value));
+                for(var m=0,n=score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star1.png" style="margin-right:2px;"></img><%}%><%for(var m=0,n=5-score;m<n;m++){%><img src="http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/star2.png" style="margin-right:2px;"></img><%}%></a></div>          
+                </div>
+                <div class="itemSubmit">
+                <div class="sprice"><a href="<%pageItem_1[i].sprice.curl%>" id="sprice_0_<%pageItem_1[i].sprice.midIndex%>" target="_blank"><span class="sign">￥</span><span class="spriceNum"><%pageItem_1[i].sprice.value%>元</span><span class="spricePer">/桌</span></a></div>
+                <div class="submit"><a  href="<%pageItem_1[i].res.curl%>" id="submit_0_<%pageItem_1[i].midIndex%>" target="_blank">立即预订</a></div>
+                </div>
+            </div>
+             <% } %>
+            </div>      
+            <%} %>  
+        </div>
+    </div>
+
+        </script>
+        <script type="text/javascript">
+            var ads = [{"encoding":1,"title":null,"desc":[],"monitorUrl":[],"clickUrl":null,"midTime":30,"showUrl":null,"stuffType":9000,"stuffSrc":"","width":960,"height":90,"smartIdeaProduct":[{"clickUrl":"http://pos.baidu.com/cclick.php?af0000KIKxX3ws7ttKmSieMD2pwgSFDlQRZVWXouw6HGlOvNSLhmYqZuL6q-sZe7GjSyHVIHtVakcnvDFpWAqFIMlH9MnNkWjsiLX3ODHC7YtJyk74amLLqiifGM.7D_aqM76wKWo4pjl775OOdJhI6k3EOOEEX1BsTEpMfkk3tTMAEWvIrHGLI5i_HDnNerQKzs34-9h9mzUVLWkR0.mhwGujYznDuDnWbYnWTYwRNKrj77PRDsfbfkwRw7fRD1nHT4nfKWTA-b5HcswbfzrHfzP1w7wRD3nRRdfHKawj77wDNKfHnkP1bk0ZIbg17YTh7buHYk0ZIbg1FYTh7buHYknfKbUvd9py4xuh-zTLwxIZF9uARqn0KbUvd9py4xTvNWUv4bgLwzmyw-5H00TAtqn0Ksm1Ys0APCUyfqnfK9uZfqnfK9uAP_mgP15H00IZRqPHcsnHnkP0KYUHYs0Zw9TWYk0ZP1TjYknj0k0Aq15H00mMcqn0KbIZ0qnfKdThsqpZwYTjCEQLILIz4Bmy-bIi4WUvY0Iv-bIA6qnW0s0A9-pyICIjYznj00myw3gvFGu7qWTAYqn0K1IA7YpyPxTZFETANzIZbq0ZPVmgFYgLIspyfqnH0snfK1Uy7zI7qsThqbIyPYpyfqnH0snsK1Uy7zI7qYTAkGujY1nfKWThnqnWn4PHn0","midTime":38,"jsonData":"{\"title\" : {\"value\" : \"三星 I9300I 3G手机（蓝色） WCDMA/GSM双卡双待\",\"curl\":\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f0000KpTZ_kquqkR7odV7RHgk2t0cI3oiO5mFyn8cen71ymC7x8MFAkPFjGJmYGu05L0sxAZEhhRC8GPgMnp28M5WwJunI_MJ-pIvSGvdbAsTOpeWqUsGY16lri.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 1},\"res\" : {\"value\" : \"http://10.26.53.15:8455/img/lunbo/1.jpg\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"acceptable\" : {\"value\" : \"http://10.26.53.15:8455/img/lunbo/1.jpg\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"score\" : {\"value\" : \"4\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"sprice\" : {\"value\" : \"4333\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2}}"},{"clickUrl":"http://pos.baidu.com/cclick.php?af0000KIKxX3ws7ttKmSieMD2pwgSFDlQRZVWXouw6HGlOvNSLhmYqZuL6q-sZe7GjSyHVIHtVakcnvDFpWAqFIMlH9MnNkWjsiLX3ODHC7YtJyk74amLLqiifGM.7D_aqM76wKWo4pjl775OOdJhI6k3EOOEEX1BsTEpMfkk3tTMAEWvIrHGLI5i_HDnNerQKzs34-9h9mzUVLWkR0.mhwGujYznDuDnWbYnWTYwRNKrj77PRDsfbfkwRw7fRD1nHT4nfKWTA-b5HcswbfzrHfzP1w7wRD3nRRdfHKawj77wDNKfHnkP1bk0ZIbg17YTh7buHYk0ZIbg1FYTh7buHYknfKbUvd9py4xuh-zTLwxIZF9uARqn0KbUvd9py4xTvNWUv4bgLwzmyw-5H00TAtqn0Ksm1Ys0APCUyfqnfK9uZfqnfK9uAP_mgP15H00IZRqPHcsnHnkP0KYUHYs0Zw9TWYk0ZP1TjYknj0k0Aq15H00mMcqn0KbIZ0qnfKdThsqpZwYTjCEQLILIz4Bmy-bIi4WUvY0Iv-bIA6qnW0s0A9-pyICIjYznj00myw3gvFGu7qWTAYqn0K1IA7YpyPxTZFETANzIZbq0ZPVmgFYgLIspyfqnH0snfK1Uy7zI7qsThqbIyPYpyfqnH0snsK1Uy7zI7qYTAkGujY1nfKWThnqnWn4PHn0","midTime":38,"jsonData":"{\"title\" : {\"value\" : \"三星 I9300I 3G手机（蓝色） WCDMA/GSM双卡双待\",\"curl\":\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f0000KpTZ_kquqkR7odV7RHgk2t0cI3oiO5mFyn8cen71ymC7x8MFAkPFjGJmYGu05L0sxAZEhhRC8GPgMnp28M5WwJunI_MJ-pIvSGvdbAsTOpeWqUsGY16lri.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 1},\"res\" : {\"value\" : \"http://10.26.53.15:8455/img/lunbo/1.jpg\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"acceptable\" : {\"value\" : \"http://10.26.53.15:8455/img/lunbo/1.jpg\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"score\" : {\"value\" : \"4\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2},\"sprice\" : {\"value\" : \"4333\",\"curl\" :\"http://cp01-rdqa-pool637.cp01.baidu.com:8765/cpro.php?0f00000MDM1plEPKYQoWyGav9Ttu453WTHINhu_h0Vcy6uNEptIt4qZCnObwNp6PleNfumzQlUDVxuX6YG-WBqlAk3xqpSe1zkCYf9foleficydABFq3cvQkSWJ_.7D_aqM76f_HA9L_Te-9k1QjPakvU81FkR0.IgF_5y9YIZ0lQzqvQM-EIyVdQhPEUiqvgLPCULTEpywxyDdJRHKrwDbsHNwFPa4CIAd_0ZwV5Hcsn1Dzr0KYIHddnHmdPjb30ZI_5Hc0mv4YUWd4UL7EUdqWTZc0mywWUA71T1Ys0ZF15H00mLwV5gw-XZwxuANhmgN_I7t1njKxnWRs0A49IZRqQHD0pgwGujYs0A-Ypy4hUv-b5H00uLKGujYs0ZF-uMKGujYs0APsThqGujY0mvqVTAk-5HR0mgwGujY0mgwYXHY0mMNbuvNYgvN3TA-b5iYk0A7GTjY0Iy-s5fKWpjYs0Zw9TWYs0AwYTjYk0AN9uA-b5H00mgbqnfK9TZKxpyfqn0KWIgPY5fKGTdqLpgF-UAN1T1Ys0ZF9Uh_qn0KVm1Ys0Adv5H00UMus5H08nj0snj0snj00u1bqn0KhpgF1I7qzuyIGUv3qn0K1uyPEUhwxThNMpyq85H00TLPs5HD0TLPsnWYk0ZwYTjYk0AwGTLws5H00mycqn0K9uZ6qn0KsuMwzmyw-5H00TZPYTh7buHYs0ZKGujYknWnY0ZIspyfqnHc1P0K9uZw4TARqnfK1Iv-b5H00TLw4TARqn0KWThnqPWcLrHc0\",\"midIndex\" : 2}}"}],"extention":null}];
+            var config = {"templateWidth":960,"templateHeight":90,"account":"super-nova"};            
+            var layoutConfig = {};
+            var antiArray = new Array();
+            for(var i=0;i<50;i++){
+                antiArray.push(ads[0].smartIdeaProduct[0].midTime);
+            }
+            var smGlobleCss ={}
+;
+            var smLunboConfig = {
+    isLunbo:true,
+    isAnimation:true,
+    lunboTimeArray:[5000,3000,2000],
+    lunboStep:88,
+    lunboBlock:"item0",
+    cssStr:'.leftIconBlock {top:29px;left:5px;}.rightIconBlock {top:29px;right:5px;}',
+    showPageNumBlock:false,
+    lunboType:3,
+    lunboDirection:"vertical"
+}
+;
+        </script>
+        <div id="container" class="container"></div>
+        <!-- main -->
+        <div id="loader" class="loader">loading......</div>
+        <div id="lu_loader" class="loader">loading......</div>
+        <!-- //main -->
+        <script type="text/javascript">
+            var dataArray=[];dataArray[0]={};for(var pBlocksArray={},i=0,j=ads[0].smartIdeaProduct.length;j>i;i++){var item=ads[0].smartIdeaProduct[i],pageBlocks={};for(var k in item)if("jsonData"===k){var jsonD=eval("["+item[k]+"]");item[k]=jsonD;for(var l in jsonD)for(var m in jsonD[l])"object"==typeof jsonD[l][m]&&(jsonD[l][m].curl=jsonD[l][m].curl||ads[0].smartIdeaProduct[i].clickUrl||ads[0].clickUrl,(""===jsonD.midIndex||"undefined"==typeof jsonD.midIndex)&&(jsonD.midIndex=ads[0].smartIdeaProduct[i].midIndex||ads[0].midIndex||0),(""===jsonD[l][m].midIndex||"undefined"==typeof jsonD[l][m].midIndex)&&(jsonD[l][m].midIndex=jsonD.midIndex)),pageBlocks[m]=jsonD[l][m]}else"clickUrl"==k?pageBlocks.curl=item[k]||ads[0].clickUrl:"midTime"==k&&(pageBlocks.midIndex=item[k]||ads[0].midTime);console.log(pageBlocks),item.block=item.block||"normalBlock",pBlocksArray[item.block]=pBlocksArray[item.block]||[],pBlocksArray[item.block].push(pageBlocks)}dataArray[0].pageBlocks=pBlocksArray,dataArray[0].pageBlocks.normalBlock.length>0?window.parent.postMessage("ad=1","http://tieba.baidu.com"):window.parent.postMessage("ad=0","http://tieba.baidu.com");var tpl=oojs.using("oojs.smTemplate"),html=tpl.complie("smTpl",dataArray),logoStr='<a href="" title="" class="bd-logo5"></a>';document.getElementById("container").innerHTML=html+logoStr;
+
+            try{document.execCommand("BackgroundImageCache",!1,!0)}catch(err){}oojs.config({basePath:"http://cpro.baidustatic.com/cpro/ui/noexpire/js/"}),oojs.loadScript("rs.business.anticheat");       
+        </script>
+        <script>
+            if(smLunboConfig && smLunboConfig.isLunbo){
+                if(smLunboConfig.lunboType==4){
+                    document.write('<scr'+'ipt src="http://cpro.baidustatic.com/cpro/ui/noexpire/js/smartIdea/lunbo'+4+'.js"></scr'+'ipt>')
+                }else{
+                    document.write('<scr'+'ipt src="http://cpro.baidustatic.com/cpro/ui/noexpire/js/smartIdea/lunbo.js"></scr'+'ipt>')
+                }
+                
+            }   
+        </script>
+    </body>
+
+</html>

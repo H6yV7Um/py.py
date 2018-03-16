@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--20010-->
+        <title>百度网盟推广</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="{{baseCssUrl}}">
+        <style type="text/css">{{style}}</style>
+    </head>
+    <body>
+        {{html}}
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+            var config = {{config}};
+            var antiArray = {{antiArray}};
+        </script>
+        <script type="text/javascript" src="{{commonJsUrl}}"></script>
+        <script type="text/javascript" src="{{anticheatMobJsUrl}}"></script>
+        {{winnotice}}
+        <script>
+        {{page.js}}
+        </script>
+        <script type="text/javascript">
+        // 临时监控，预计9月底下线，@wangyungan
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement('script');
+            hm.src = '//hm.baidu.com/hm.js?f5bf2d0b4c6d8365c6261f4387de313b';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+        <script type="text/javascript" src="{{feedbackMobile}}"></script>
+        <script type="text/javascript">
+            var templateid = '20007';
+        </script>
+    </body>
+</html>

@@ -1,0 +1,361 @@
+# huicong templete
+
+GlobalCss = <code>
+{
+			'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:2px solid #ca0000;}',
+			'.container div':'{position:absolute;overflow:hidden}',
+			'.container a':'{text-decoration:none;font-family:Î¢ÈíÑÅºÚ;}',
+			'.brandLine':'{display:inline;overflow:hidden;background:rgba(115,86,73,0.5)}',
+			'.adItem':'{position:relative;float:left}',
+			'.adDesc':'{color:#474747}',
+                        '.adSprice':'{font-size:16px;color:#ca0000}',
+			'.discount':'{text_decoration:none;background:#745848;font-size:14px;text-align:center}',
+		'.adClickBtn':'{position:relative;float:left;background:#ca0000;}',
+		'.adArrow':'{float:left;border-color: transparent transparent transparent #ca0000;border-style: solid;padding: 0;width: 0;height: 0;font-size: 0;line-height: 0;overflow: hidden;}',
+		'.adBoughtBlock':'{position:relative;float:left;background:#753f1c;}',
+		'.adArrowD':'{position:relative;float:left;width:0;height:0;}'
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+	container:{id:'container',style:'width:116px;height:266px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:60px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'top:13px;left:0px;width:116px;height:29px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:116px;height:200px;left:0px;top:66px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:114px;height:200px;left:1px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:100px;height:100px;left:7px;top:0px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:114px;height:90px;top:105px;left:0px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:106px;height:35px;line-height:17px;top:0px;left:4px;text-align:left;font-size:16.82px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:90px;height:28px;top:33px;left:6px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:22px;top:5px;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:94px;height:25px;top:61px;left:20px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_120_600 = <code>
+{
+	container:{id:'container',style:'width:116px;height:596px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:80px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'top:23px;left:0px;width:116px;height:29px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:116px;height:506px;left:0px;top:90px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:114px;height:506px;left:1px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:110px;height:110px;left:2px;top:150px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:114px;height:375px;top:240px;left:0px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adItem',style:'width:106px;height:47px;line-height:23px;top:60px;left:4px;text-align:left;font-size:23px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:90px;height:30px;top:50px;left:20px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:22px;top:5px;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:85px;height:25px;top:80px;left:20px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+	container:{id:'container',style:'width:156px;height:596px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:156px;height:80px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'top:18px;width:156px;height:39px;left:0px',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:156px;height:506px;left:0px;top:90px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:130px;height:506px;left:13px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:130px;height:130px;left:0px;top:160px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:115px;height:120px;top:280px;left:15px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adItem',style:'width:130px;height:57px;line-height:28px;top:50px;left:0;text-align:left;font-weight:bold;font-size:28px',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:100px;height:30px;top:35px;left:5px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:0;left:14px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:110px;height:25px;top:65px;left:16px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_200_200 = <code>
+{
+	container:{id:'container',style:'width:196px;height:196px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:196px;height:45px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:27px;width:140px;height:35px;top:5px',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:196px;height:150px;left:0px;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:190px;height:150px;left:3px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:100px;height:100px;left:48px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:193px;height:48px;top:102px;left:0px;',isShow:true,type:'layout'},
+
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:116px;height:16px;line-height:16px;top:0px;left:3px;font-size:12px;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+
+
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:85px;height:25px;top:15px;left:3px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:85px;height:25px;top:3px;left:0px;font-size:15px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:75px;height:35px;top:10px;left:116px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:25px;text-align:center;left:0px;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArowD:{id:'adArrowD',style:'border-bottom:13px solid #fff;left:59px;border-top:13px solid #fff; border-left:13px solid #ca0000;',type:'layout',className:'adArrowD',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true}
+}
+</code>
+
+
+layoutConfig_250_200 = <code>
+{
+	container:{id:'container',style:'width:246px;height:196px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:45px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:45px;top:2px;width:160px;height:40px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:246px;height:150px;left:0px;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:236px;height:140px;left:5px;top:10px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:110px;height:110px;left:0px;top:3px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:125px;height:140px;top:2px;left:111px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:124px;height:18px;line-height:16px;top:20px;left:0;font-size:14px;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:125px;height:30px;top:35px;left:0px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:2px;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:125px;height:35px;top:69px;left:0px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:68px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_250_250 = <code>
+{
+	container:{id:'container',style:'width:246px;height:246px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:45px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:45px;top:2px;width:160px;height:40px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:246px;height:200px;left:0px;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:236px;height:180px;left:5px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:130px;height:130px;left:55px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:240px;height:68px;top:132px;left:0px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:120px;height:16px;line-height:16px;top:0px;left:10px;font-size:14px;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:125px;height:30px;top:20px;left:10px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:2px;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:90px;height:35px;top:10px;left:140px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:69px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_300_250 = <code>
+{
+	container:{id:'container',style:'width:296px;height:246px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:296px;height:45px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:65px;width:160px;top:2px;height:40px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:296px;height:200px;left:0px;top:46px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:296px;height:200px;left:0px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:135px;height:135px;left:4px;top:18px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:152px;height:160px;top:30px;left:140px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:153px;height:20px;line-height:18px;top:25px;left:0;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:130px;height:30px;top:50px;left:0px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:0;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:45px;top:80px;left:25px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:69px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_336_280 = <code>
+{
+	container:{id:'container',style:'width:332px;height:276px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:332px;height:55px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:73px;top:2px;width:200px;height:50px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:332px;height:220px;left:0px;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:312px;height:200px;left:10px;top:10px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:0px;top:10px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:155px;height:140px;top:37px;left:155px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:155px;height:20px;line-height:18px;top:10px;left:0;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:130px;height:30px;top:35px;left:20px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:0;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:35px;top:65px;left:20px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},	
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:69px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_360_300 = <code>
+{
+	container:{id:'container',style:'width:356px;height:296px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:356px;height:55px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:83px;top:2px;width:200px;height:50px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:356px;height:240px;left:0px;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:336px;height:220px;left:10px;top:10px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:170px;height:170px;left:0px;top:20px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:170px;height:150px;top:40px;left:170px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:170px;height:20px;line-height:18px;top:12px;left:0;font-size:18px;font-weight:bold;border-bottom:0px dashed #c6c6c6',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:130px;height:30px;top:35px;left:20px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:130px;height:30px;top:0;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:35px;top:65px;left:20px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:69px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_400_300 = <code>
+{
+	container:{id:'container',style:'width:396px;height:296px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:396px;height:55px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'left:105px;width:200px;height:50px;top:2px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:396px;height:240px;left:0px;top:56px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:376px;height:220px;left:10px;top:10px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:190px;height:190px;left:0px;top:8px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:187px;height:150px;top:35px;left:195px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:187px;height:26px;line-height:24px;top:13px;left:0;font-size:20px;border-bottom:0px dashed #c6c6c6;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:130px;height:30px;top:43px;left:20px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:30px;top:0;left:0px;font-size:18px;font-weight:bold',type:'text',content:'',isShow:true,className:'adSprice',prefix:'&yen',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:35px;top:75px;left:20px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:65px;height:30px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:14px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:15px 0  15px 15px;left:69px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_460_60 = <code>
+{
+	container:{id:'container',style:'width:456px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:100px;height:56px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:100px;height:25px;top:15px;left:0px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:300px;height:56px;left:156px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:300px;height:56px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:52px;height:52px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:219px;height:50px;top:3px;left:81px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:212px;height:20px;line-height:18px;top:5px;left:0px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:70px;height:20px;top:29px;left:0px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:70px;height:20px;top:0;left:0px;font-size:14px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:25px;top:30px;left:70px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_468_60 = <code>
+{
+	container:{id:'container',style:'width:464px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:100px;height:56px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:100px;height:25px;left:0px;top:15px',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:304px;height:56px;left:160px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:305px;height:56px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:52px;height:52px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:220px;height:50px;top:3px;left:85px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:220px;height:20px;line-height:18px;top:5px;left:0px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:70px;height:20px;top:29px;left:0px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:70px;height:20px;top:0;left:4px;font-size:14px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:25px;top:30px;left:70px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_580_90 = <code>
+{
+	container:{id:'container',style:'width:576px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:86px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'top:23px;width:150px;height:38px;left:0px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:386px;height:86px;left:190px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:386px;height:86px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:82px;height:82px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:254px;height:76px;top:7px;left:130px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:256px;height:28px;line-height:24px;top:5px;left:0;font-size:24px;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:90px;height:20px;top:45px;left:0px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:20px;top:0;left:0px;font-size:16px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:25px;top:45px;left:90px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_640_60 = <code>
+{
+	container:{id:'container',style:'width:636px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:56px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:150px;height:38px;left:0px;top:8px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:480px;height:56px;left:155px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:480px;height:56px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:52px;height:52px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:410px;height:50px;top:3px;left:70px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:240px;height:28px;line-height:24px;top:11px;left:0px;font-size:24px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:80px;height:20px;top:11px;left:240px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:80px;height:20px;top:0;left:4px;font-size:16px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:90px;height:25px;top:11px;left:320px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_728_90 = <code>
+{
+	container:{id:'container',style:'width:724px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:180px;height:45px;left:0px;top:19px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:516px;height:86px;left:210px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:516px;height:86px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:82px;height:82px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:400px;height:85px;top:0px;left:115px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:220px;height:28px;line-height:24px;top:32px;left:0;font-size:24px;font-weight:bold;',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:95px;height:20px;top:32px;left:220px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:95px;height:20px;top:0;left:4px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:80px;height:25px;top:32px;left:320px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_760_90 = <code>
+{
+	container:{id:'container',style:'width:756px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:180px;height:45px;left:0px;top:19px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:546px;height:86px;left:210px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:546px;height:86px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:82px;height:82px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:431px;height:85px;top:0px;left:115px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:240px;height:28px;line-height:24px;top:32px;left:0;font-size:24px;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:95px;height:20px;top:32px;left:240px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:95px;height:20px;top:0;left:4px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:90px;height:25px;top:32px;left:340px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_960_60 = <code>
+{
+	container:{id:'container',style:'width:956px;height:56px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:56px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:150px;height:38px;left:5px;top:8px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:676px;height:56px;left:280px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:676px;height:56px;top:0px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:52px;height:52px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:596px;height:50px;top:3px;left:80px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:270px;height:28px;line-height:24px;top:11px;left:0px;font-size:24px;font-weight:bold',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:90px;height:20px;top:11px;left:280px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:90px;height:20px;top:0;left:4px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:25px;top:13px;left:380px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>
+
+
+layoutConfig_960_90 = <code>
+{
+	container:{id:'container',style:'width:956px;height:86px;',className:'container',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:86px;background:#ca0000',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo',parent:'brandBlock',style:'width:180px;height:45px;top:19px;left:0px;',type:'image',content:'http://ubmcmm.baidustatic.com/media/v1/0f000QDCrdvN7Srm-ssvKf.jpg',isShow:true,linkDisplay:"inline",enableClick:true},
+	adBlock:{id:'adBlock',parent:'container',style:'width:666px;height:86px;left:290px;top:0;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:666px;height:86px;position:relative;float:left',className:'adItem',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:82px;height:82px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+        adContent:{id:'adContent',parent:'adItem',style:'width:540px;height:85px;top:0px;left:125px;',isShow:true,type:'layout'},
+	adTitle:{id:'adTitle',parent:'adContent',style:'width:250px;height:28px;line-height:24px;top:32px;left:0;font-weight:bold;font-size:24px',type:'text',content:'',isShow:true,className:'adDesc',k:'title'},
+        adPriceBlock:{id:'adPriceBlock',parent:'adContent',style:'width:120px;height:20px;top:32px;left:260px;',isShow:true,type:'layout'},
+	adSprice:{id:'adSprice',parent:'adPriceBlock',style:'width:120px;height:20px;top:0;left:4px;font-size:18px;font-weight:bold;',type:'text',content:'',isShow:true,prefix:'&yen',className:'adSprice',k:'sprice'},
+        adBoughtBlock:{id:'adBoughtBlock',parent:'adContent',style:'width:130px;height:25px;top:32px;left:380px;',isShow:true,type:'layout'},
+	adBuyImmediate:{id:'adBuyImmediate',style:'width:55px;height:20px;float:left;text-align:center;margin-left:4px;background:#ca0000;color:#fff;font-size:12px;',type:'text',className:'',parent:'adBoughtBlock',content:'Á¢¼´×ÉÑ¯',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+	adArrow:{id:'adArrow',style:'border-width:10px 0  10px 10px;left:59px;',type:'layout',className:'adArrow',parent:'adBoughtBlock',content:'',isShow:true,linkDisplay:'inline',enableClick:true,isShow:true},
+}
+</code>

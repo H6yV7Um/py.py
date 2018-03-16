@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>百度网盟推广</title>
+        <!--20011-->
+        <link rel="stylesheet" href="https://cpro.baidustatic.com/cpro/ui/noexpire/css/2.0.9/template.min.css">
+        <style type="text/css">{{style}}</style>
+    </head>
+    <body>
+        {{html}}
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+        var config = {{config}};
+        var antiArray = {{antiArray}};
+        // 获得tu的参数值
+        var con = document.getElementById('container');
+        var aLink = con.getElementsByTagName('a');
+        var aSum = (document.getElementById('bd-logo4'))? aLink - 1 : aLink;
+        var index = 0;
+        var tu = null;
+        for (var i = 0;i<aSum.length;i++){
+            var aId = document.getElementById('res' + index);
+            tu = aId.getAttribute('data-tu');
+        }
+        var msgStr = '{"msgName":"cpro_displayAd","msg":{"tu":"'+ tu + '","dspid":6,"displayAd":1}}';
+        if (!!window.postMessage){
+            parent.postMessage(msgStr, "*");
+        }
+        </script>
+        {{winnotice}}
+        <script type="text/javascript" src="{{anticheatMobJsUrl}}"></script>
+        <script type="text/javascript">{{page.js}}</script>
+        <script type="text/javascript" src="{{feedbackMobile}}"></script>
+    </body>
+
+</html>

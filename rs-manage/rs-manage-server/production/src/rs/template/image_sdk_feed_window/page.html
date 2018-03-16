@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- image_sdk_feed_window -->
+        <title>百度网盟推广</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        {{timeStatistic}}
+        <link rel="stylesheet" href="{{baseCssUrl}}" >
+        <style>{{style}}</style>
+    </head>
+
+    <body>
+
+        {{html}}
+
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+        var config = {{config}};
+        var antiArray = {{antiArray}};
+        var winUrlArr = %%winnoticeArr%%;
+
+        </script>
+        <!--<script type="text/javascript">
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = '{{dupDomain}}/cpro/ui/noexpire/js/rs/business/1.0.0/anticheat_mob.min.js?v=' + (+new Date);
+
+        var body = document.querySelector('body');
+        body.appendChild(s);
+        </script>-->
+        <script type="text/javascript" src="{{dupDomain}}/cpro/ui/noexpire/js/rs/business/1.0.0/anticheat_mob.min.js"></script>
+        <!--<script type="text/javascript">
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://cp01-rd-nova-009.cp01:8018/liguangyi/page-window.js?v=' + (+new Date);
+
+        var body = document.querySelector('body');
+        body.appendChild(s);
+        </script>-->
+        <script type="text/javascript" src="{{dupDomain}}/cpro/ui/noexpire/js/3.2.4/rs_js/image_sdk_feed_window_page.min.js"></script>
+    </body>
+
+</html>

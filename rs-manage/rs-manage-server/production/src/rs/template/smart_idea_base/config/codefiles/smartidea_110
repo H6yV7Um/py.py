@@ -1,0 +1,408 @@
+# for ctrip hotel
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+'a':'{text-decoration:none}',
+'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid #2358b8;background:#FFFFFF;}',
+'.title':'{color:#2358b8;}',
+'.city':'{color:#2358b8;}',
+'.price':'{color:red}',
+'.priceUnit':'{color:#000}',
+'.addesBlock':'{color:#FF6600}',
+ '.clickButton':'{background:red;}',
+                        '.buttonText':'{color:#fff}'
+}
+</code>
+
+layoutConfig_400_300 = <code>
+{
+			// container
+			container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:142px;height:48px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:142px;height:48px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:398px;height:300px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:320px;height:320px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:45px;left:345px;width:25px;height:150px;line-height:30px;font-size:25px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:238px;left:0px;width:398px;background:#2358b8;height:60px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},	
+			title:{id:'title',parent:'addesBlock',style:'top:0px;left:0px;width:380px;color:#fff;height:30px;line-height:30px;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:35px;left:160px;color:#fff;width:35px;height:16px;font-size:15px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'top:30px;left:200px;color:yellow;width:80px;height:25px;line-height:25px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:100px;height:28px;top:30px;left:284px;border-radius:4px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_200_200 = <code>
+{
+			// container
+			container:{id:'container',style:'width:198px;height:198px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:112px;height:38px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:112px;height:38px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:198px;height:198px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:150px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:33px;left:160px;width:25px;height:100px;line-height:20px;font-size:20px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:148px;left:0px;width:198px;background:#2358b8;height:50px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},
+			title:{id:'title',parent:'addesBlock',style:'top:0px;left:0px;color:#fff;width:198px;height:20px;line-height:20px;font-size:16px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:28px;left:13px;color:#fff;width:35px;height:16px;font-size:14px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'top:25px;left:50px;color:yellow;width:60px;height:20px;line-height:20px;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:85px;height:22px;top:25px;left:110px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:15px;height:22px;line-height:22px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_250_200 = <code>
+{
+			// container
+			container:{id:'container',style:'width:248px;height:198px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:112px;height:38px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:112px;height:38px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:248px;height:248px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:190px;height:190px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:30px;left:205px;width:25px;height:110px;line-height:22px;font-size:22px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:148px;left:0px;width:248px;background:#2358b8;height:50px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},	
+			title:{id:'title',parent:'addesBlock',style:'color:#fff;top:0px;left:0px;width:230px;height:20px;line-height:20px;font-size:17px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'color:#fff;top:30px;left:55px;width:35px;height:16px;font-size:14px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'top:25px;left:95px;color:yellow;width:60px;height:20px;font-size:18px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:85px;height:24px;top:24px;left:160px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:15px;height:24px;line-height:24px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_250_250 = <code>
+{
+			// container
+			container:{id:'container',style:'width:248px;height:248px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:112px;height:38px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:112px;height:38px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:248px;height:248px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:190px;height:190px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:45px;left:205px;width:24px;height:120px;line-height:24px;font-size:24px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:188px;left:0px;width:248px;background:#2358b8;height:60px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},
+			title:{id:'title',parent:'addesBlock',style:'top:0px;left:0px;color:#fff;width:230px;height:23px;line-height:23px;font-size:18px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:38px;left:45px;width:35px;height:16px;font-size:15px;color:#fff;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'color:yellow;top:33px;left:83px;width:75px;height:23px;line-height:23px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:85px;height:26px;top:29px;left:160px;border-radius:4px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:15px;height:26px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_300_250 = <code>
+{
+			// container
+			container:{id:'container',style:'width:298px;height:248px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'top:0px;left:0px;width:112px;height:38px;z-index:999',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:112px;height:38px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:298px;height:248px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-26px;left:0px;width:240px;height:240px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			title:{id:'title',parent:'adBlock',style:'z-index:998;top:190px;left:0px;width:250px;color:#fff;height:25px;line-height:25px;font-size:20px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			city:{id:'city',parent:'adBlock',style:'left:255px;width:25px;top:40px;height:125px;line-height:25px;text-align:center;font-size:25px;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:188px;left:0px;width:298px;background:#2358b8;height:60px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},      
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:38px;left:105px;width:35px;color:#fff;height:16px;text-align:right;font-size:15px;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'top:30px;left:144px;width:70px;color:yellow;height:25px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:72px;height:22px;top:33px;border-radius:4px;left:215px',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_336_280 = <code>
+{
+			// container
+			container:{id:'container',style:'width:334px;height:278px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:142px;height:48px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:142px;height:48px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:334px;height:278px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:276px;height:276px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:60px;left:285px;width:35px;height:125px;line-height:25px;font-size:25px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:218px;left:0px;width:334px;background:#2358b8;height:60px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},
+			title:{id:'title',parent:'addesBlock',style:'top:0px;left:0px;width:270px;height:25px;line-height:25px;color:#fff;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:38px;left:105px;width:35px;height:16px;color:#fff;font-size:15px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'color:yellow;top:33px;left:145px;width:80px;height:23px;line-height:23px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:100px;height:28px;top:30px;left:224px;border-radius:4px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+
+layoutConfig_360_300 = <code>
+{
+			// container
+			container:{id:'container',style:'width:358px;height:298px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:9999;top:0px;left:0px;width:142px;height:48px;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:142px;height:48px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0005AAGZ5d21_3kItEO0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:358px;height:298px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:0px;left:0px;width:300px;height:300px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:60px;left:310px;width:35px;height:150px;line-height:25px;font-size:25px;text-align:center;margin:auto;display:table-cell;vertical-align:middle;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			addesBlock:{id:'addesBlock',parent:'adBlock',style:'top:238px;left:0px;width:358px;background:#2358b8;height:60px;font-size:22px;',type:'text',content:'',isShow:true,className:'addesBlock'},
+			title:{id:'title',parent:'addesBlock',style:'top:0px;left:0px;width:300px;height:30px;line-height:30px;color:#fff;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'addesBlock',style:'top:38px;left:120px;width:35px;height:16px;color:#fff;font-size:15px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'addesBlock',prefix:'&yen;',style:'top:33px;left:160px;width:80px;color:yellow;height:24px;line-height:24px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'addesBlock',style:'width:100px;height:28px;top:30px;left:244px;border-radius:4px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:958px;height:88px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:781px;width:147px;height:88px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:147px;height:88px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:958px;height:88px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-36px;left:30px;width:160px;height:160px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:15px;left:220px;width:240px;height:27px;line-height:27px;font-size:26px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:50px;left:220px;width:250px;height:22px;line-height:22px;font-size:20px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:55px;left:485px;width:35px;height:16px;font-size:15px;text-align:right',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:43px;left:525px;width:90px;height:30px;font-size:30px;line-height:30px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:105px;height:28px;top:43px;left:630px;border-radius:4px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;line-height:28px;text-align:center;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:758px;height:88px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:638px;width:120px;height:88px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:8px;left:0px;width:120px;height:72px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:758px;height:88px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-30px;left:0px;width:150px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:15px;left:155px;width:200px;height:26px;line-height:26px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:50px;left:155px;width:235px;height:24px;line-height:24px;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:55px;left:380px;width:35px;height:16px;font-size:14px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:43px;left:420px;width:90px;height:30px;font-size:28px;line-height:30px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:105px;height:28px;top:43px;left:520px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_728_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:726px;height:88px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:606px;width:120px;height:88px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:8px;left:0px;width:120px;height:72px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:726px;height:88px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-30px;left:0px;width:150px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:15px;left:160px;width:200px;height:26px;line-height:26px;font-size:24px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:48px;left:160px;width:220px;height:24px;line-height:24px;font-size:18px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:55px;left:375px;width:35px;height:16px;font-size:14px;text-align:right',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:45px;left:413px;width:80px;height:30px;font-size:26px;line-height:30px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:100px;height:28px;top:45px;left:495px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;line-height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_580_90 = <code>
+{
+			// container
+			container:{id:'container',style:'width:578px;height:88px;',type:'layout'},
+		// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:468px;width:110px;height:88px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:11px;left:0px;width:110px;height:66px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:578px;height:88px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-30px;left:0px;width:150px;height:150px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			title:{id:'title',parent:'adBlock',style:'top:48px;left:155px;width:195px;height:25px;line-height:25px;font-size:16px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			city:{id:'city',parent:'adBlock',style:'top:15px;left:155px;width:180px;height:24px;line-height:24px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:25px;left:350px;width:35px;height:18px;font-size:14px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:17px;left:390px;width:70px;height:25px;font-size:24px;line-height:25px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'text-align:center;width:105px;border-radius:4px;height:28px;top:45px;left:350px',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;line-height:28px;font-size:16px;height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+
+layoutConfig_960_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:958px;height:58px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:790px;width:97px;height:58px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:97px;height:58px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:958px;height:58px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-51px;left:70px;width:160px;height:160px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:7px;left:270px;width:200px;height:20px;line-height:20px;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:35px;left:270px;width:230px;height:20px;line-height:20px;font-size:19px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:35px;left:510px;width:35px;height:16px;font-size:15px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:24px;left:550px;width:90px;height:30px;font-size:30px;line-height:30px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:105px;height:28px;top:26px;border-radius:4px;left:660px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;line-height:28px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_640_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:638px;height:58px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:528px;width:110px;height:58px;background:#2358B8',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:7px;width:96px;height:58px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:638px;height:58px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-20px;left:0px;width:110px;height:110px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:7px;left:120px;width:180px;height:22px;line-height:22px;font-size:20px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:33px;left:120px;width:195px;height:20px;line-height:20px;font-size:16px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:35px;left:310px;width:35px;height:16px;font-size:14px;text-align:right',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:25px;left:345px;width:80px;height:28px;font-size:25px;line-height:28px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:95px;height:26px;top:26px;left:425px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:15px;height:26px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_468_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:466px;height:58px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:366px;width:100px;height:58px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:2px;width:96px;height:58px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:466px;height:58px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-15px;left:0px;width:90px;height:90px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:7px;left:100px;width:145px;height:20px;line-height:20px;font-size:18px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:32px;left:100px;width:170px;height:18px;line-height:18px;font-size:14px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:9px;left:260px;width:30px;height:16px;font-size:13px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:1px;left:295px;width:70px;height:24px;font-size:22px;text-aling:center;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:86px;height:22px;top:30px;left:270px;border-radius:4px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:22px;line-height:22px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_460_60 = <code>
+{
+			// container
+			container:{id:'container',style:'width:458px;height:58px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:358px;width:100px;height:58px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:2px;width:96px;height:58px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:0px;width:458px;height:58px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:-15px;left:0px;width:90px;height:90px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:7px;left:95px;width:140px;height:20px;line-height:20px;font-size:18px;text-align:left;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:32px;left:95px;width:170px;height:18px;line-height:18px;font-size:14px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:9px;left:255px;width:30px;height:16px;font-size:13px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:1px;left:290px;width:70px;height:24px;font-size:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:86px;height:22px;top:30px;left:265px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:22px;line-height:22px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+			// container
+			container:{id:'container',style:'width:158px;height:598px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:158px;height:94px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:0px;width:158px;height:94px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:100px;width:158px;height:490px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:100px;left:0px;width:160px;height:160px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			title:{id:'title',parent:'adBlock',style:'top:280px;left:7px;width:144px;height:50px;line-height:25px;font-size:20px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			city:{id:'city',parent:'adBlock',style:'top:15px;left:7px;width:144px;height:60px;line-height:30px;font-size:24px;text-align:center;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:400px;left:20px;width:35px;height:18px;font-size:15px;line-height:16px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:393px;left:60px;width:90px;height:28px;font-size:26px;line-height:28px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:105px;height:28px;border-radius:4px;top:430px;left:25px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:16px;height:28px;line-height:28px;margin-left:0px;color:#fff',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+
+
+}
+			
+</code>
+
+layoutConfig_120_600 = <code>
+{
+			// container
+			container:{id:'container',style:'width:118px;height:598px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:118px;height:80px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:5px;left:0px;width:118px;height:70px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:80px;width:118px;height:518px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+			image:{id:'image',parent:'adBlock',style:'top:110px;left:0px;width:118px;height:118px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:30px;left:4px;width:110px;height:50px;line-height:25px;font-size:22px;text-align:center;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:255px;left:7px;width:104px;height:63px;line-height:21px;font-size:20px;text-align:left;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:410px;left:4px;width:30px;height:15px;font-size:13px;line-height:15px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:403px;left:35px;width:75px;height:25px;font-size:24px;line-height:25px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'border-radius:4px;width:95px;height:26px;top:435px;left:10px;text-align:center',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:15px;height:26px;line-height:26px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+			// container
+			container:{id:'container',style:'width:118px;height:268px;',type:'layout'},
+			// logo container
+			brandBlock:{id:'brandBlock',parent:'container',style:'z-index:999;top:0px;left:0px;width:118px;height:68px;background:#2358B8;',type:'layout',isShow:true},
+			brandLogo:{id:'brandLogo0',parent:'brandBlock',style:'top:0px;left:2px;width:114px;height:68px',type:'image',isShow:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000rzPPqkNlKxkTxfuD0.jpg'},
+			// product container
+			adBlock:{id:'adBlock',parent:'container',style:'left:0px;top:68px;width:118px;height:200px;background:#fff;',isShow:true,type:"layout",linkDisplay:"inline"},
+			// product item
+            imageBlock:{id:'imageBlock',parent:'adBlock',style:'top:22px;left:0px;width:118px;height:100px',type:'layout',isShow:true,linkDisplay:'inline'},
+			image:{id:'image',parent:'imageBlock',style:'top:-9px;left:0px;width:118px;height:118px;',type:'image',content:'',isShow:true,className:'image',k:'res'},
+			 city:{id:'city',parent:'adBlock',style:'top:0px;left:0px;width:118px;height:22px;line-height:22px;font-size:18px;text-align:center;',type:'text',content:'',isShow:true,className:'city',k:'city'},
+			title:{id:'title',parent:'adBlock',style:'top:123px;left:0px;width:118px;height:32px;background-color:#fff;font-size:15px;line-height:16px;text-align:center;',type:'text',content:'',isShow:true,className:'title',k:'title'},
+			priceUnit:{id:'priceUnit',parent:'adBlock',style:'top:160px;left:10px;width:35px;height:13px;font-size:12px;line-height:13px;text-align:right;',type:'text',content:'特价',isShow:true,className:'priceUnit'},
+			price:{id:'price',parent:'adBlock',prefix:'&yen;',style:'top:155px;left:48px;width:65px;height:22px;font-size:20px;line-height:22px;text-align:left;',type:'text',content:'',isShow:true,className:'price',k:'sprice'},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:72px;height:20px;top:177px;left:23px;border-radius:4px;text-align:center;',type:'layout',content:'',isShow:true,className:'clickButton'},
+                        buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:20px;line-height:20px;margin-left:0px;',type:'text',content:'超低价预订',isShow:true,className:'buttonText'}
+
+}
+</code>

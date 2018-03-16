@@ -1,0 +1,1230 @@
+GlobalCss = <code>
+{}
+</code>
+
+
+layoutConfig_960_90 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>">
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                    <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                    <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0>" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_90 = <code>
+</code>
+
+cssConfig_960_90 = <code>
+   .container { position: relative; width: 958px; height: 88px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 170px; height: 88px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 50px; height: 33px; position: absolute;top: 14px; left: 50px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 168px; height: 20px;line-height:20px; position: absolute; top: 57px; left: 0; color: #ffffff; font-size: 15px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 408px;height: 88px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 80px; height: 80px; position: absolute;left: 30px; top: 4px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 160px; height: 80px; position: absolute;left: 120px; top: 5px;}
+    .ad-title {width: 100%;height: 32px;font-size: 15px;line-height: 16px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 45px;font-size: 14px;line-height: 15px;overflow:hidden;position: absolute;top:34px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .ad-intro-list { padding-right: 5px; margin-left: 10px; border-right: solid 1px #c8c8c8; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 224px; }
+    .ad-intro-list-title { font-size: 14px; text-decoration: none; color: #29a5df; line-height: 22px; font-weight:normal; }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 12px; color: #323232; }
+    .footer { position: absolute; height: 30px;line-height: 30px; width:90px;left:460px;bottom:5px; background:#29a5df;text-align: center;}
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 90px; height: 30px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 13px; }	
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_960_60 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_960_60 = <code>
+</code>
+
+cssConfig_960_60 = <code>
+.container { position: relative; width: 958px; height: 58px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 180px; height: 58px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 40px; height: 26px; position: absolute;top: 6px; left: 58px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 160px; height: 25px; line-height:25px;position: absolute; top: 30px; left: 0; color: #ffffff; font-size: 14px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 720px;height: 58px; top: 0px;left:30px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 56px; height: 56px; position: absolute;left: 10px; top: 1px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 140px; height: 58px; position: absolute;left: 80px; top: 2px;}
+    .ad-title {width: 100%;height: 28px;font-size: 13px;line-height: 14px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 26px;font-size: 12px;line-height: 13px;overflow:hidden;position: absolute;top:27px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .footer { position: absolute; height: 22px;line-height: 22px; width:66px;left:450px;bottom:5px; background:#29a5df;text-align: center;}
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 66px; height: 22px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 13px; }	
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_760_90 = <code>
+<%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_760_90 = <code>
+</code>
+
+cssConfig_760_90 = <code>
+    .container { position: relative; width: 758px; height: 88px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 170px; height: 88px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 100%; height: 100%;  width: 50px; height: 33px; position: absolute;top: 14px; left: 50px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 168px; height: 20px; line-height:20px;position: absolute; top: 57px; left: 0; color: #ffffff; font-size: 15px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 588px;height: 88px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 80px; height: 80px; position: absolute;left: 30px; top: 4px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 160px; height: 80px; position: absolute;left: 120px; top: 5px;}
+    .ad-title {width: 100%;height: 32px;font-size: 15px;line-height: 16px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 45px;font-size: 14px;line-height: 15px;overflow:hidden;position: absolute;top:34px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .ad-intro-list { padding-right: 5px; margin-left: 10px; border-right: solid 1px #c8c8c8; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 224px; }
+    .ad-intro-list p { width: 17em; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list-title { font-size: 14px; text-decoration: none; color: #29a5df; line-height: 22px; font-weight:normal; }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 12px; color: #323232; }
+    .footer { position: absolute; height: 30px;line-height: 30px; width:90px;left:460px;bottom:5px; background:#29a5df;text-align: center;}
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 90px; height: 30px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_728_90 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_728_90 = <code>
+</code>
+
+cssConfig_728_90 = <code>
+    .container { position: relative; width: 726px; height: 88px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 200px; height: 88px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 100%; height: 100%;  width: 56px; height: 37px; position: absolute;top: 14px; left: 64px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 196px; height: 20px;line-height:20px;position: absolute; top: 50px; left: 0; color: #ffffff; font-size: 17px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 408px;height: 88px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 80px; height: 80px; position: absolute;left: 60px; top: 4px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 180px; height: 80px; position: absolute;left: 150px; top: 5px;}
+    .ad-title {width: 100%;height: 32px;font-size: 15px;line-height: 16px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 45px;font-size: 14px;line-height: 15px;overflow:hidden;position: absolute;top:34px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .footer { position: absolute; height: 30px;line-height: 30px; width:90px;left:530px;bottom:5px; background:#29a5df;text-align: center;}
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 90px; height: 30px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_640_60 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_640_60 = <code>
+</code>
+
+cssConfig_640_60 = <code>
+    .container { position: relative; width: 638px; height: 58px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 200px; height: 58px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 40px; height: 26px; position: absolute;top: 5px; left: 69px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 200px; height: 20px; line-height:20px;position: absolute; top: 31px; left: 0; color: #ffffff; font-size: 16px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 438px;height: 58px; top: 0px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 56px; height: 56px; position: absolute;left: 50px; top: 1px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 140px; height: 58px; position: absolute;left: 120px; top: 2px;}
+    .ad-title {width: 100%;height: 28px;font-size: 13px;line-height: 14px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 26px;font-size: 12px;line-height: 13px;overflow:hidden;position: absolute;top:27px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .footer { position: absolute; height: 25px;line-height: 25px; width:75px;left:460px;bottom:5px; background:#29a5df;text-align: center;}
+    .learn-more { position: absolute; width:75px; height: 25px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 14px; }   
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_580_90 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_580_90 = <code>
+</code>
+
+cssConfig_580_90 = <code>
+    .container { position: relative; width: 578px; height: 88px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 170px; height: 88px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 100%; height: 100%;  width: 50px; height: 33px; position: absolute;top: 14px; left: 50px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 168px; height: 15px; position: absolute; top: 57px; left: 0; color: #ffffff; font-size: 15px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 408px;height: 88px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 80px; height: 80px; position: absolute;left: 30px; top: 4px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 160px; height: 80px; position: absolute;left: 120px; top: 5px;}
+    .ad-title {width: 100%;height: 32px;font-size: 15px;line-height: 16px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 45px;font-size: 14px;line-height: 15px;overflow:hidden;position: absolute;top:34px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .ad-intro-list { padding-right: 5px; margin-left: 10px; border-right: solid 1px #c8c8c8; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 224px; }
+    .ad-intro-list p { width: 17em; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .ad-intro-list-title { font-size: 14px; text-decoration: none; color: #29a5df; line-height: 22px; font-weight:normal; }
+    .ad-intro-list-desc { text-decoration: none; line-height: 18px; font-size: 12px; color: #323232; }
+    .footer { position: absolute; height: 30px;line-height: 30px; width:90px;left:460px; bottom:5px; background:#29a5df;text-align: center;}
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .learn-more { position: absolute; width: 90px; height: 30px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 13px; }	
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_468_60 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_468_60 = <code>
+</code>
+
+cssConfig_468_60 = <code>
+    .container { position: relative; width: 466px; height: 58px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 140px; height: 58px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 40px; height: 26px; position: absolute;top: 5px; left: 44px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 134px; height: 20px; line-height:20px;position: absolute; top: 30px; left: 0; color: #ffffff; font-size: 12px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 326px;height: 58px; top: 0px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 56px; height: 56px; position: absolute;left: 25px; top: 1px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 120px; height: 58px; position: absolute;left: 90px; top: 2px;}
+    .ad-title {width: 100%;height: 28px;font-size: 13px;line-height: 14px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 26px;font-size: 12px;line-height: 13px;overflow:hidden;position: absolute;top:27px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .footer { position: absolute; height: 22px;line-height: 22px; width:66px;left:360px;bottom:5px; background:#29a5df;text-align: center;}
+    .learn-more { position: absolute; width:66px; height: 22px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 12px; }   
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_460_60 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg">
+                </a>
+            </div>
+            <div id="brandSlogan" class="ad-brand-slogan"><span><%brandTitle%></span></div>
+        </div>
+        
+        <div class="ad-content">
+            <div id="adLogo_0" class="ad-logo">
+                <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div class="ad-info">
+                <div id="adTitle_0" class="ad-title" >
+                <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                </div>
+                <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+</code>
+
+lunboConfig_460_60 = <code>
+</code>
+
+cssConfig_460_60 = <code>
+    .container { position: relative; width: 458px; height: 58px; background: white; border: 1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { float: left; width: 140px; height: 58px; position: relative; background: #29a5df; text-align: left; }
+    .ad-brand-logo {width: 40px; height: 26px; position: absolute;top: 5px; left: 44px;}
+    .ad-brand-logo a ,.ad-brand-logo a img {width: 100%;height: 100%;position: absolute;}
+    .ad-brand-slogan {width: 134px; height: 20px; line-height:20px;position: absolute; top: 30px; left: 0; color: #ffffff; font-size: 12px; font-family: Î¢ÈíÑÅºÚ; text-align: center;overflow:hidden}
+    .ad-content { overflow: hidden; position: relative; width: 318px;height: 58px; top: 0px;}
+    .ad-content a{text-decoration: none;color:#29a5df;}
+    .ad-logo {width: 56px; height: 56px; position: absolute;left: 25px; top: 1px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-info {width: 120px; height: 58px; position: absolute;left: 90px; top: 2px;}
+    .ad-title {width: 100%;height: 28px;font-size: 13px;line-height: 14px;font-weight: bold;overflow:hidden;}
+    .ad-desc {width: 100%;height: 26px;font-size: 12px;line-height: 13px;overflow:hidden;position: absolute;top:27px;}
+    .ad-desc a ,.ad-title a{width: 100%;height: 100%;display: block;}
+    .footer { position: absolute; height: 25px;line-height: 25px; width:75px;left:360px;bottom:5px; background:#29a5df;text-align: center;}
+    .learn-more { position: absolute; width:75px; height: 25px; margin: 0 auto; display: block; text-decoration: none;color: #fff; font-size: 14px; }   
+    .logo { display: block; margin: 10px auto 10px auto; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_400_300 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandTitle.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad_logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad_title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</code>
+
+lunboConfig_400_300 = <code>
+</code>
+
+cssConfig_400_300 = <code>
+    .container { position: relative; width: 398px; height: 298px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden;}
+    .ad-banner { width: 100%; height: 70px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 73px; height: 48px; position: absolute; overflow: hidden; top: 12px; left: 20px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 243px; top: 24px; left: 110px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 20px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 100%; height: 228px; position: absolute;}
+    .ad-logo {width: 180px; height: 180px; position: absolute; left: 9px; top: 24px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;
+    }
+    .ad_info {width: 170px; height: 180px; position: absolute;left: 198px; top: 24px; }
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {    width: 100%; height: 100%; position: absolute;left:0px; top:0px;}
+    .ad_title {width:100%; height: 38px; letter-spacing: 1px; line-height: 18px; position: absolute; left: 0px; top: 0px; font-size: 17px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 85px; line-height: 17px; overflow: hidden; position: absolute;left: 0px; top: 45px; font-size: 16px; }
+    .ad_title a ,.ad-desc a{width: 100%; height:100%; display: block }
+    .click-button {width: 120px; height: 40px; position: absolute;top: 139px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff; }
+    .learn-more {color: #fff; font-family: Î¢ÈíÑÅºÚ; font-size: 18px; width: 100%; height: 100%; line-height: 40px; display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_360_300 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad_logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_360_300 = <code>
+</code>
+
+cssConfig_360_300 = <code>
+    .container { position: relative; width: 358px; height: 298px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden;}
+    .ad-banner { width: 358px; height: 70px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 66px; height: 44px; position: absolute; overflow: hidden; top: 12px; left: 20px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 220px; top: 24px; left: 110px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 20px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 100%; height: 228px; position: absolute; }
+    .ad-logo {width: 180px; height: 180px; position: absolute; left: 9px; top: 24px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;
+    }
+    .ad_info {width: 153px; height: 180px; position: absolute;left: 198px; top: 24px; }
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {    width: 100%; height: 100%; position: absolute;left:0px; top:0px;}
+    .ad-title {width:100%; height: 38px; letter-spacing: 1px; line-height: 18px; position: absolute; left: 0px; top: 0px; font-size: 17px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 85px; line-height: 17px; overflow: hidden; position: absolute;left: 0px; top: 45px; font-size: 16px; }
+    .ad-desc a,.ad-title a { width: 100%; height: 100%;display: block;} 
+    .click-button {width: 120px; height: 40px; position: absolute;top: 139px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff; }
+    .learn-more {color: #fff; font-family: Î¢ÈíÑÅºÚ; font-size: 18px; width: 100%; height: 100%; line-height: 40px; display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_336_280 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+ 
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandTitle.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad_logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</code>
+
+lunboConfig_336_280 = <code>
+</code>
+
+cssConfig_336_280 = <code>
+    .container { position: relative; width: 334px; height: 278px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden;}
+    .ad-banner { width: 334px; height: 70px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 66px; height: 44px; position: absolute; overflow: hidden; top: 12px; left: 20px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 220px; top: 24px; left: 110px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 20px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 100%; height: 208px; position: absolute; }
+    .ad-logo {width: 160px; height: 160px; position: absolute; left: 9px; top: 24px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;
+    }
+    .ad_info {width: 150px; height: 160px; position: absolute;left: 180px; top: 24px}
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {    width: 100%; height: 100%; position: absolute;left:0px; top:0px;}
+    .ad-title {width:100%; height: 36px; letter-spacing: 1px; line-height: 18px; position: absolute; left: 0px; top: 0px; font-size: 17px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 68px; line-height: 17px; overflow: hidden; position: absolute;left: 0px; top: 45px; font-size: 16px; }
+    .ad-desc a,.ad-title a{ width: 100%; height: 100%;display: block;} 
+    .click-button {width: 120px; height: 40px; position: absolute;top: 120px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff; }
+    .learn-more {color: #fff; font-family: Î¢ÈíÑÅºÚ; font-size: 18px; width: 100%; height: 100%; line-height: 40px; display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_300_250 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad_logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_300_250 = <code>
+</code>
+
+cssConfig_300_250 = <code>
+    .container { position: relative; width: 298px; height: 248px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 298px; height: 60px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 298px; height:60px; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 50px; height: 33px; position: absolute; overflow: hidden; top: 15px; left: 9px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 220px; top: 20px; left: 60px; padding-left: 4px; word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 19px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 298px; height: 188px; position: absolute;}
+    .ad-logo { width: 130px; height: 130px; position: absolute; top:30px; left:9px;}
+    .ad-logo a ,.ad-logo a img{width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;}
+    .ad_info {}
+    #link_buttonText_0 {color: #fff; }
+    .ad_info_block {width: 150px; height: 130px; position: absolute; left: 148px; top: 30px;}
+    .ad-title {width: 150px; height: 40px; letter-spacing: 1px; line-height: 20px; position: absolute; left: 0px; top: 0px; font-size: 17px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 150px; height: 45px; line-height: 15px; overflow: hidden; position: absolute;left: 0px; top: 45px; font-size: 14px; }
+    .ad-desc a,.ad-title a{ width: 150px; height: 100%;display: block;} 
+    .click-button {width: 90px; height: 30px; position: absolute;top: 100px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff;}
+    .learn-more { display: block; width: 66px; float: right; margin-right: 10px; border: 1px solid #646464; border-radius: 6px; text-decoration: none; padding: 5px; color: #8C8787; font-size: 13px; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_250_250 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad-logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</code>
+
+lunboConfig_250_250 = <code>
+</code>
+
+cssConfig_250_250= <code>
+    .container { position: relative; width: 248px; height: 248px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden;}
+    .ad-banner { width: 248px; height: 48px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 50px; height: 33px; position: absolute; overflow: hidden; top: 9px; left: 10px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 165px; top: 14px; left: 69px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 15px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 248px; height: 200px; position: absolute; }
+    .ad-logo {width: 115px; height: 115px; position: absolute; left: 5px; top: 40px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;}
+    .ad_info {width: 115px; height: 115px; position: absolute;left: 126px; top: 40px; }
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {width: 100%; height: 100%; position: absolute;left:0px; top:0px;}
+    .ad-title {width:100%; height: 30px; letter-spacing: 1px; line-height: 15px; position: absolute; left: 0px; top: 0px; font-size: 13px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 45px; line-height: 15px; overflow: hidden; position: absolute;left: 0px; top: 38px; font-size: 14px; }
+    .ad-desc a,.ad-title a{ width: 100%; height: 100%;display: block;} 
+    .click-button {width: 66px; height: 22px; position: absolute;top: 92px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff; }
+    .learn-more { color: #fff; font-family: Î¢ÈíÑÅºÚ; font-size: 12px; width: 66px; height: 22px; line-height: 22px; display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_250_200 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad-logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</code>
+
+lunboConfig_250_200 = <code>
+</code>
+
+cssConfig_250_200 = <code>
+    .container { position: relative; width: 248px; height: 198px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 248px; height: 40px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 44px; height: 22px; position: absolute; overflow: hidden; top: 9px; left: 20px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 154px; top: 10px; left: 69px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 13px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 248px; height: 158px; position: absolute; }
+    .ad-logo {     width: 115px; height: 115px; position: absolute; left: 5px; top: 22px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;
+    }
+    .ad_info {width: 115px; height: 115px; position: absolute;left: 126px; top: 22px; }
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {    width: 100%; height: 100%; position: absolute;left:0px; top:0px;}
+    .ad-title {width:100%; height: 30px; letter-spacing: 1px; line-height: 15px; position: absolute; left: 0px; top: 0px; font-size: 13px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 45px; line-height: 15px; overflow: hidden; position: absolute;left: 0px; top: 38px; font-size: 14px; }
+    .ad-desc a,.ad-title a { width: 100%; height: 100%;display: block;} 
+    .click-button {width: 66px; height: 30px; position: absolute;top: 85px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff;
+    .learn-more {color: #fff;font-family: Î¢ÈíÑÅºÚ;font-size: 12px; width: 66px;height: 22px;line-height: 22px;display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_200_200 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+        <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="ad-banner-logo">
+                <a id="ad_banner_logo_0" href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+            </div>
+            <div class="ad-banner-title">
+                <span><%brandTitle%></span>
+            </div>
+        </div>
+        <div id='ad_content' class="ad_content">
+            <div id="ad-logo" class="ad-logo">
+                <a id="ad-logo_0" target="_blank" href="<%item_1[0].res.curl%>" >
+                    <img src="<%item_1[0].res.value%>" >
+                </a>
+            </div>
+            <div id="ad_info" class="ad_info">
+                <div id="adInfoBlock_0" class="ad_info_block">
+                    <div id="adTitle_0" class="ad-title" >
+                        <a id="link_adTitle_0" target="_blank" href="<%item_1[0].title.curl%>" ><%item_1[0].title.value%></a>
+                    </div>
+                    <div id="adDesc_0" class="ad-desc">
+                        <a id="link_adDesc_0" target="_blank" href="<%item_1[0].desc.curl%>" ><%item_1[0].desc.value%></a>
+                    </div>
+                    <div id="clickButton_0" class="click-button clickButton">
+                        <div id="buttonText_0" class="buttonText" >
+                            <a id="link_buttonText_0" target="_blank" class='learn-more' href="<%item_1[0].learnMore.curl%>">
+                            ¸ü¶àÖªÊ¶
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</code>
+
+lunboConfig_200_200 = <code>
+</code>
+
+cssConfig_200_200 = <code>
+    .container { position: relative; width: 198px; height: 198px; overflow: hidden; background: white; border:1px solid #29a5df;}
+    .adWrap { font-family: "Î¢ÈíÑÅºÚ", arial, sans-serif; line-height: 1em; overflow: hidden; }
+    .ad-banner { width: 198px; height: 40px; position: relative; background: #29a5df; }
+    .ad-banner a { width: 100%;height: 100%; position: absolute;z-index: 1;}
+    .ad-banner-logo { width: 33px; height: 22px; position: absolute; overflow: hidden; top: 9px; left: 5px;}
+    .ad-banner-logo img { width: 100%; height:100% } 
+    .ad-banner-title {position: absolute; height: 20px; width: 143px; top: 10px; left: 47px;word-break: break-all; word-wrap: break-word; color: #ffffff; font-size: 13px; font-family: Î¢ÈíÑÅºÚ; text-align: center; line-height: 20px; overflow: hidden; }
+    .ad_content { width: 198px; height: 158px;display: block;position:absolute}
+    .ad-logo {     width: 85px; height: 102px; position: absolute; left: 5px; top: 30px; }
+    .ad-logo a ,.ad-logo a img{width: 100%;height: 100%; position: absolute; top: 0px; left: 0px;}
+    .ad_info div a  { text-decoration: none; color:#29a5df; display: block;
+    }
+    .ad_info {width: 100px; height: 120px; position: absolute;left: 95px; top: 25px; }
+    #link_buttonText_0 {color: #fff; } 
+    .ad_info_block {width: 100px; height: 120px; position: absolute;left:0px; top:0px;}
+    .ad-title {width:100%; height: 30px; letter-spacing: 1px; line-height: 15px; position: absolute; left: 0px; top: 0px; font-size: 13px; font-weight: bold ;overflow: hidden}
+    .ad-desc {width: 100%; height: 45px; line-height: 15px; overflow: hidden; position: absolute;left: 0px; top: 35px; font-size: 14px; }
+    .ad-desc a,.ad-title a { width: 100%; height:100%;position: absolute;} 
+    .click-button {width: 66px; height: 22px; position: absolute;top: 85px; left: 0px; text-align: center; line-height:30px; background: #29a5df;}
+    .click-button a {color: #fff; }
+    .learn-more {color: #fff; font-family: Î¢ÈíÑÅºÚ; font-size: 12px; width: 66px; height: 22px; line-height: 22px; display: inline; }
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0 0;cursor:default}.bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0 0}
+</code>
+
+layoutConfig_160_600 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+
+    }%>
+   <div id="adWrap" class="adWrap">
+        <div id="brandBlock" class="ad-brand-block">
+            <div id="brandlogo0" class="ad-brand-logo">
+                <a id="link_brandlogo_0" target="_blank" href="<%item_1[0].brandLogo.curl%>">
+                    <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+                </a>
+            </div>
+            <div id="brandSlogan"  class="ad-brand-slogan"> <%brandTitle%> </div>
+        </div>
+    </div>
+    <div class="adBlockWrap">
+        <div id="adLogo_0" class="ad-logo">
+            <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>">
+                <img src="<%item_1[0].res.value%>">
+            </a>
+        </div>
+        <div class="ad-content">
+            <div id="adTitle_0" class="ad-title">
+                <a id="link_adTitle_0" class="ad-intro-list-title" href="<%item_1[0].title.curl%>" target="_blank"><%item_1[0].title.value%></a> 
+            </div>
+            <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" class="ad-intro-list-desc" href="<%item_1[0].desc.curl%>" target="_blank"> <%item_1[0].desc.value%></a> 
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+    </div>
+</code>
+
+lunboConfig_160_600 = <code>
+</code>
+
+cssConfig_160_600 = <code>
+    .container{position:relative;width:158px;height:598px;overflow:hidden;background:white;border:1px solid #29a5df;}
+    .adWrap{font-family:"Î¢ÈíÑÅºÚ",arial,sans-serif;line-height:1em;overflow:hidden}
+    .adBlockWrap {width: 158px; height: 478px;position: absolute;}
+    .ad-brand-block{width:158px;height:120px;position:relative;background: #29a5df;}
+    .ad-brand-slogan{width: 116px; height: 42px; position: absolute; top: 60px; left: 22px; color: #ffffff; font-size: 17px; font-family: 'Î¢ÈíÑÅºÚ'; text-align: center; line-height: 20px; letter-spacing: 1px;}
+    .ad-brand-logo {width: 66px; height: 40px; position: absolute; top: 13px; left: 46px;}
+    .ad-brand-logo a {display: block; }
+    .ad-brand-logo a img {width: 100%; height: 100%; }
+    .ad-logo{ width: 150px; height: 150px;position: absolute; left: 4px; top: 60px;} 
+    .ad-content{overflow:hidden;  width: 158px; height: 258px; position: absolute; top: 220px; } 
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-title {width: 138px; height: 30px;position: absolute; left: 10px; top: 20px; overflow: hidden; font-weight: bold; text-align: left;} 
+    .ad-desc {width: 138px; height: 90px; position: absolute; left: 10px; top: 60px; font-size: 13px;overflow: hidden} 
+    .ad-title a,.ad-desc a {width: 100%;height: 100%;display: block;}
+    .ad-intro-list{margin-bottom:10px}
+    .ad-intro-list-title{text-decoration:none;font-size:15px;color:#29a5df;line-height:16px;position: absolute;}
+    .ad-intro-list-desc{display:block;text-decoration:none;font-size:14px;color:#29a5df;line-height:15px}
+    .footer{position:absolute;bottom:40px;width:100%;z-index:9999;text-align: center;}
+    .learn-more{display:block;width:66px;margin:0 auto;text-decoration:none;padding:5px;color:#fff;font-size:14px;
+background:#29a5df;}
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0;cursor:default}
+    .bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0}
+    .ad-intro-list{width:110px;height:100px;overflow:hidden}
+</code>
+
+layoutConfig_120_600 = <code>
+    <%{
+       var data=dataArray[0],
+       itemCollection=data.pageBlocks,
+       item_1=itemCollection["normalBlock"],
+       brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+   }%>
+   <div id="adWrap" class="adWrap">
+       <div class="ad-banner">
+       	<a id="ad_banner_0"href="<%item_1[0].brandLogo.curl%>" target="_blank"></a>
+           <div class="ad-banner-title">
+               <%brandTitle%>
+           </div>
+       </div>
+   </div>
+   <div class="adBlockWrap">
+    <div id="adLogo_0" class="ad-logo">
+        <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>">
+            <img src="<%item_1[0].res.value%>">
+        </a>
+       </div>
+       <div class="ad-content">
+           <div id="adTitle_0" class="ad-title">
+            <a id="link_adTitle_0" class="ad-intro-list-title" href="<%item_1[0].title.curl%>" target="_blank"><%item_1[0].title.value%></a> 
+        </div>
+           <div id="adDesc_0" class="ad-desc">
+            <a id="link_adDesc_0" class="ad-intro-list-desc" href="<%item_1[0].desc.curl%>" target="_blank"> <%item_1[0].desc.value%></a> 
+        </div>
+       </div>
+       <div class="footer">
+           <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+       </div>
+    </div>
+    </div>
+</code>
+
+lunboConfig_120_600 = <code>
+</code>
+
+cssConfig_120_600 = <code>
+    .container{position:relative;width:118px;height:598px;overflow:hidden;background:white;border:1px solid #29a5df;}
+    .adWrap{font-family:"Î¢ÈíÑÅºÚ",arial,sans-serif;line-height:1em;overflow:hidden}
+    .adBlockWrap {width: 118px; height: 508px;position: absolute;}
+    .ad-banner{width:118px;height:90px;position:relative;background:url(http://ecmc.bdimg.com/adtest/dukeke/intel/images/120x600-banner_03.png) no-repeat;}
+    .ad-banner a {width: 100%;height: 100%;position: absolute;z-index: 100}
+    .ad-banner-title{position:absolute;display:block;width:7em;left:8px;font-size:15px;top:50px;color:white;line-height:17px;overflow:hidden;height:34px}
+    .ad-logo{ width: 110px; height: 110px;position: absolute; left: 4px; top: 60px;} 
+    .ad-content{overflow:hidden;width: 118px; height: 328px; position: absolute; top: 180px; } 
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-title {width: 110px; height: 28px; line-height: 14px; position: absolute; left: 4px; top: 20px; overflow: hidden; font-weight: bold; text-align: left;} 
+    .ad-desc {width: 110px; height: 84px; position: absolute; left: 4px; top: 51px;line-height: 14px;overflow: hidden} 
+    .ad-title a ,.ad-desc a {width: 100%;height: 100%;display: block;}
+    .ad-intro-list{margin-bottom:10px}
+    .ad-intro-list-title{text-decoration:none;font-size:13px;color:#29a5df;line-height:14px}
+    .ad-intro-list-desc{display:block;text-decoration:none;font-size:12px;color:#29a5df;line-height:14px}
+    .footer{position:absolute;bottom:80px;width:100%;z-index:9999;text-align: center;}
+    .learn-more{display:block;width:66px;margin:0 auto;text-decoration:none;padding:5px;color:#fff;font-size:14px;
+    background:#29a5df;}
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0;cursor:default}
+    .bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0}
+    .ad-intro-list{width:110px;height:100px;overflow:hidden}
+</code>
+
+layoutConfig_120_270 = <code>
+    <%{
+        var data=dataArray[0],
+        itemCollection=data.pageBlocks,
+        item_1=itemCollection["normalBlock"],
+        brandTitle = item_1[0].brandTitle && item_1[0].brandTitle.value ?item_1[0].brandTitle.value : "ÈÃÔÆ¼ÆËã´óµÀÖÁ¼ò";
+    
+    }%>
+    <div id="adWrap" class="adWrap">
+        <div class="ad-banner">
+            <div class="brandBlock">
+                <a id="link_brandlogo0" target="_blank" href="<%item_1[0].brandLogo.curl%>" >
+                <img src="http://ubmcmm.baidustatic.com/media/v1/0f000AssQ9MmEvIH374wV0.jpg" >
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="adBlockWrap">
+        <div id="adLogo_0" class="ad-logo">
+            <a id="link_adLogo_0" target="_blank" href="<%item_1[0].res.curl%>">
+                <img src="<%item_1[0].res.value%>">
+            </a>
+        </div>
+        <div class="ad-content">
+            <div id="adTitle_0" class="ad-title">
+                <a id="link_adTitle_0" class="ad-intro-list-title" href="<%item_1[0].title.curl%>" target="_blank"><%item_1[0].title.value%></a> 
+            </div>
+            <div id="adDesc_0" class="ad-desc">
+                <a id="link_adDesc_0" class="ad-intro-list-desc" href="<%item_1[0].desc.curl%>" target="_blank"> <%item_1[0].desc.value%></a> 
+            </div>
+        </div>
+        <div class="footer">
+            <a id="learn_more_0" class="learn-more" href="<%item_1[0].learnMore.curl%>" target="_blank">¸ü¶àÖªÊ¶</a>
+        </div>
+    </div>
+    </div>
+</code>
+
+lunboConfig_120_270 = <code>
+</code>
+
+cssConfig_120_270 = <code>
+    .container{position:relative;width:118px;height:268px;overflow:hidden;background:white;border:1px solid #29a5df;}
+    .adWrap{font-family:"Î¢ÈíÑÅºÚ",arial,sans-serif;line-height:1em;overflow:hidden}
+    .adBlockWrap {width: 118px; height: 218px;position: absolute;}
+    .ad-banner{width:118px;height:50px;position: relative;background: #29a5df;}
+    .brandBlock {width: 50px; height: 33px; position: absolute; top: 10px; left: 34px;} 
+    .brandBlock a {width: 50px; height: 33px;position: absolute;}
+    .brandBlock a img {width: 50px; height: 33px;position: absolute;}
+    .ad-logo{ width: 90px; height: 90px;position: absolute; left: 14px; top: 5px;}
+    .ad-logo a ,.ad-logo a img{width: 100%;height:100%;display:block;}
+    .ad-content{overflow:hidden;width: 118px; height: 118px; position: absolute; top: 100px; } 
+    .ad-title {width: 110px; height: 30px; top: 0px;left: 4px;text-align: left; font-weight: bold; position: absolute; overflow: hidden;}
+    .ad-desc {width: 110px; height: 42px; position: absolute; top: 35px; left: 4px;overflow: hidden} 
+    .ad-title a ,.ad-desc a {width: 100%;height: 100%;position: absolute;}
+    .ad-intro-list {margin-bottom:10px}
+    .ad-intro-list-title{text-decoration:none;font-size:13px;color:#29a5df;line-height:15px}
+    .ad-intro-list-desc{display:block;text-decoration:none;font-size:12px;color:#29a5df;line-height:14px}
+    .footer{position:absolute;bottom:10px;width:100%;z-index:9999;text-align: center;}
+    .learn-more{display:block;width:66px;margin:0 auto;text-decoration:none;padding:5px;color:#fff;font-size:14px;
+background:#29a5df;}
+    .bd-logo{width:24px;height:20px;position:absolute;top:0;right:0;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5.png');_background:0;cursor:default}
+    .bd-logo:hover{width:90px;height:20px;background:url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png) no-repeat top left;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=none,src='http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.0/bd-logo5-hover.png');_background:0}
+    .ad-intro-list{width:110px;height:100px;overflow:hidden}
+    .ad-intro-list .ad-intro-list-title{width:110px;height:25px;overflow:hidden;display:block;text-overflow:ellipsis;white-space:nowrap}
+</code>

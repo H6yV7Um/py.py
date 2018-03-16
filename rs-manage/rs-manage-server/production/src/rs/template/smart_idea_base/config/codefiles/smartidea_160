@@ -1,0 +1,668 @@
+# meilele轮播模板
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none;font-family:微软雅黑;}',
+			'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:2px solid #c9033b;background:#fff;}',
+			'.adItemSpace':'{width:400px;height:0px;border-top:1px dotted #dadada;position:relative;}',
+			'.adDesc':'{color:#333333}',
+			'.adPrice':'{color:#c9033b;font-weight:bold}',
+			'.adShoppingCart':'{background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/shoppingCart.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/shoppingCart.png");_background:none;}',
+			'.clickButton':'{background:#c9033b;}',
+			'.buttonText':'{color:#fff}'
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+	container:{id:'container',style:'width:116px;height:266px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:58px;width:116px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:208px;background:#fff;left:0px;top:58px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:208px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:208px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:98px;height:98px;left:11px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:32px;left:10px;top:102px;font-size:14px;line-height:15px;text-align:center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:118px;height:74px;top:134px;text-align:center;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;top:0px;left:0px;position:relative',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;top:22px;left:28px',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff;border-left:5px solid #c9033b;left:83px;top:22px; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:0px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_120_270 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:20px;top:235px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;left:65px;top:235px;overflow:hidden;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:118,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_120_600 = <code>
+{
+	container:{id:'container',style:'width:116px;height:596px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:116px;height:58px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:58px;width:116px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:118px;height:485px;background:#fff;left:0px;top:65px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:118px;height:485px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'vertical'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:118px;height:240px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:110px;height:110px;left:3px;top:10px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:100px;height:34px;left:10px;top:135px;font-size:14px;line-height:16px;text-align: center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:118px;height:90px;top:170px;text-align:center;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:22px;font-size:16px;top:0;left:0;position:relative;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:60px;height:22px;top:28px;left:28px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff;border-left:5px solid #c9033b;left:88px;top:28px; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:20px;margin-left:2px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:90px;margin-left:14px;margin-top:238px;',className:'adItemSpace',isShow:true,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_120_600 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:23px;top:540px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;left:68px;top:540px;overflow:hidden;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:118,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_160_600 = <code>
+{
+	container:{id:'container',style:'width:156px;height:596px;position:relative',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:156px;height:95px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:78px;width:156px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:158px;height:486px;background:#fff;left:0px;top:88px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:158px;height:486px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'vertical'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:158px;height:243px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:140px;height:140px;left:9px;top:0px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:34px;left:19px;top:150px;font-size:14px;line-height:16px;text-align: center',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:158px;height:90px;top:186px;text-align:center;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'width:158px;height:22px;font-size:20px;top:0;left:0;position:relative;',type:'text',content:'',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:60px;height:22px;top:28px;left:48px',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;left:108px;top:28px; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:14px;height:20px;margin-left:2px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:140px;margin-left:9px;margin-top:239px;',className:'adItemSpace',isShow:true,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_160_600 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:42px;top:566px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;left:86px;top:566px;overflow:hidden;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:158,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_200_200 = <code>
+{
+	container:{id:'container',style:'width:196px;height:196px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:196px;height:40px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:36px;width:72px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:128px;height:160px;background:#fff;left:34px;top:36px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:128px;height:160px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:128px;height:160px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:96px;height:96px;left:19px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:128px;height:32px;left:0px;top:101px;font-size:14px;line-height:16px;text-align:center;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlockWrap:{id:'adPriceBlockWrap',parent:'adItem',style:'height:40px;width:128px;position:relative;top:134px;left:0;text-align:center',type:'layout',content:'',isShow:true},
+	adPriceBlock:{id:'adPriceBlock',parent:'adPriceBlockWrap',style:'height:40px;position:relative;display:inline-block;_display:inline;_zoom:1',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:30px;font-size:14px;width:60px;position:relative;float:left;',type:'text',content:'',suffix:'',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;margin-top:3px;margin-left:3px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'position:relative;float:left;margin-top:3px;width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff;border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:0px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:15px;position:relative;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_200_200 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:5px;top:85px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:5px;top:85px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:128,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_250_200 = <code>
+{
+	container:{id:'container',style:'width:246px;height:196px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:40px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:36px;width:72px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:180px;height:160px;background:#fff;left:33px;top:36px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:180px;height:160px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:180px;height:160px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:112px;height:112px;left:34px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:180px;height:16px;left:0px;top:116px;font-size:14px;line-height:15px;text-align:center;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlockWrap:{id:'adPriceBlockWrap',parent:'adItem',style:'height:30px;width:158px;position:relative;top:132px;left:11px;text-align:center',type:'layout',content:'',isShow:true},
+	adPriceBlock:{id:'adPriceBlock',parent:'adPriceBlockWrap',style:'height:30px;position:relative;display:inline-block;_display:inline;_zoom:1',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:25px;font-size:16px;position:relative;float:left;top:3px;',type:'text',content:'',suffix:'&nbsp',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;margin-top:3px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'position:relative;float:left;margin-top:3px;width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff;border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:0px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:15px;position:relative;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_250_200 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:10px;top:85px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:10px;top:85px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:180,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_250_250 = <code>
+{
+	container:{id:'container',style:'width:246px;height:246px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:246px;height:40px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:36px;width:72px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:190px;height:238px;background:#fff;left:0px;top:36px;left:28px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:190px;height:238px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:190px;height:218px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:154px;height:154px;left:18px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:190px;height:18px;left:0px;top:160px;font-size:15px;line-height:18px;text-align:center;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlockWrap:{id:'adPriceBlockWrap',parent:'adItem',style:'height:38px;width:158px;position:relative;top:180px;left:16px;text-align:center',type:'layout',content:'',isShow:true},
+	adPriceBlock:{id:'adPriceBlock',parent:'adPriceBlockWrap',style:'height:38px;position:relative;display:inline-block;_display:inline;_zoom:1',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:27px;font-size:20px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:50px;height:22px;position:relative;float:left;margin-top:3px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'position:relative;float:left;margin-top:3px;width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:10px;height:22px;margin-left:0px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:15px;position:relative;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_250_250 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:5px;top:110px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:5px;top:110px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:190,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_300_250 = <code>
+{
+	container:{id:'container',style:'width:296px;height:246px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:296px;height:40px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:80px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:208px;height:248px;background:#fff;left:44px;top:41px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:208px;height:248px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:198px;height:208px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:150px;height:150px;left:24px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:190px;height:18px;left:4px;top:155px;font-size:15px;line-height:18px;text-align:center;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlockWrap:{id:'adPriceBlockWrap',parent:'adItem',style:'height:40px;width:208px;position:relative;top:173px;left:0;text-align:center',type:'layout',content:'',isShow:true},
+	adPriceBlock:{id:'adPriceBlock',parent:'adPriceBlockWrap',style:'height:40px;position:relative;display:inline-block;_display:inline;_zoom:1',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:27px;font-size:20px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;margin-top:3px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'position:relative;float:left;margin-top:3px;width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:0px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:15px;position:relative;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_300_250 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:15px;top:110px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:15px;top:110px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:208,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_336_280 = <code>
+{
+	container:{id:'container',style:'width:332px;height:276px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:332px;height:50px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:80px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:244px;height:234px;background:#fff;left:0px;top:40px;margin-left:50px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:244px;height:234px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'},
+	adItem:{id:'adItem',parent:'adBlock',style:'width:244px;height:117px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:112px;height:112px;left:0px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:36px;left:122px;top:18px;font-size:14px;line-height:17px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:135px;height:60px;top:50px;left:125px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:24px;font-size:16px;top:5px;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;margin-top:30px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'left:55px;margin-top:30px;width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:230px;margin-left:5;position:relative;',className:'adItemSpace',isShow:true,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_336_280 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:10px;top:145px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:10px;top:145px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:244,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_360_300 = <code>
+{
+	container:{id:'container',style:'width:356px;height:296px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:356px;height:40px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:80px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:268px;height:256px;background:#fff;left:0px;top:40px;margin-left:45px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:268px;height:256px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:268px;height:128px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:122px;height:122px;left:10px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:125px;height:35px;left:150px;top:10px;font-size:14px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:125px;height:65px;top:55px;left:150px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:25px;font-size:17px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;margin-top:30px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'left:55px;margin-top:30px;width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:15px;position:relative;',className:'adItemSpace',isShow:true,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_360_300 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:10px;top:150px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:10px;top:150px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:268,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_400_300 = <code>
+{
+	container:{id:'container',style:'width:396px;height:296px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:396px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:50px;width:100px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:308px;height:246px;background:#fff;left:0px;top:50px;margin-left:45px;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:308px;height:246px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:308px;height:123px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:117px;height:117px;left:10px;top:2px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:160px;height:35px;left:140px;top:20px;font-size:14px;line-height:16px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:168px;height:40px;top:65px;left:140px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:40px;font-size:22px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;top:4px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'position:relative;float:left;top:4px;width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff; border-left:5px solid #c9033b; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:293px;margin-left:10px;position:relative;',className:'adItemSpace',isShow:true,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_400_300 = <code>
+{
+	isLunbo:true,
+	isAnimation:true,
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:15px;top:160px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:15px;top:160px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:true},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],
+	lunboStep:308,
+	lunboBlock:"adBlock"
+}
+</code>
+
+layoutConfig_460_60 = <code>
+{
+	container:{id:'container',style:'width:456px;height:56px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:135px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:58px;width:112px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:248px;height:60px;background:#fff;left:155px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:248px;height:60px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:248px;height:60px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:54px;height:54px;left:23px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:152px;height:29px;left:95px;top:4px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:145px;height:20px;top:34px;left:95px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;position:relative;float:left; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:20px;margin-left:6px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_460_60 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:130px;top:15px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:10px;top:15px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:248, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_468_60 = <code>
+{
+	container:{id:'container',style:'width:464px;height:56px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:135px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:58px;width:112px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:246px;height:60px;background:#fff;left:155px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:246px;height:60px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:246px;height:60px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:54px;height:54px;left:23px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:145px;height:29px;left:95px;top:4px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:145px;height:20px;top:34px;left:95px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;position:relative;float:left; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:20px;margin-left:6px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_468_60 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:130px;top:15px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:20px;top:15px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:246, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_580_90 = <code>
+{
+	container:{id:'container',style:'width:576px;height:86px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:160px;height:90px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:86px;width:160px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:340px;height:90px;background:#fff;left:195px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:340px;height:90px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:1,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:340px;height:90px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:84px;height:84px;left:15px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:220px;height:32px;left:120px;top:16px;font-size:14px;line-height:15px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:250px;height:20px;top:52px;left:120px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff; border-left:5px solid #c9033b;position:relative;float:left; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:20px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_580_90 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:165px;top:30px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:5px;top:30px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:340, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_640_60 = <code>
+{
+	container:{id:'container',style:'width:636px;height:56px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:135px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:56px;width:112px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:450px;height:60px;background:#fff;left:147px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:450px;height:60px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:225px;height:60px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:54px;height:54px;left:16px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:125px;height:29px;left:80px;top:4px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:140px;height:20px;top:35px;left:80px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff; border-top:11px solid #fff;border-left:5px solid #c9033b;position:relative;float:left; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_640_60 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:120px;top:15px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:10px;top:15px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:450, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_728_90 = <code>
+{
+	container:{id:'container',style:'width:724px;height:86px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:160px;height:90px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:86px;width:160px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:460px;height:90px;background:#fff;left:220px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:460px;height:90px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:230px;height:90px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:84px;height:84px;left:5px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:36px;left:95px;top:5px;font-size:14px;line-height:17px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:135px;height:45px;top:40px;left:95px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;width:120px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:60px;height:22px;top:20px',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;top:20px;left:60px;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:10px;height:20px;margin-left:5px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_728_90 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:178px;top:30px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:15px;top:30px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:460, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+	container:{id:'container',style:'width:756px;height:86px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:160px;height:90px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:86px;width:160px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:470px;height:90px;background:#fff;left:220px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:470px;height:90px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:2,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:233px;height:90px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:84px;height:84px;left:5px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:36px;left:95px;top:5px;font-size:14px;line-height:17px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:125px;height:45px;top:40px;left:95px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;width:120px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:60px;height:22px;top:20px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;top:20px;left:60px;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:10px;height:20px;margin-left:5px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_760_90 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:178px;top:30px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:20px;top:30px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:530, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_960_60 = <code>
+{
+	container:{id:'container',style:'width:956px;height:56px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:140px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:56px;width:112px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:728px;height:60px;background:#fff;left:170px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:728px;height:60px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:3,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:242px;height:60px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:54px;height:54px;left:23px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:140px;height:29px;left:100px;top:4px;font-size:12px;line-height:14px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:140px;height:20px;top:34px;left:100px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:55px;height:22px;position:relative;float:left;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;border-bottom:11px solid #fff;border-top:11px solid #fff;border-left:5px solid #c9033b;position:relative;float:left; ',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:12px;height:22px;margin-left:4px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_960_60 = <code>
+{
+	isLunbo:true, //是否轮播
+	isAnimation:true,//切换的时候，是否需要动画效果
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:140px;top:15px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_1.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:15px;top:15px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:21px;height:21px;margin:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_1.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_1.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_1.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//轮播时间数组
+	lunboStep:728, //轮播步长，跟adBlockWrap的宽度保持一致
+	lunboBlock:"adBlock" //轮播的Dom元素，目前仅支持商品轮播
+}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+	container:{id:'container',style:'width:956px;height:86px;',type:'layout'},
+	brandBlock:{id:'brandBlock',parent:'container',style:'width:180px;height:90px;background:#fff;text-align:left;',type:'layout',isShow:true},
+	brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:86px;width:162px;top:0px;left:0px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f0000Riu5abAJGYGdVy1f.jpg'},
+	adBlockWrap:{id:'adBlockWrap',parent:'container',style:'width:670px;height:90px;background:#fff;left:220px;top:0;',isShow:true,type:"layout"},
+	adBlock:{id:'adBlock',parent:'adBlockWrap',style:'width:670px;height:90px;background:#fff;left:0px;top:0px;',isShow:true,type:"layout",linkDisplay:"inline",adItemNum:3,adItemlayoutType:'horizontal'}, //vertical and horizontal
+	adItem:{id:'adItem',parent:'adBlock',style:'width:223px;height:90px;background:#fff;position:relative;float:left',isShow:true,type:"layout",linkDisplay:"inline"},
+	adLogo:{id:'adLogo',parent:'adItem',style:'width:84px;height:84px;left:5px;top:1px;',className:'adLogo',isShow:true,type:"image",linkDisplay:"inline",k:'res'},
+	adPromotion:{id:'adPromotion',parent:'adLogo',style:'width:40px;height:18px;top:0px;right:0px;background:#c9033b;font-size:12px;text-align:center;',type:'text',content:'促销中',isShow:true,className:'adPromotion',k:'promotion'},
+	adDesc:{id:'adDesc',parent:'adItem',style:'width:120px;height:36px;left:95px;top:5px;font-size:14px;line-height:17px;',className:'adDesc',isShow:true,type:"text",linkDisplay:"inline",k:'title'},
+	adPriceBlock:{id:'adPriceBlock',parent:'adItem',style:'width:125px;height:45px;top:40px;left:95px;',type:'layout',content:'',isShow:true},
+	adPrice:{id:'adPrice',parent:'adPriceBlock',style:'height:20px;width:120px;font-size:16px;position:relative;float:left;',type:'text',content:'',suffix:'&nbsp;',isShow:true, className:'adPrice',k:'sprice'},
+	clickButton:{id:'clickButton',parent:'adPriceBlock',style:'width:60px;height:22px;top:20px;',type:'layout',content:'',isShow:true,className:'clickButton'},
+	clickButtonArrow:{id:'clickButtonArrow',parent:'adPriceBlock',style:'width:0;height:0;top:20px;left:60px;border-bottom:11px solid #fff; border-top:11px solid #fff; border-left:5px solid #c9033b;',type:'layout',content:'',isShow:true},
+	buttonText:{id:'buttonText',parent:'clickButton',style:'position:relative;font-size:10px;height:20px;margin-left:5px;',type:'text',content:'了解详情',isShow:true,className:'buttonText'},
+	adItemSpace:{id:'adItemSpace',parent:'adBlock',style:'width:238px;margin-left:45px;',className:'adItemSpace',isShow:false,type:"layout",linkDisplay:"inline"}
+}
+</code>
+
+lunboConfig_960_90 = <code>
+{
+	isLunbo:true, //
+	isAnimation:true,
+	lunboLeftIconBlock: {style:'width:30px;height:30px;position:absolute;left:178px;top:30px;overflow:hidden;',parent:'container',isShow:true},
+	lunboLeftIcon:{style:'width:30px;height:30px;padding:5px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowLeft_hover_2.png',parent:'lunboLeftIconBlock'},
+	lunboRightIconBlock: {style:'width:30px;height:30px;position:absolute;right:25px;top:30px;',parent:'container',isShow:true},
+	lunboRightIcon:{style:'width:30px;height:30px;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_2.png',mouseover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_mouseover_2.png',hover:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunboArrowRight_hover_2.png',parent:'lunboRightIconBlock'},
+	lunboPageNumBlock:{style:'width:41px;height:41px;position:absolute;right:0;top:0;',src:'http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/lunbo_page_1.png',parent:'container',isShow:false},
+	lunboCurrentPageNum:{style:'color:#FF7800'},
+	lunboTimeArray:[5000,3000,2000],//
+	lunboStep:670, //adBlockWrap
+	lunboBlock:"adBlock" //Dom
+}
+</code>
+

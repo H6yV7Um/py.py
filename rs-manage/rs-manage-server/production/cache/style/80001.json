@@ -1,0 +1,28 @@
+{
+  "styleId": 80001,
+  "styleGroupId": 80000,
+  "flowType": [
+    1
+  ],
+  "layout": [
+    1
+  ],
+  "creativeType": [
+    7
+  ],
+  "attachType": [
+    0
+  ],
+  "size": [
+    {
+      "sizeType": 1,
+      "valueType": 1,
+      "width": 100,
+      "widthEnd": 1000,
+      "height": 60,
+      "heightEnd": 1000
+    }
+  ],
+  "updateTime": 1000,
+  "template":[80001]
+}

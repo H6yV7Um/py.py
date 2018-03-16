@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- tuwen_wap_wise -->
+        <title>百度网盟推广</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        {{timeStatistic}}
+        <link rel="stylesheet" href="https://cpro.baidustatic.com/cpro/ui/noexpire/css/2.1.1/template.min.css">
+        <style>{{style}}</style>
+    </head>
+    <body>
+
+        {{html}}
+
+        <script type="text/javascript" src="{{baseJsUrl}}"></script>
+        <script type="text/javascript">
+            var antiArray = {{antiArray}};
+            // 获得tu的参数值
+            var con = document.getElementById('container');
+            var aLink = con.getElementsByTagName('a');
+            var aSum = (document.getElementById('bd-logo4'))? aLink - 1 : aLink;
+            var index = 0;
+            var tu = null;
+            for (var i = 0;i<aSum.length;i++){
+                var aId = document.getElementById('res' + index);
+                tu = aId.getAttribute('data-tu');
+            }
+            var msgStr = '{"msgName":"cpro_displayAd","msg":{"tu":"'+ tu + '","dspid":6,"displayAd":1}}';
+            if (!!window.postMessage){
+                parent.postMessage(msgStr, "*");
+            }
+        </script>
+        <script type="text/javascript" src="{{dupDomain}}/cpro/ui/noexpire/js/rs/business/1.0.0/anticheat_mob.min.js"></script>
+        <script>{{page.js}}</script>
+    </body>
+
+</html>

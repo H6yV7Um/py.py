@@ -1,0 +1,12 @@
+{
+  "templateId": 10010,
+  "size": [
+    {
+      "sizeType": 2,
+      "valueType": 2,
+      "scaleEnd": 11,	  
+	  "scale": 0.1
+    }
+  ],
+  "updateTime": 1482135139000
+}

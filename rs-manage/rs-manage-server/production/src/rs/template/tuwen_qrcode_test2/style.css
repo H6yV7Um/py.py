@@ -1,0 +1,417 @@
+/* Common */
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+html {
+	font-size: 16px;
+	/*height: 100%;*/
+}
+body {
+	/*height: 100%;*/
+}
+ul {
+	list-style-type: none;
+}
+.item.item2.page2.hack4uc {
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.item.item2.page2.hack4uc * {
+	display: none;		
+}
+
+.clearfix {
+	clear: both;
+}
+.hide {
+	display: none;
+}
+.bottom {
+	position: relative;
+	z-index: 5;
+}
+
+input[type=submit] {
+	-webkit-appearance:none;border-radius:0.3125rem;
+}
+::-webkit-input-placeholder {
+	padding-left: 0.6rem;
+	text-align:left;
+	font-size:0.6rem;
+}
+::-moz-placeholder {
+	padding-left: 0.6rem;
+	text-align:left;
+	font-size:0.6rem;
+}
+:-ms-in	put-placeholder {
+	padding-left: 0.6rem;
+	text-align:left;
+	font-size:0.6rem;
+}
+:-moz-placeholder {
+	padding-left: 0.6rem;
+	text-align:left;
+	font-size:0.6rem;
+}
+
+/* Page1 */
+body {
+	background-color: #5d0807;
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/b-bg-v2.png);
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	background-size: contain;
+}
+.container {
+	width: 100%;
+    /*width: 750px;*/
+    /*height: 100%;*/
+    /*border: 1px solid black;*/
+    position: relative;
+    z-index: 1;
+}
+.item1 .top {	
+	padding: 4.375rem 2.5rem 0;
+    box-sizing: border-box;
+	min-height: 21.875rem;
+}
+.app-icon {
+	width: 7.5rem;
+	height: 7.5rem;
+	float: left;
+}
+.app-name {
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+.app-title {
+	float: left;
+	margin-left: 2.5rem;
+	margin-top: 0.625rem;
+	color: white;
+	font-size: 1.5rem;
+}
+.app-desc {
+	margin-top: 3.75rem;	
+	color: white;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
+}
+.item1 .bottom {
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/b-page1-bottom-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 46.875rem;
+	height: 36.25rem;
+	margin-top: 5.3125rem;
+	box-sizing: border-box;
+	padding: 15rem 11.25rem 0;
+	color: white;
+}
+.steps-intro {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1.25rem;
+}
+.steps li {
+	font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    padding-left: 2.1875rem;
+}
+.download-btn {
+	display: block;
+    border: 2px solid black;
+    width: 100%;
+    color: black;
+    background-color: #ffeb1a;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.625rem;
+    padding: 0.625rem 0;
+    margin: 1.875rem auto 1.25rem;
+}
+.tips span:first-of-type {
+	color: #ffeb1a;
+	font-size: 1.5rem;
+}
+.tips span:last-of-type {
+	color: white;
+	font-size: 1.25rem;
+}
+.color2 {
+	background:#f24f06;
+	height:8rem;
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+	z-index:-1;
+}
+.color {
+	background-color: #f24f06;
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	width: 100%;
+	height: 40px;
+/*	width: 100%;
+	height: 0;
+	color: #f24f06;
+	position: absolute;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 3;*/
+}
+.mask {
+	background-color: rgba(0, 0, 0, 0.7);
+	/*background-color: rgba(0, 0, 0, 1);*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	z-index: 9999;
+	display: none;
+	overflow: hidden;
+}
+.mask img {
+	position: absolute;
+    width: 23.45rem;
+    left: -11.725rem;
+    /*top: -11.2rem;*/
+    top: -5.2rem;
+    margin-left: 50%;
+    margin-top: 50%;
+}
+.quiz-title p {
+    margin-bottom: 0.3125rem;
+    color: #fabe20;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.quiz {
+    margin-bottom: 3rem;
+    color: white;
+    padding: 2.625rem 1.5rem 0;
+    box-sizing: border-box;
+}
+#quiz-options {
+	width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: none;
+    box-sizing: border-box;
+	padding: 0px 5.75rem;
+}
+#quiz-answer {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1.3rem 0;
+    display: none;
+}
+.item2 .bottom {
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/b-page2-bottom-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	/*width: 46.875rem;*/
+	width: 100%;
+	/*height: 36.25rem;*/
+	margin-top: 2.975rem;
+	box-sizing: border-box;
+	padding: 8.4rem 6rem 0;
+	color: white;
+}
+.account-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+}
+.account-btn {
+    background: #f24e06;
+    font-size: 0.6rem;
+    padding: 0.1875rem 0.5rem;
+    border-radius: 0.3125rem;
+    width: 100%;
+    height: 1.8rem;
+    /*margin-left: 0.5rem;*/
+    border: 1px solid black;
+}
+.account-btn-login {
+    color: white;
+    background-color: #26bc62;
+    border: 1px solid black;
+}
+.require-validate {
+    background-color: #f40a0a;
+    /* border: none; */
+    color: white;
+    font-weight: bold;
+}
+.account-unknown .text-input {
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    border-radius: 0.3125rem;
+    height: 1.8rem;
+    width: 8rem;
+    font-size: 0.75rem;
+}
+.account {
+    margin-bottom: 1rem;
+}
+.btn {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.3125rem;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 0.625rem;
+    display: block;
+    font-size: 1rem;
+}
+.btn-submit {
+    background-color: #ffeb1a;
+    color: black;
+    border: 2px solid black;
+}
+body.special {
+	background-color: #5d0807;
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/b-celebrate-bg.png);
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	background-size: contain;
+}
+.congratulate {
+	/*width: 100%;*/
+	box-sizing: border-box;
+	padding: 5.625rem 11.25rem 0;
+}
+.congratulate p:first-of-type {
+	color: #fabe20;
+	font-size: 2.25rem;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+.congratulate p:last-of-type {
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.item3 .bottom {
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/show-money-bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*width: 750px;*/
+	width: 100%;
+	height: 40.875rem;
+	box-sizing: border-box;
+	margin-top: 6.25rem;
+	color: white;
+	padding: 3.4375rem 11.25rem 0;	
+}
+.money {
+    text-align: center;
+    color: #f24f06;
+    padding-left: 2.8125rem;
+    margin-bottom: 4.6875rem;
+}
+.money span:first-of-type {
+	font-size: 3.75rem;
+}
+.money span:last-of-type {
+	font-size: 1.875rem;
+	font-weight: bold;
+}
+.warning {
+	color: #ffeb1a;
+	font-size: 1.875rem;
+	margin-bottom: 0.625;
+}
+.warning-detail {
+	color: white;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
+}
+.click-to-check {
+	font-size: 1.25rem;
+    display: block;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 0.625rem;
+    color: white;
+    text-align: center;
+    padding: 0.75rem 0;
+    margin-top: 1.25rem;
+}
+.qianbao-icon {
+	width: 5rem;
+	height: 5rem;
+	margin: 0 auto;
+	display: block;
+	margin-top: 2.8125rem;
+}
+.download-qianbao {
+	background-color: #ffeb1a;
+	font-size: 1.5625rem;
+	font-weight: bold;
+    display: block;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 0.625rem;
+    color: black;
+    text-align: center;
+    padding: 0.75rem 0;
+    margin-top: 1.25rem;	
+}
+/* Page4 */
+body {
+	background-color: #5d0807;
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/b-bg-v2.png);
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	background-size: contain;
+}
+
+.item4 .top {
+	width: 100%;
+	height: 26.875rem;
+	padding: 5.625rem 11.25rem 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.item4 .top p:first-of-type {
+	color: #fabe20;
+	font-size: 2.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.item4 .top p:last-of-type {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.item4 .bottom {
+	background-image: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/qrcode/B/sorry.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 43.25rem;
+}

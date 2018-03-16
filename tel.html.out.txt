@@ -1,0 +1,1 @@
+"<html>\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Document<\/title>\n\t<style>\na{\n\tdisplay: inline-block;\n\twidth: 100px;\n\theight: 100px;\n\tborder: 1px solid red;\n}\n\t<\/style>\n<\/head>\n<body>\n\t<a href=\"tel:18612272236\">\u70b9\u51fb\u62e8\u6253\u7535\u8bdd<\/a>\n<\/body>\n\n<\/html>"

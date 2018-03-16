@@ -1,0 +1,27 @@
+{
+"styleId": 20014,
+  "styleGroupId": 20000,
+  "flowType": [
+    2
+  ],
+  "layout": [
+    2
+  ],
+  "creativeType": [
+    1
+  ],
+  "attachType": [
+    0,1,8,16,32,1024
+  ],
+  "size": [
+    {
+      "sizeType": 2,
+      "valueType": 2,
+      "scaleEnd": 0,	  
+	  "scale": 1.2
+    }
+  ],
+  "updateTime": 1491880107000,
+  "template":[20014],
+  "isSendWinNow": false
+}

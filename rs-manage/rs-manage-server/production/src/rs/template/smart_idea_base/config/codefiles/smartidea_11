@@ -1,0 +1,467 @@
+# 同程网机票模板 
+
+GlobalCss = <code>
+{
+			'.container div':'{position:absolute;overflow:hidden}',
+			'a':'{text-decoration:none}',
+			'.container':'{position:relative;padding:0;margin:0;overflow:hidden;border:1px solid #8AB820;background:#FFFFFF;}',
+			'.downArrow':'{width:7px;height:5px;background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/ctrip_flight__downArrow.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://yf-cm-et00.yf01.baidu.com:8047/img/sm10_downArrow.png");_background:none;cursor:pointer;}',
+			'.cityTip':'{color:#fff;text-decoration:none;font-size:18px;width:80px;height:25px;line-height:25px}',
+			'.cityContainer':'{background:#fff;border:1px solid #2785e6}',
+			'.city':'{width:38px;height:25px;line-height:25px;color:#1c74e4;display:block}',
+			'.fromIcon':'{width:22px;height:20px;background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/ctrip_flight__from.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://yf-cm-et00.yf01.baidu.com:8047/img/sm10_from.png");_background:none;cursor:pointer;}',
+			'.toIcon':'{width:22px;height:20px;background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/ctrip_flight__to.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://yf-cm-et00.yf01.baidu.com:8047/img/sm10_to.png");_background:none;cursor:pointer;}',
+			'.buttonIcon':'{background:url("http://cpro.baidu.com/cpro/ui/noexpire/img/smartIdea/ctrip_flight__button.png") no-repeat 0 0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=none, src="http://yf-cm-et00.yf01.baidu.com:8047/img/sm10_button.png");_background:none;cursor:pointer}',
+			'.reduceRate':'{color:#ffa56b;font-weight:bold}'
+}
+</code>
+
+layoutConfig_120_270 = <code>
+{
+container:{id:'container',style:'width:118px;height:268px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:50px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:28px;width:112px;top:11px;left:3px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:118px;height:218px;background:#8AB820;left:0px;top:50px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:13px;left:9px;height:20px;width:20px',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:13px;left:36px;font-size:14px;width:60px;height:16px',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:37px;left:9px;width:100px;height:22px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:38px;left:17px;font-size:14px;width:75px;height:20px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:47px;left:96px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+          toIcon:{id:'toIcon',parent:'adBlock',style:'top:73px;left:9px;height:20px;width:20px',type:'icon',content:'',isShow:true,className:'toIcon'},
+          to:{id:'to',parent:'adBlock',style:'top:73px;left:36px;font-size:14px;width:60px;height:16px',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+          toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:97px;left:9px;width:100px;height:22px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          toCity:{id:'dstRegion',parent:'adBlock',style:'top:98px;left:17px;font-size:14px;width:75px;height:20px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+          toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:107px;left:96px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+          reducedRate:{id:'reducedRate',parent:'adBlock',style:'text-align:center;width:40px;height:26px;line-height:24px;top:130px;left:16px;font-size:22px;text-shadow: 1px 2px 1px #000;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+          reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:44px;height:26px;line-height:24px;top:130px;left:57px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+          clickButton:{id:'clickButton',parent:'adBlock',style:'width:90px;height:30px;top:165px;left:11px;background:#ff761b;',type:'layout',content:'',isShow:true},
+          clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:165px;left:101px;width:0;height:0;border-bottom:15px solid transparent;_border-bottom:15; border-top:15px solid transparent; _border-top:0;border-left:8px solid #ff761b; ',type:'layout',content:'',isShow:true},
+          buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:100px;left:95px;',type:'icon',content:'',isShow:false,className:"buttonIcon"},
+          buttonText:{id:'buttonText',parent:'adBlock',style:'text-align:center;width:90px;height:20px;line-height:18px;position:absolute;top:169px;left:11px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+          }
+</code>
+
+layoutConfig_120_600 = <code>
+            {
+container:{id:'container',style:'width:118px;height:598px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:118px;height:95px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:28px;width:112px;top:34px;left:3px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:118px;height:503px;background:#8AB820;left:0px;top:95px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:65px;left:7px;height:20px;width:20px',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:65px;left:33px;font-size:18px;width:73px;height:20px',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:100px;left:7px;width:104px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:100px;left:15px;font-size:18px;width:80px;height:32px;line-height:32px',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:115px;left:96px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+          toIcon:{id:'toIcon',parent:'adBlock',style:'top:165px;left:7px;height:20px;width:20px',type:'icon',content:'',isShow:true,className:'toIcon'},
+          to:{id:'to',parent:'adBlock',style:'top:165px;left:33px;font-size:18px;width:73px;height:20px',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+          toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:200px;left:7px;width:104px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          toCity:{id:'dstRegion',parent:'adBlock',style:'top:200px;left:15px;font-size:18px;width:80px;height:32px;line-height:32px',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+          toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:215px;left:96px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+          reducedRate:{id:'reducedRate',parent:'adBlock',style:'text-align:center;width:51px;height:32px;line-height:32px;top:271px;left:2px;font-size:28px;text-shadow: 1px 2px 1px #000;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+          reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:58px;height:32px;line-height:32px;top:270px;left:55px;font-size:28px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+          clickButton:{id:'clickButton',parent:'adBlock',style:'width:90px;height:36px;top:345px;left:9px;background:#ff761b;',type:'layout',content:'',isShow:true},
+          clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:345px;left:99px;width:0;height:0;border-bottom:18px solid transparent;_border-bottom:15; border-top:18px solid transparent; _border-top:0;border-left:10px solid #ff761b; ',type:'layout',content:'',isShow:true},
+          buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:120px;left:95px;',type:'icon',content:'',isShow:false,className:"buttonIcon"},
+          buttonText:{id:'buttonText',parent:'adBlock',style:'text-align:center;width:90px;height:22px;line-height:20px;position:absolute;top:350px;left:11px;font-size:18px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+          }
+</code>
+
+layoutConfig_160_600 = <code>
+{
+container:{id:'container',style:'width:158px;height:598px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:158px;height:100px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:38px;width:152px;top:31px;left:3px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:158px;height:498px;background:#8AB820;left:0px;top:100px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:63px;left:10px;height:20px;width:20px',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:63px;left:40px;font-size:20px;width:83px;height:22px',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:100px;left:10px;width:138px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:101px;left:20px;font-size:20px;width:100px;height:31px;line-height:31px',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:115px;left:130px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+          toIcon:{id:'toIcon',parent:'adBlock',style:'top:165px;left:10px;height:20px;width:20px',type:'icon',content:'',isShow:true,className:'toIcon'},
+          to:{id:'to',parent:'adBlock',style:'top:165px;left:40px;font-size:20px;width:83px;height:22px',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+          toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:200px;left:10px;width:138px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          toCity:{id:'dstRegion',parent:'adBlock',style:'top:201px;left:20px;font-size:20px;width:100px;height:31px;line-height:31px',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+          toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:215px;left:130px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+          reducedRate:{id:'reducedRate',parent:'adBlock',style:'text-align:center;width:65px;height:40px;line-height:40px;top:270px;left:7px;font-size:34px;text-shadow: 1px 2px 1px #000;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+          reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:70px;height:36px;line-height:36px;top:270px;left:73px;font-size:34px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+          clickButton:{id:'clickButton',parent:'adBlock',style:'width:115px;height:40px;top:340px;left:15px;background:#ff761b;',type:'layout',content:'',isShow:true},
+          clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:340px;left:130px;width:0;height:0;border-bottom:20px solid transparent;_border-bottom:15; border-top:20px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+          buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:115px;left:95px;',type:'icon',content:'',isShow:false,className:"buttonIcon"},
+          buttonText:{id:'buttonText',parent:'adBlock',style:'text-align:center;width:90px;height:22px;line-height:20px;position:absolute;top:347px;left:29px;font-size:18px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+          }
+</code>
+
+layoutConfig_200_200 = <code>
+{
+container:{id:'container',style:'width:198px;height:198px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:198px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:160px;top:10px;left:19px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:198px;height:148px;background:#8AB820;left:0px;top:60px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:16px;left:7px;height:20px;width:20px',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:11px;left:29px;font-size:14px;width:60px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:12px;left:92px;width:98px;height:22px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:13px;left:99px;font-size:14px;width:70px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:22px;left:178px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+          toIcon:{id:'toIcon',parent:'adBlock',style:'top:56px;left:8px;height:20px;width:20px',type:'icon',content:'',isShow:true,className:'toIcon'},
+          to:{id:'to',parent:'adBlock',style:'top:51px;left:30px;font-size:14px;width:60px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+          toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:53px;left:92px;width:98px;height:22px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          toCity:{id:'dstRegion',parent:'adBlock',style:'top:54px;left:99px;font-size:14px;width:70px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+          toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:62px;left:178px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+          reducedRate:{id:'reducedRate',parent:'adBlock',style:'text-align:center;width:35px;height:24px;line-height:24px;top:98px;left:7px;font-size:20px;text-shadow: 1px 2px 1px #000;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+          reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:45px;height:24px;line-height:24px;top:98px;left:44px;font-size:20px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+          clickButton:{id:'clickButton',parent:'adBlock',style:'width:90px;height:30px;top:95px;left:90px;background:#ff761b;',type:'layout',content:'',isShow:true},
+          clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:95px;left:180px;width:0;height:0;border-bottom:15px solid transparent;_border-bottom:15; border-top:15px solid transparent; _border-top:0;border-left:10px solid #ff761b; ',type:'layout',content:'',isShow:true},
+          buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:100px;left:95px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+          buttonText:{id:'buttonText',parent:'adBlock',style:'width:60px;height:20px;line-height:18px;position:absolute;top:100px;left:120px;font-size:14px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+          }
+</code>
+
+layoutConfig_250_200 = <code>
+{
+container:{id:'container',style:'width:248px;height:198px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:50px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:160px;top:4px;left:44px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:248px;height:148px;background:#8AB820;left:0px;top:50px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:18px;left:10px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:16px;left:35px;font-size:16px;width:70px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:13px;left:110px;width:125px;height:27px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:14px;left:118px;font-size:16px;width:100px;line-height:25px;height:25px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:26px;left:220px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+          toIcon:{id:'toIcon',parent:'adBlock',style:'top:58px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+          to:{id:'to',parent:'adBlock',style:'top:55px;left:35px;font-size:16px;width:70px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+          toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:54px;left:110px;width:125px;height:27px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          toCity:{id:'dstRegion',parent:'adBlock',style:'top:55px;left:118px;font-size:16px;width:110px;line-height:25px;height:25px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+          toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:66px;left:220px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+          reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:43px;height:26px;line-height:24px;top:99px;left:10px;font-size:22px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+          reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:52px;height:26px;line-height:24px;top:98px;left:55px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+          clickButton:{id:'clickButton',parent:'adBlock',style:'width:110px;height:34px;top:95px;left:115px;background:#ff761b;',type:'layout',content:'',isShow:true},
+          clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:95px;left:225px;width:0;height:0;border-bottom:17px solid transparent;_border-bottom:20; border-top:17px solid transparent; _border-top:0;border-left:11px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:101px;left:120px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:80px;height:20px;line-height:20px;position:absolute;top:101px;left:150px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_250_250 = <code>
+{
+container:{id:'container',style:'width:248px;height:248px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:248px;height:60px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:50px;width:200px;top:4px;left:24px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:248px;height:188px;background:#8AB820;left:0px;top:60px',isShow:true,type:"layout",linkDisplay:"inline"},
+          formIcon:{id:'formIcon',parent:'adBlock',style:'top:25px;left:10px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+          form:{id:'from',parent:'adBlock',style:'top:23px;left:35px;font-size:16px;width:70px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+          formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:20px;left:110px;width:125px;height:27px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+          formCity:{id:'srcRegion',parent:'adBlock',style:'top:21px;left:118px;font-size:16px;width:100px;line-height:25px;height:25px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+          formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:33px;left:220px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+            toIcon:{id:'toIcon',parent:'adBlock',style:'top:75px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+            to:{id:'to',parent:'adBlock',style:'top:72px;left:35px;font-size:16px;width:70px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+            toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:71px;left:110px;width:125px;height:27px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            toCity:{id:'dstRegion',parent:'adBlock',style:'top:72px;left:118px;font-size:16px;width:100px;line-height:25px;height:25px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+            toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:83px;left:220px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+            reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:43px;height:28px;line-height:26px;top:131px;left:10px;font-size:24px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:52px;height:28px;line-height:26px;top:130px;left:55px;font-size:24px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+            clickButton:{id:'clickButton',parent:'adBlock',style:'width:110px;height:40px;top:125px;left:115px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:125px;left:225px;width:0;height:0;border-bottom:20px solid transparent;_border-bottom:20; border-top:20px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:135px;left:120px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:80px;height:20px;line-height:20px;position:absolute;top:135px;left:150px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_300_250 = <code>
+{
+container:{id:'container',style:'width:298px;height:248px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:298px;height:70px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:50px;width:200px;top:10px;left:49px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:298px;height:180px;background:#8AB820;left:0px;top:71px',isShow:true,type:"layout",linkDisplay:"inline"},
+            formIcon:{id:'formIcon',parent:'adBlock',style:'top:25px;left:15px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+            form:{id:'from',parent:'adBlock',style:'top:23px;left:45px;font-size:18px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+            formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:20px;left:135px;width:145px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            formCity:{id:'srcRegion',parent:'adBlock',style:'top:21px;left:145px;font-size:20px;width:110px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+            formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:35px;left:260px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+            toIcon:{id:'toIcon',parent:'adBlock',style:'top:80px;left:15px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+            to:{id:'to',parent:'adBlock',style:'top:77px;left:45px;font-size:18px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+            toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:75px;left:135px;width:145px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            toCity:{id:'dstRegion',parent:'adBlock',style:'top:76px;left:145px;font-size:20px;width:110px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+            toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:90px;left:260px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+            reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:54px;height:32px;line-height:30px;top:131px;left:20px;font-size:28px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:32px;line-height:30px;top:130px;left:75px;font-size:28px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+            clickButton:{id:'clickButton',parent:'adBlock',style:'width:120px;height:40px;top:125px;left:145px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:125px;left:265px;width:0;height:0;border-bottom:20px solid transparent;_border-bottom:0; border-top:20px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:135px;left:150px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:22px;line-height:25px;position:absolute;top:135px;left:178px;font-size:20px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_336_280 = <code>
+{
+container:{id:'container',style:'width:334px;height:278px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:334px;height:70px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:55px;width:220px;top:7px;left:57px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:336px;height:208px;background:#8AB820;left:0px;top:71px',isShow:true,type:"layout",linkDisplay:"inline"},
+            formIcon:{id:'formIcon',parent:'adBlock',style:'top:27px;left:15px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+            form:{id:'from',parent:'adBlock',style:'top:22px;left:45px;font-size:20px;width:85px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+            formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:18px;left:150px;width:160px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            formCity:{id:'srcRegion',parent:'adBlock',style:'top:19px;left:160px;font-size:20px;width:120px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+            formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:33px;left:290px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+            toIcon:{id:'toIcon',parent:'adBlock',style:'top:82px;left:15px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+            to:{id:'to',parent:'adBlock',style:'top:77px;left:45px;font-size:20px;width:85px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:73px;left:150px;width:160px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            toCity:{id:'dstRegion',parent:'adBlock',style:'top:74px;left:160px;font-size:20px;width:120px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+            toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:87px;left:290px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+            reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:54px;height:38px;line-height:36px;top:142px;left:23px;font-size:32px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:70px;height:38px;line-height:36px;top:142px;left:80px;font-size:32px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+            clickButton:{id:'clickButton',parent:'adBlock',style:'width:120px;height:44px;top:140px;left:170px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:140px;left:290px;width:0;height:0;border-bottom:22px solid transparent;_border-bottom:0; border-top:22px solid transparent; _border-top:0;border-left:14px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:153px;left:177px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:85px;height:25px;line-height:24px;position:absolute;top:150px;left:202px;font-size:20px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_360_300 = <code>
+{
+container:{id:'container',style:'width:358px;height:298px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:358px;height:80px;background:#fff;text-align:left;',type:'layout',isShow:true},
+			brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:55px;width:220px;top:12px;left:64px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:358px;height:218px;background:#8AB820;left:0px;top:80px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:27px;left:20px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:22px;left:50px;font-size:22px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:20px;left:160px;width:170px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:21px;left:170px;font-size:22px;width:140px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:35px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:82px;left:20px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:77px;left:50px;font-size:22px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:75px;left:160px;width:170px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:76px;left:170px;font-size:22px;width:140px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:90px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:55px;height:44px;line-height:38px;top:143px;left:21px;font-size:36px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:42px;line-height:42px;top:142px;left:80px;font-size:36px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+            clickButton:{id:'clickButton',parent:'adBlock',style:'width:132px;height:50px;top:140px;left:175px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:140px;left:307px;width:0;height:0;border-bottom:25px solid transparent;_border-bottom:0; border-top:25px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:153px;left:180px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:148px;left:210px;font-size:22px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_400_300 = <code>
+{
+			container:{id:'container',style:'width:398px;height:298px;',type:'layout'},
+			brandBlock:{id:'brandBlock',parent:'container',style:'width:398px;height:80px;background:#fff;text-align:left;',type:'layout',isShow:true},
+            brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:55px;width:220px;top:12px;left:89px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+			adBlock:{id:'adBlock',parent:'container',style:'width:400px;height:218px;background:#8AB820;left:0px;top:80px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:27px;left:20px;',type:'icon',content:'',isShow:true,enableClick:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:22px;left:50px;font-size:22px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:20px;left:160px;width:170px;height:32px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:21px;left:170px;font-size:22px;width:130px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:35px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:82px;left:20px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:77px;left:50px;font-size:22px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:75px;left:160px;width:170px;height:32px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:76px;left:170px;font-size:22px;width:130px;line-height:30px;height:30px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:90px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:55px;height:44px;line-height:38px;top:143px;left:25px;font-size:36px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:42px;line-height:42px;top:142px;left:85px;font-size:36px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:132px;height:50px;top:140px;left:190px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:140px;left:322px;width:0;height:0;border-bottom:25px solid transparent;_border-bottom:0; border-top:25px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:155px;left:193px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+			buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:150px;left:222px;font-size:22px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_460_60 = <code>
+{
+container:{id:'container',style:'width:458px;height:58px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:82px;height:58px;top:0px;background:#fff;text-align:left;',type:'layout',isShow:true},
+            brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:20px;width:80px;top:19px;left:1px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:376px;height:58px;background:#8AB820;left:82px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:5px;left:10px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:2px;left:35px;font-size:14px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:3px;left:95px;width:100px;height:22px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:5px;left:100px;font-size:14px;width:80px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:13px;left:182px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:35px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:30px;left:35px;font-size:14px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:30px;left:95px;width:100px;height:22px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:32px;left:100px;font-size:14px;width:80px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:40px;left:182px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:36px;height:44px;line-height:38px;top:8px;left:200px;font-size:22px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:10px;left:237px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:77px;height:30px;top:15px;left:285px;background:#ff761b;',type:'layout',content:'',isShow:true},
+			clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:15px;left:362px;width:0;height:0;border-bottom:15px solid transparent;_border-bottom:0; border-top:15px solid transparent; _border-top:0;border-left:9px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:20px;left:284px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:58px;height:30px;line-height:30px;position:absolute;top:14px;left:304px;font-size:14px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_468_60 = <code>
+{
+container:{id:'container',style:'width:466px;height:58px;',type:'layout'},
+                brandBlock:{id:'brandBlock',parent:'container',style:'width:88px;height:58px;top:0px;background:#fff;text-align:left;line-height:0px',type:'layout',isShow:true},
+			brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:20px;width:80px;top:19px;left:4px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:378px;height:58px;background:#8AB820;left:90px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:4px;left:10px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:2px;left:35px;font-size:14px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:3px;left:95px;width:100px;height:22px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:4px;left:100px;font-size:14px;width:80px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:14px;left:180px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:34px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:30px;left:35px;font-size:14px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:30px;left:95px;width:100px;height:22px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:32px;left:100px;font-size:14px;width:80px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:40px;left:180px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:36px;height:44px;line-height:38px;top:8px;left:200px;font-size:22px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:10px;left:237px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:77px;height:30px;top:15px;left:285px;background:#ff761b;',type:'layout',content:'',isShow:true},
+			clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:15px;left:362px;width:0;height:0;border-bottom:15px solid transparent;_border-bottom:0; border-top:15px solid transparent; _border-top:0;border-left:9px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:20px;left:284px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+			buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:14px;left:304px;font-size:14px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_580_90 = <code>
+{
+container:{id:'container',style:'width:578px;height:88px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:125px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+			brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:30px;width:120px;top:29px;left:2px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:698px;height:88px;background:#8AB820;left:125px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:14px;left:10px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:12px;left:35px;font-size:16px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+            formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:10px;left:110px;width:133px;height:28px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:11px;left:120px;font-size:16px;width:105px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+            formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:22px;left:228px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:55px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:52px;left:35px;font-size:16px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+            toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:50px;left:110px;width:133px;height:28px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:51px;left:120px;font-size:16px;width:105px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+            toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:63px;left:228px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+            reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:35px;height:44px;line-height:38px;top:23px;left:250px;font-size:22px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:25px;left:287px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+            clickButton:{id:'clickButton',parent:'adBlock',style:'width:90px;height:36px;top:28px;left:340px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:28px;left:430px;width:0;height:0;border-bottom:18px solid transparent;_border-bottom:0; border-top:18px solid transparent; _border-top:0;border-left:13px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:35px;left:342px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:30px;left:363px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_640_60 = <code>
+{
+container:{id:'container',style:'width:638px;height:58px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:58px;top:0px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:36px;width:144px;top:11px;left:3px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:698px;height:58px;background:#8AB820;left:150px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:4px;left:20px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:2px;left:45px;font-size:16px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+            formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:2px;left:120px;width:133px;height:22px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            formCity:{id:'srcRegion',parent:'adBlock',style:'top:3px;left:127px;font-size:16px;width:115px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+            formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:14px;left:240px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:34px;left:20px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:30px;left:45px;font-size:16px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+            toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:30px;left:120px;width:133px;height:22px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            toCity:{id:'dstRegion',parent:'adBlock',style:'top:31px;left:127px;font-size:16px;width:115px;line-height:20px;height:20px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+            toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:41px;left:240px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:35px;height:44px;line-height:38px;top:9px;left:268px;font-size:22px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:11px;left:305px;font-size:22px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:90px;height:36px;top:12px;left:365px;background:#ff761b;',type:'layout',content:'',isShow:true},
+			clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:12px;left:455px;width:0;height:0;border-bottom:18px solid transparent;_border-bottom:0; border-top:18px solid transparent; _border-top:0;border-left:11px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:20px;left:367px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+			buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:14px;left:388px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+            }
+</code>
+
+layoutConfig_728_90 = <code>
+{
+container:{id:'container',style:'width:726px;height:88px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:175px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:160px;top:24px;left:8px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:698px;height:88px;background:#8AB820;left:175px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:14px;left:10px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:12px;left:40px;font-size:18px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:10px;left:120px;width:170px;height:28px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:11px;left:127px;font-size:18px;width:145px;line-height:27px;height:27px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:22px;left:275px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:55px;left:10px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:52px;left:40px;font-size:18px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:50px;left:120px;width:170px;height:28px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:51px;left:127px;font-size:18px;width:145px;line-height:27px;height:27px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:63px;left:275px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:44px;height:44px;line-height:38px;top:23px;left:300px;font-size:28px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:25px;left:345px;font-size:28px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:115px;height:36px;top:28px;left:415px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:28px;left:530px;width:0;height:0;border-bottom:18px solid transparent;_border-bottom:0; border-top:18px solid transparent; _border-top:0;border-left:10px solid #ff761b; ',type:'layout',content:'',isShow:true},
+            buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:35px;left:420px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:30px;left:445px;font-size:20px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+}
+</code>
+
+layoutConfig_760_90 = <code>
+{
+container:{id:'container',style:'width:758px;height:88px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:175px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:40px;width:160px;top:24px;left:7px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:698px;height:88px;background:#8AB820;left:175px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:14px;left:15px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:12px;left:45px;font-size:18px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:10px;left:130px;width:170px;height:28px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:11px;left:135px;font-size:18px;width:145px;line-height:27px;height:27px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:22px;left:285px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:55px;left:15px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:52px;left:45px;font-size:18px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:50px;left:130px;width:170px;height:28px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:51px;left:135px;font-size:18px;width:145px;line-height:27px;height:27px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:63px;left:285px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:44px;height:44px;line-height:38px;top:23px;left:320px;font-size:28px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:25px;left:365px;font-size:28px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:115px;height:36px;top:28px;left:440px;background:#ff761b;',type:'layout',content:'',isShow:true},
+			clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:28px;left:555px;width:0;height:0;border-bottom:18px solid transparent;_border-bottom:0; border-top:18px solid transparent; _border-top:0;border-left:10px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:35px;left:445px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+            buttonText:{id:'buttonText',parent:'adBlock',style:'width:85px;height:30px;line-height:30px;position:absolute;top:30px;left:470px;font-size:20px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+}
+</code>
+
+layoutConfig_960_60 = <code> 
+{
+container:{id:'container',style:'width:958px;height:58px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:150px;height:58px;top:0px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:35px;width:140px;top:12px;left:5px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+          adBlock:{id:'adBlock',parent:'container',style:'width:808px;height:58px;background:#8AB820;left:150px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:20px;left:10px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:18px;left:35px;font-size:18px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:16px;left:112px;width:150px;height:28px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            formCity:{id:'srcRegion',parent:'adBlock',style:'top:18px;left:120px;font-size:18px;width:120px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:28px;left:243px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:20px;left:280px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+            to:{id:'to',parent:'adBlock',style:'top:18px;left:305px;font-size:18px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:16px;left:382px;width:150px;height:28px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+            toCity:{id:'dstRegion',parent:'adBlock',style:'top:18px;left:390px;font-size:18px;width:120px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:28px;left:513px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:53px;height:44px;line-height:38px;top:8px;left:550px;font-size:28px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+            reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:72px;height:38px;top:10px;left:605px;font-size:28px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:102px;height:40px;top:10px;left:680px;background:#ff761b;',type:'layout',content:'',isShow:true},
+			clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:10px;left:782px;width:0;height:0;border-bottom:20px solid transparent;_border-bottom:0; border-top:20px solid transparent; _border-top:0;border-left:11px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:18px;left:685px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+			buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:13px;left:710px;font-size:16px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+}
+</code>
+
+layoutConfig_960_90 = <code>
+{
+container:{id:'container',style:'width:958px;height:88px;',type:'layout'},
+          brandBlock:{id:'brandBlock',parent:'container',style:'width:230px;height:88px;background:#fff;text-align:left;',type:'layout',isShow:true},
+          brandLogo:{id:'brandlogo0',parent:'brandBlock',style:'height:55px;width:220px;top:16px;left:5px;',type:'image',content:'',isShow:true,linkDisplay:"inline",enableClick:true,content:'http://ubmcmm.baidustatic.com/media/v1/0f000FHCGPWT0eF57DrFKs.jpg'},
+            adBlock:{id:'adBlock',parent:'container',style:'width:728px;height:88px;background:#8AB820;left:230px;top:0px',isShow:true,type:"layout",linkDisplay:"inline"},
+			formIcon:{id:'formIcon',parent:'adBlock',style:'top:14px;left:40px;',type:'icon',content:'',isShow:true,className:'fromIcon'},
+			form:{id:'from',parent:'adBlock',style:'top:12px;left:70px;font-size:18px;width:96px;',type:'text',content:'出发城市',isShow:true,enableClick:true,className:'cityTip'},
+			formCityContainer:{id:'formCityContainer',parent:'adBlock',style:'top:10px;left:160px;width:170px;height:28px',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			formCity:{id:'srcRegion',parent:'adBlock',style:'top:11px;left:168px;font-size:18px;width:130px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'srcRegion',className:'city'},
+			formDownArrow:{id:'downArrow',parent:'adBlock',style:'top:22px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'},
+			toIcon:{id:'toIcon',parent:'adBlock',style:'top:55px;left:40px;',type:'icon',content:'',isShow:true,className:'toIcon'},
+			to:{id:'to',parent:'adBlock',style:'top:52px;left:70px;font-size:18px;width:96px;',type:'text',content:'到达城市',isShow:true,className:'cityTip'},
+			toCityContainer:{id:'toCityContainer',parent:'adBlock',style:'top:50px;left:160px;width:170px;height:28px;',type:'text',content:'',isShow:true,className:'cityContainer',linkDisplay:"block"},
+			toCity:{id:'dstRegion',parent:'adBlock',style:'top:51px;left:168px;font-size:18px;width:130px;line-height:26px;height:26px;',type:'text',content:'',isShow:true,k:'dstRegion',className:'city'},
+			toDownArrow:{id:'toArrow',parent:'adBlock',style:'top:63px;left:315px;',type:'icon',content:'',isShow:true,className:'downArrow'}, 
+			reducedRate:{id:'reducedRate',parent:'adBlock',style:'width:63px;height:44px;line-height:40px;top:24px;left:365px;font-size:38px;text-shadow: 1px 2px 1px #000;text-align:center;',type:'text',content:'',isShow:true, className:'reduceRate',k:'discount'},
+			reducedInfo:{id:'reducedInfo',parent:'adBlock',style:'width:80px;height:44px;top:21px;left:430px;font-size:38px;color:#fff;text-shadow: 1px 2px 1px #000;',type:'text',content:'折起',isShow:true},
+			clickButton:{id:'clickButton',parent:'adBlock',style:'width:132px;height:50px;top:20px;left:530px;background:#ff761b;',type:'layout',content:'',isShow:true},
+            clickButtonArrow:{id:'clickButtonArrow',parent:'adBlock',style:'top:20px;left:662px;width:0;height:0;border-bottom:25px solid transparent;_border-bottom:0; border-top:25px solid transparent; _border-top:0;border-left:15px solid #ff761b; ',type:'layout',content:'',isShow:true},
+			buttonIcon:{id:'buttonIcon',parent:'adBlock',style:'width:20px;height:20px;top:32px;left:535px;',type:'icon',content:'',isShow:true,className:"buttonIcon"},
+			buttonText:{id:'buttonText',parent:'adBlock',style:'width:90px;height:30px;line-height:30px;position:absolute;top:27px;left:565px;font-size:22px;color:#fff',type:'text',content:'抢购机票',isShow:true}
+}
+</code>
